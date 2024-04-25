@@ -1,0 +1,16 @@
+@use "global" as *;
+.FV-texts {
+  z-index: 10;
+  position: absolute;
+  top: 49%;
+  left: 52%;
+  color: white;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+@include mq("md") {
+  .FV-texts {
+    top: 50.5%;
+    left: 51.5%;
+  }
+}

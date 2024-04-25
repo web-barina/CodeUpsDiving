@@ -1,0 +1,10 @@
+@use "global" as *;
+.sns-logo {
+  width: rem(19.5);
+  height: auto;
+}
+@include mq("md") {
+  .sns-logo {
+    width: rem(24);
+  }
+}

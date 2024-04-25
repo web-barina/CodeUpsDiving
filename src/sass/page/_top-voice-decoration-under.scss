@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.top-voice-decoration-under {
+  display: none;
+}
+
+@include mq("md") {
+  .top-voice-decoration-under {
+    display: block;
+    position: absolute;
+    bottom: 7.5%;
+    right: 8.8%;
+    width: 5.4%;
+    height: auto;
+    z-index: 10;
+  }
+}

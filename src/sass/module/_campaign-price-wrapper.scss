@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.campaign-price-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left: rem(19);
+}

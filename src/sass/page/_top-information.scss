@@ -1,0 +1,10 @@
+@use "global" as *;
+.top-information {
+  background-color: $light-green;
+  padding: rem(80) 0;
+}
+@include mq("md") {
+  .top-information {
+    padding: rem(100) 0 rem(76);
+  }
+}

@@ -1,0 +1,13 @@
+@use "global" as *;
+.swiper-button-next::after {
+  background-image: url(../../assets/images/common/swiper-next.png);
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: rem(80);
+  height: rem(80);
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}

@@ -1,0 +1,15 @@
+@use "global" as *;
+.price-contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(28);
+}
+@include mq("md") {
+  .price-contents-wrapper {
+    flex-direction: row-reverse;
+    column-gap: rem(93);
+    margin: rem(40) auto 0 auto;
+    max-width: rem(1077);
+    width: 100%;
+  }
+}

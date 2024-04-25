@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.campaign-after-price {
+  margin-left: rem(16);
+  font-size: rem(32);
+  font-weight: $bold;
+  font-family: $second-font-family;
+  color: $green;
+}
+@include mq("md") {
+  .campaign-after-price {
+    margin-left: rem(24);
+    font-size: rem(40);
+  }
+}

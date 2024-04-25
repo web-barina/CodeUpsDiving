@@ -1,0 +1,9 @@
+@use "global" as *;
+.top-about-us-inner {
+  padding: 0 rem(16) 0 rem(14);
+}
+@include mq("md") {
+  .top-about-us-inner {
+    padding: 0 rem(180);
+  }
+}

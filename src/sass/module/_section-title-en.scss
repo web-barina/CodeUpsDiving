@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.section-title-en {
+  font-family: $title-font-family;
+  font-size: rem(32);
+  line-height: 1.25;
+}
+
+.section-title-en span {
+  color: $green;
+}
+
+.section-title-en--big {
+  font-size: rem(80);
+  line-height: 1;
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+}
+@include mq("md") {
+  .section-title-en {
+    font-size: rem(40);
+    line-height: 1;
+  }
+  .section-title-en--white {
+    color: $white;
+  }
+  .section-title-en--white span {
+    color: $white;
+  }
+  .section-title-en--big {
+    text-shadow: none;
+    font-size: rem(80);
+  }
+}

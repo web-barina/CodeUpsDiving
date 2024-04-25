@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(40);
+}
+.cards--voice {
+  row-gap: rem(40);
+}
+@include mq("md") {
+  .cards {
+    flex-direction: row;
+    max-width: rem(1080);
+    width: 100%;
+    column-gap: rem(40);
+    margin: 0 auto;
+  }
+  .cards--voice {
+    row-gap: rem(0);
+  }
+}

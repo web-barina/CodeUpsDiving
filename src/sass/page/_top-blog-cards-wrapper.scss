@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.top-blog-cards-wrapper {
+  margin-top: rem(28);
+}
+
+@include mq("md") {
+  .top-blog-cards-wrapper {
+    margin-top: rem(80);
+  }
+}

@@ -1,0 +1,24 @@
+@use "global" as *;
+.logo {
+  width: rem(120);
+  height: auto;
+}
+.logo--top-contact {
+  width: rem(174);
+  height: auto;
+  margin: 0 auto;
+}
+.logo--header {
+  width: rem(102);
+  height: auto;
+}
+@include mq("md") {
+  .logo--top-contact {
+    width: rem(200);
+    height: auto;
+  }
+  .logo--header {
+    width: rem(133);
+    height: auto;
+  }
+}

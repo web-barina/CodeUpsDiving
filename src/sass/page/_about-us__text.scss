@@ -1,0 +1,10 @@
+@use "global" as *;
+.about-us__text {
+  margin-top: rem(16);
+}
+
+@include mq("md") {
+  .about-us__text {
+    margin-top: rem(0);
+  }
+}

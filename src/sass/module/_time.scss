@@ -1,0 +1,7 @@
+@use "global" as *;
+
+time {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  line-height: 1.5;
+}

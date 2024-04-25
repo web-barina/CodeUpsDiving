@@ -1,0 +1,11 @@
+@use "global" as *;
+.contact__content {
+  margin-top: rem(40);
+}
+
+@include mq("md") {
+  .contact__content {
+    margin-top: rem(0);
+    padding-left: rem(80);
+  }
+}

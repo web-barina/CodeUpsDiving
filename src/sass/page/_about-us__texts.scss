@@ -1,0 +1,19 @@
+@use "global" as *;
+.about-us__texts {
+  margin-top: rem(41);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@include mq("md") {
+  .about-us__texts {
+    max-width: rem(840);
+    width: 100%;
+    position: absolute;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(40);
+    color: $white;
+    top: 38.5%;
+    left: 26.5%;
+  }
+}

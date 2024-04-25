@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.top-price-decoration {
+  display: none;
+}
+
+@include mq("md") {
+  .top-price-decoration {
+    display: block;
+    position: absolute;
+    bottom: 4.7%;
+    left: 6.5%;
+    width: 30.7%;
+    z-index: 10;
+  }
+}

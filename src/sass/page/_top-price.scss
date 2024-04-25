@@ -1,0 +1,11 @@
+@use "global" as *;
+.top-price {
+  padding: rem(82) 0;
+  background-color: $light-green;
+}
+@include mq("md") {
+  .top-price {
+    padding: rem(100) 0;
+    position: relative;
+  }
+}

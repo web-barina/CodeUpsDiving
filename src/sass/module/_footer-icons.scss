@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.footer-icons {
+  display: flex;
+  flex-direction: column;
+}
+@include mq("md") {
+  .footer-icons {
+    max-width: rem(1008);
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}

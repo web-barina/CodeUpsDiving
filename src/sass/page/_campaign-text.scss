@@ -1,0 +1,12 @@
+@use "global" as *;
+.campaign-text {
+  text-align: center;
+  line-height: 1.71428;
+  font-size: rem(14);
+}
+@include mq("md") {
+  .campaign-text {
+    line-height: 1.5;
+    font-size: rem(16);
+  }
+}

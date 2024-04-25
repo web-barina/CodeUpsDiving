@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.footer-logo {
+  width: rem(120);
+  height: auto;
+}
+@include mq("md") {
+  .footer-logo {
+    width: rem(200);
+  }
+}

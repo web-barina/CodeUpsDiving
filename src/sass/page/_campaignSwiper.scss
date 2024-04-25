@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.campaignSwiper {
+  margin-top: rem(0);
+}
+@include mq("md") {
+  .campaignSwiper {
+    margin-top: rem(15);
+  }
+}

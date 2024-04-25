@@ -1,0 +1,15 @@
+@use "global" as *;
+.FV-sub-text {
+  font-family: $title-font-family;
+  font-size: rem(20);
+  line-height: 1.65;
+  margin-top: rem(-10);
+  margin-left: rem(-20);
+}
+@include mq("md") {
+  .FV-sub-text {
+    font-family: $title-font-family;
+    font-size: rem(20);
+    line-height: 1.65;
+  }
+}

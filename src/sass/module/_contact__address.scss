@@ -1,0 +1,18 @@
+@use "global" as *;
+.contact__address {
+  width: 100%;
+  text-align: center;
+}
+.contact__address p {
+  margin-top: rem(4);
+}
+.contact__address p:first-child {
+  margin-top: rem(0);
+}
+
+@include mq("md") {
+  .contact__address {
+    width: 42%;
+    text-align: left;
+  }
+}

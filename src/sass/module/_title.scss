@@ -1,0 +1,34 @@
+@use "global" as *;
+.title {
+  font-size: rem(16);
+  padding-bottom: rem(8);
+  line-height: 1.5;
+  border-bottom: solid rem(1) $green;
+  font-weight: $bold;
+}
+.title--big {
+  font-size: rem(20);
+  line-height: 1.2;
+}
+.title--blog {
+  padding-bottom: rem(4);
+}
+.title--price {
+  padding-bottom: rem(4);
+}
+
+.title--voice {
+  font-size: rem(16);
+  padding-bottom: rem(4);
+  font-weight: 500;
+  line-height: 1.4375;
+}
+@include mq("md") {
+  .title--info {
+    font-size: rem(24);
+    line-height: 1;
+  }
+  .title--voice {
+    font-size: rem(24);
+  }
+}

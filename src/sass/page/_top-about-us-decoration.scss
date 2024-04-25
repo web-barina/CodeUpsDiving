@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.top-about-us-decoration {
+  display: none;
+}
+@include mq("md") {
+  .top-about-us-decoration {
+    display: block;
+    position: absolute;
+    bottom: 7%;
+    right: 4.5%;
+    width: rem(194);
+  }
+}

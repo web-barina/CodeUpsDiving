@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.campaign-pre-price {
+  line-height: 1;
+  font-size: rem(20);
+  font-family: $second-font-family;
+  text-decoration: line-through rem(3) $red;
+}
+
+@include mq("md") {
+  .campaign-pre-price {
+    font-size: rem(24);
+  }
+}

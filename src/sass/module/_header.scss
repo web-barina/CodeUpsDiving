@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: rem(80);
+  background-color: rgba($color: $black, $alpha: 0.68);
+  z-index: 9999;
+}
+@include mq("md") {
+  .header {
+    height: rem(90);
+  }
+}

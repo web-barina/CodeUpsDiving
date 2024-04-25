@@ -1,0 +1,19 @@
+@use "global" as *;
+.contact-text {
+  color: $green;
+  margin-top: rem(8);
+  line-height: 1.2857;
+  font-size: rem(14);
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+}
+.card__text--voice {
+  margin-top: rem(16);
+}
+@include mq("md") {
+  .contact-text {
+    text-shadow: none;
+  }
+  .card__text--voice {
+    margin-top: rem(40);
+  }
+}

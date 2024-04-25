@@ -1,0 +1,10 @@
+@use "global" as *;
+.card__customer-data-wrapper {
+  width: 100%;
+}
+
+@include mq("md") {
+  .card__customer-data-wrapper {
+    width: 58%;
+  }
+}

@@ -1,0 +1,65 @@
+@use "global" as *;
+//ボタン本体
+.btn {
+  position: relative;
+  width: rem(202);
+  display: inline-block;
+  padding: rem(16) rem(0);
+  text-align: center;
+  background-color: $green;
+  color: $white;
+  font-size: rem(14);
+  font-family: $title-font-family;
+}
+//外側二重線
+.btn::before {
+  border: 1px solid $green;
+  bottom: -4px;
+  content: "";
+  display: inline-block;
+  left: 10px;
+  position: absolute;
+  right: -4px;
+  top: 4px;
+  z-index: -1;
+}
+//矢印
+.btn span {
+  vertical-align: super;
+  margin-left: rem(8);
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  position: relative;
+  width: rem(40);
+  height: rem(1);
+  background: currentColor;
+}
+.btn span::after {
+  content: "";
+  width: rem(10);
+  border: rem(1.5) solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(40deg);
+  transform-origin: top right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  border: 1px solid $green;
+  background: $white;
+  color: $green;
+  transition: 0.3s;
+}
+
+.btn span :hover {
+  content: "";
+  background-image: url(../../assets/images/common/btn-arrow-hover.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
