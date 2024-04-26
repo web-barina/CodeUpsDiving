@@ -6,6 +6,8 @@
 }
 @include mq("md") {
   .top-about-us__img-wrapper {
-    margin-top: rem(40);
+    margin: rem(40) auto 0 auto;
+    max-width: rem(1100);
+    width: 100%;
   }
 }
