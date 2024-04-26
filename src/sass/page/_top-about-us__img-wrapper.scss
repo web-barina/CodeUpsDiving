@@ -1,6 +1,8 @@
 @use "global" as *;
 .top-about-us__img-wrapper {
-  margin-top: rem(28);
+  max-width: rem(500);
+  width: 100%;
+  margin: rem(28) auto 0 auto;
 }
 @include mq("md") {
   .top-about-us__img-wrapper {

@@ -7,6 +7,9 @@
   padding-bottom: rem(24);
   box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
   background-color: $white;
+  max-width: rem(500);
+  margin: 0 auto;
+  width: 100%;
 }
 .card--voice {
   padding-top: rem(15);
