@@ -10,6 +10,8 @@
 @include mq("md") {
   .footer-sns-logos {
     margin-top: rem(0);
-    margin-left: rem(16);
+    margin-left: rem(40);
+    padding-bottom: rem(10);
+    column-gap: rem(22.5);
   }
 }

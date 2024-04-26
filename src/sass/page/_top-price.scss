@@ -5,7 +5,7 @@
 }
 @include mq("md") {
   .top-price {
-    padding: rem(100) 0;
+    padding: rem(100) 0 rem(105) 0;
     position: relative;
   }
 }

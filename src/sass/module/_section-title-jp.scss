@@ -19,11 +19,14 @@
 @include mq("md") {
   .section-title-jp {
     margin-top: rem(8);
+    font-size: rem(10);
   }
   .section-title-jp--white {
     color: $white;
   }
   .section-title-jp--shadow {
+    margin-top: rem(12);
     text-shadow: none;
+    margin-top: rem(-10);
   }
 }
