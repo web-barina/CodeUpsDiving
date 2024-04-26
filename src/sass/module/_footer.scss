@@ -4,3 +4,8 @@
   background-color: $green;
   color: $white;
 }
+@include mq("md") {
+  .footer {
+    padding: rem(80) 0;
+  }
+}

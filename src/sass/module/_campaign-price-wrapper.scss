@@ -6,3 +6,8 @@
   align-items: baseline;
   margin-left: rem(19);
 }
+@include mq("md") {
+  .campaign-price-wrapper {
+    margin-top: rem(8);
+  }
+}

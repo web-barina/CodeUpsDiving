@@ -7,7 +7,7 @@
 }
 @include mq("md") {
   .top-campaign-slide {
-    max-width: rem(333);
+    min-width: rem(333);
     width: 100%;
   }
 }
