@@ -12,6 +12,7 @@
 @include mq("md") {
   .contact-text {
     text-shadow: none;
+    margin-top: rem(8);
   }
   .card__text--voice {
     margin-top: rem(40);

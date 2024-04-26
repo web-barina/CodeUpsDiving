@@ -11,6 +11,9 @@
 }
 @include mq("md") {
   .card__body--campaign {
-    padding: rem(24) rem(16) rem(40) rem(16);
+    padding: rem(24) rem(16) rem(33) rem(16);
+  }
+  .card__body--blog {
+    margin-top: rem(18);
   }
 }

@@ -7,8 +7,6 @@
 }
 @include mq("md") {
   .copy {
-    line-height: 1.28571;
-    font-size: rem(14);
     margin-top: rem(80);
   }
 }
