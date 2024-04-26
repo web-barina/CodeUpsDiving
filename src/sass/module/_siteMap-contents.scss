@@ -9,6 +9,10 @@
   background-color: $green;
   color: $white;
 }
+.siteMap-contents--header {
+  margin-top: rem(-17);
+  column-gap: rem(0);
+}
 @include mq("md") {
   .siteMap-contents {
     margin: rem(-19) auto 0 auto;
