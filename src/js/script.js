@@ -84,7 +84,7 @@ jQuery(function ($) {
   function PageTopAnime() {
     var scroll = $(window).scrollTop(); //スクロール値を取得
     if (scroll >= 300) {
-      //200pxスクロールしたら
+      //〇pxスクロールしたら
       $("#scroll-top").removeClass("DownMove"); // DownMoveというクラス名を除去して
       $("#scroll-top").addClass("UpMove"); // UpMoveというクラス名を追加して出現
     } else {

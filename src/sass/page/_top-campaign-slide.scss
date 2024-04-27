@@ -1,13 +1,5 @@
 @use "global" as *;
 .top-campaign-slide {
-  max-width: rem(280);
-  width: 100%;
   box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
   background-color: $white;
-}
-@include mq("md") {
-  .top-campaign-slide {
-    min-width: rem(333);
-    width: 100%;
-  }
 }

@@ -3,6 +3,7 @@
   padding: rem(48) 0 rem(56);
   background-color: $green;
   color: $white;
+  opacity: 1;
 }
 @include mq("md") {
   .footer {

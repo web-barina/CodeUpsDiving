@@ -13,32 +13,31 @@
 }
 //外側二重線
 .btn::before {
+  position: absolute;
   border: 1px solid $green;
   bottom: -4px;
   content: "";
   display: inline-block;
   left: 10px;
-  position: absolute;
   right: -4px;
   top: 4px;
   z-index: -1;
 }
 //矢印
 .btn span {
-  vertical-align: super;
-  margin-left: rem(8);
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
   position: relative;
+  display: inline-block;
   width: rem(40);
   height: rem(1);
+  margin-left: rem(8);
+  vertical-align: middle;
+  line-height: 1;
   background: currentColor;
 }
 .btn span::after {
   content: "";
   width: rem(10);
-  border: rem(1.5) solid currentColor;
+  border: rem(1) solid currentColor;
   border-left: 0;
   border-bottom: 0;
   transform: rotate(40deg);
@@ -48,18 +47,32 @@
   right: 0;
   box-sizing: border-box;
 }
-
-.btn:hover {
-  border: 1px solid $green;
-  background: $white;
-  color: $green;
-  transition: 0.3s;
-}
-
-.btn span :hover {
-  content: "";
-  background-image: url(../../assets/images/common/btn-arrow-hover.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+/*
+.c-btn.slide {
+  background: #fff;
+  color: #ff701e;
+  overflow: hidden;
+  position: relative;
   z-index: 1;
 }
+.c-btn.slide::after {
+  background: #ff701e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.c-btn.slide:hover {
+  color: #fff;
+}
+.c-btn.slide:hover::after {
+  transform: scale(1, 1);
+}
+ 
+*/
