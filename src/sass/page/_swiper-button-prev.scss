@@ -1,6 +1,6 @@
 @use "global" as *;
 .swiper-button-prev::after {
-  background-image: url(../../assets/images/common/swiper-prev.png);
+  background-image: url(/assets/images/common/swiper-prev.png);
   content: "";
   background-size: cover;
   background-repeat: no-repeat;
