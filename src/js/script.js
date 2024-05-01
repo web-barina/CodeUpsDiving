@@ -49,11 +49,9 @@ jQuery(function ($) {
   /***************
     カラーボックス
     **************/
-  //要素の取得とスピードの設定
   var box = $(".colorbox"),
     speed = 700;
 
-  //.colorboxの付いた全ての要素に対して下記の処理を行う
   box.each(function () {
     $(this).append('<div class="color"></div>');
     var color = $(this).find($(".color")),
@@ -62,7 +60,7 @@ jQuery(function ($) {
 
     image.css("opacity", "0");
     color.css("width", "0%");
-    //inviewを使って背景色が画面に現れたら処理をする
+
     color.on("inview", function () {
       if (counter == 0) {
         $(this)
@@ -85,14 +83,14 @@ jQuery(function ($) {
     var scroll = $(window).scrollTop(); //スクロール値を取得
     if (scroll >= 300) {
       //〇pxスクロールしたら
-      $("#scroll-top").removeClass("DownMove"); // DownMoveというクラス名を除去して
-      $("#scroll-top").addClass("UpMove"); // UpMoveというクラス名を追加して出現
+      $("#scroll-top").removeClass("DownMove");
+      $("#scroll-top").addClass("UpMove");
     } else {
       //それ以外は
       if ($("#scroll-top").hasClass("UpMove")) {
         //UpMoveというクラス名が既に付与されていたら
-        $("#scroll-top").removeClass("UpMove"); //  UpMoveというクラス名を除去し
-        $("#scroll-top").addClass("DownMove"); // DownMoveというクラス名を追加して非表示
+        $("#scroll-top").removeClass("UpMove");
+        $("#scroll-top").addClass("DownMove");
       }
     }
 

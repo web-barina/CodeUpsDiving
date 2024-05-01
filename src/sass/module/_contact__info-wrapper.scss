@@ -1,0 +1,9 @@
+@use "global" as *;
+.contact__info-wrapper {
+  margin-top: rem(16);
+}
+@include mq("md") {
+  .contact__info-wrapper {
+    margin-top: rem(24);
+  }
+}

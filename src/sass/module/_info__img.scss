@@ -12,6 +12,7 @@
   transform: translate(-50%, -50%);
   object-fit: cover;
 }
+
 @include mq("md") {
   .info__img {
     padding-top: 65.925%;
