@@ -1,6 +1,8 @@
 @use "global" as *;
 .top-voice-card-wrapper {
-  margin-top: rem(40);
+  margin: rem(40) auto 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 @include mq("md") {

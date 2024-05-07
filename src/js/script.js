@@ -35,7 +35,7 @@ jQuery(function ($) {
       768: {
         slidesPerView: 2.5,
       },
-      1000: {
+      1300: {
         slidesPerView: 3.3,
       },
     },

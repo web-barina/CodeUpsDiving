@@ -1,0 +1,6 @@
+@use "global" as *;
+.card__arrangement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

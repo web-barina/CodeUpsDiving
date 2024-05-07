@@ -2,6 +2,8 @@
 
 .top-blog-cards-wrapper {
   margin-top: rem(28);
+  display: flex;
+  flex-direction: column;
 }
 
 @include mq("md") {

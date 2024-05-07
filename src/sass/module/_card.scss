@@ -8,7 +8,6 @@
   box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
   background-color: $white;
   max-width: rem(500);
-  margin: 0 auto;
   width: 100%;
   opacity: 1;
 }
@@ -18,6 +17,7 @@
 @include mq("md") {
   .card--voice {
     padding: rem(24);
+    width: 48%;
   }
   .card--blog {
     width: 30%;

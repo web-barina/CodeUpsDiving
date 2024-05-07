@@ -1,6 +1,7 @@
 @use "global" as *;
 .card__text {
   padding-top: rem(16);
+  margin-top: 0;
 }
 @include mq("md") {
   .card__text {
