@@ -11,9 +11,11 @@
   color: $white;
 }
 .siteMap-contents--header {
+  height: calc(100vh - 80px);
   margin: rem(-17) auto 0 auto;
   max-width: rem(500);
   column-gap: rem(0);
+  overflow: scroll;
 }
 @include mq("md") {
   .siteMap-contents {
