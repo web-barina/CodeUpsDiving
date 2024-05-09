@@ -17,9 +17,12 @@
 @include mq("md") {
   .card--voice {
     padding: rem(24);
-    width: 48%;
+    width: 47%;
   }
   .card--blog {
     width: 30%;
+  }
+  .card--blog:nth-child(3) {
+    column-gap: 0;
   }
 }

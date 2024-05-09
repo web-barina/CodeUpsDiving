@@ -1,6 +1,7 @@
 @use "global" as *;
 .about-us__text {
   margin-top: rem(16);
+  font-weight: $regular;
 }
 
 @include mq("md") {

@@ -5,11 +5,9 @@
   font-size: rem(32);
   line-height: 1.25;
 }
-
-.section-title-en span {
+.section-title-en::first-letter {
   color: $green;
 }
-
 .section-title-en--big {
   font-size: rem(80);
   line-height: 1;
@@ -23,7 +21,7 @@
   .section-title-en--white {
     color: $white;
   }
-  .section-title-en--white span {
+  .section-title-en--white::first-letter {
     color: $white;
   }
   .section-title-en--big {

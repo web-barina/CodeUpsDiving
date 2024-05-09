@@ -2,7 +2,7 @@
 .about-us__img-right {
   width: 83%;
   aspect-ratio: 281 / 186;
-  position: relative;
+  position: relative; //写真比率管理用
   position: absolute;
   z-index: -1;
   right: 0;

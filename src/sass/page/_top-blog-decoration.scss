@@ -8,7 +8,7 @@
     display: block;
     position: absolute;
     top: 3%;
-    left: 7%;
+    left: calc(50% - min(48.4vw, 38.75rem));
     max-width: rem(437);
     width: 30.5%;
     z-index: 10;
