@@ -3,8 +3,8 @@
 .campaign-price-wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: baseline;
-  margin-left: rem(19);
 }
 @include mq("md") {
   .campaign-price-wrapper {

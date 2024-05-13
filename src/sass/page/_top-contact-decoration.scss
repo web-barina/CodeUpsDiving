@@ -10,7 +10,7 @@
 @include mq("md") {
   .top-contact-decoration {
     top: 13.5%;
-    right: 3.5%;
+    right: calc(50% - min(48.4vw, 38.75rem));
     max-width: rem(301);
     width: 21%;
   }

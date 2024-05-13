@@ -1,20 +1,19 @@
 @use "global" as *;
 
 .cards {
-  display: flex;
-  flex-direction: column;
-  row-gap: rem(40);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
   margin: 0 auto;
-}
-.cards--voice {
-  row-gap: rem(40);
 }
 @include mq("md") {
   .cards {
-    flex-direction: row;
-    flex-wrap: wrap;
+    gap: rem(80) rem(40);
     max-width: rem(1080);
     width: 100%;
-    column-gap: rem(40);
+    grid-template-columns: 1fr 1fr;
+  }
+  .cards--3cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

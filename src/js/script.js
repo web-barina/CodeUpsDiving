@@ -38,6 +38,10 @@ jQuery(function ($) {
     loop: true,
     slidesPerView: 1.24,
     spaceBetween: 24,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       500: {
         slidesPerView: 1.8,

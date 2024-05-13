@@ -16,3 +16,14 @@
     text-align: left;
   }
 }
+//contact住所の周り
+.contact__address-wrapper {
+  width: 100%;
+}
+@include mq("md") {
+  .contact__address-wrapper {
+    padding-right: rem(80);
+    width: 100%;
+    border-right: solid rem(1) $green;
+  }
+}

@@ -1,0 +1,48 @@
+@use "global" as *;
+.top-info {
+  background-color: $light-green;
+  padding: rem(80) 0;
+}
+@include mq("md") {
+  .top-info {
+    padding: rem(100) 0 rem(76);
+  }
+}
+//ダイビング情報コンテンツ周り
+.top-info-wrapper {
+  max-width: rem(500);
+  width: 100%;
+  margin: rem(28) auto rem(0) auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left;
+  row-gap: rem(24);
+}
+
+@include mq("md") {
+  .top-info-wrapper {
+    max-width: rem(1080);
+    grid-template-columns: 1fr 1fr;
+    margin: rem(40) auto rem(0) auto;
+  }
+}
+//ダイビング情報写真
+.top-info__img {
+  position: relative;
+  aspect-ratio: (540/356);
+}
+.top-info__img > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+@include mq("md") {
+  .top-info__img {
+    padding-top: 65.925%;
+  }
+}

@@ -3,7 +3,7 @@
   z-index: 10;
   position: absolute;
   top: 49%;
-  left: 52%;
+  left: 50%;
   color: white;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -11,6 +11,37 @@
 @include mq("md") {
   .FV-texts {
     top: 49%;
-    left: 51.5%;
+    left: 50%;
+  }
+}
+//FV 大きいタイトル
+.FV-main-text {
+  font-family: $second-font-family;
+  font-size: rem(40);
+  letter-spacing: 0.5em;
+  left: 1.2;
+  font-weight: 400;
+  text-indent: 0.5em;
+}
+@include mq("md") {
+  .FV-main-text {
+    font-size: rem(80);
+    line-height: 1.125;
+    letter-spacing: 0.53em;
+    text-indent: 0.53em;
+  }
+}
+//FV　小さいタイトル
+.FV-sub-text {
+  font-family: $title-font-family;
+  font-size: rem(20);
+  line-height: 1.65;
+  margin-top: rem(0);
+  margin-left: rem(-20);
+}
+@include mq("md") {
+  .FV-sub-text {
+    margin-top: rem(4);
+    margin-left: rem(-40);
   }
 }

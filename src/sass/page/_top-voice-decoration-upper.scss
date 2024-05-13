@@ -9,7 +9,7 @@
     display: block;
     position: absolute;
     top: 2.5%;
-    left: 7%;
+    left: calc(50% - min(48.4vw, 38.75rem));
     max-width: rem(301);
     height: auto;
   }

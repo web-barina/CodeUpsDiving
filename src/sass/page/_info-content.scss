@@ -1,7 +1,0 @@
-@use "global" as *;
-@include mq("md") {
-  .info__content {
-    padding-left: rem(48);
-    align-content: center;
-  }
-}
