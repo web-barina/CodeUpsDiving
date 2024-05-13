@@ -1,9 +1,0 @@
-@use "global" as *;
-@include mq("md") {
-  .header-title-jp {
-    font-size: rem(10);
-    line-height: 1.5;
-    color: $white;
-    margin-top: rem(4);
-  }
-}

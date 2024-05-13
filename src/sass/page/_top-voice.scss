@@ -1,4 +1,5 @@
 @use "global" as *;
+//トップお客様の声
 .top-voice {
   padding: rem(83) 0;
 }
@@ -6,5 +7,47 @@
   .top-voice {
     position: relative;
     padding: rem(145) 0;
+  }
+}
+//トップお客様の声周り
+.top-voice-card-wrapper {
+  margin: rem(40) auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@include mq("md") {
+  .top-voice-card-wrapper {
+    margin-top: rem(30);
+  }
+}
+//トップお客様の声、装飾上
+.top-voice-decoration-upper {
+  display: none;
+}
+@include mq("md") {
+  .top-voice-decoration-upper {
+    display: block;
+    position: absolute;
+    top: 2.5%;
+    left: calc(50% - min(48.4vw, 38.75rem));
+    max-width: rem(301);
+    height: auto;
+  }
+}
+//トップお客様の声、装飾下
+.top-voice-decoration-under {
+  display: none;
+}
+@include mq("md") {
+  .top-voice-decoration-under {
+    display: block;
+    position: absolute;
+    bottom: 7.5%;
+    right: calc(50% - min(48.4vw, 38.75rem));
+    max-width: rem(71);
+    width: 5%;
+    height: auto;
+    z-index: 10;
   }
 }

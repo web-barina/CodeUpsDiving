@@ -1,9 +1,0 @@
-@use "global" as *;
-@include mq("md") {
-  .header-title-en {
-    font-size: rem(18);
-    line-height: 1;
-    color: $white;
-    font-family: $title-font-family;
-  }
-}

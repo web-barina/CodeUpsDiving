@@ -1,15 +1,17 @@
 @use "global" as *;
 
 .about-us__img {
-  position: relative;
+  display: flex;
+  flex-direction: row;
   padding-top: 5rem;
 }
 //about us背景画像左側
 .about-us__img-left {
-  position: relative;
+  margin-bottom: rem(18);
+  position: relative; //写真比率管理用
   aspect-ratio: 128 / 194;
   width: 37.03%;
-  overflow: hidden;
+  z-index: 0;
 }
 .about-us__img-left > img {
   position: absolute;
@@ -20,22 +22,20 @@
   transform: translate(-50%, -50%);
   object-fit: cover;
 }
-
 @include mq("md") {
   .about-us__img-left {
+    margin-bottom: rem(55);
     aspect-ratio: 400 / 606;
   }
 }
 //about us背景画像右側
 .about-us__img-right {
+  margin-top: rem(26);
+  margin-left: rem(-64);
   width: 83%;
   aspect-ratio: 281 / 186;
   position: relative; //写真比率管理用
-  position: absolute;
   z-index: -1;
-  right: 0;
-  bottom: -10%;
-  overflow: hidden;
 }
 .about-us__img-right > img {
   position: absolute;
@@ -49,5 +49,7 @@
 @include mq("md") {
   .about-us__img-right {
     aspect-ratio: 880 / 581;
+    margin-top: rem(80);
+    margin-left: rem(-200);
   }
 }

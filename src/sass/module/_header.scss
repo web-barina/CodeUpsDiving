@@ -1,5 +1,5 @@
 @use "global" as *;
-
+//ヘッダー全体
 .header {
   position: fixed;
   width: 100%;
@@ -10,5 +10,48 @@
 @include mq("md") {
   .header {
     height: rem(90);
+  }
+}
+//ヘッダーインナー
+.header-inner {
+  height: inherit;
+  padding: 0 rem(15);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@include mq("md") {
+  .header-inner {
+    max-width: rem(1400);
+    width: 100%;
+    padding: 0 0 0 rem(15);
+    margin: 0 auto;
+    height: inherit;
+  }
+}
+//ヘッダー日本語タイトル
+@include mq("md") {
+  .header-title-jp {
+    font-size: rem(10);
+    line-height: 1.5;
+    color: $white;
+    margin-top: rem(4);
+  }
+}
+//ヘッダー英語タイトル
+@include mq("md") {
+  .header-title-en {
+    font-size: rem(18);
+    line-height: 1;
+    color: $white;
+    font-family: $title-font-family;
+  }
+}
+//ヘッダー中身、クリック領域広げる
+@include mq("md") {
+  .header__content {
+    height: inherit;
   }
 }

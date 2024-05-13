@@ -11,6 +11,11 @@
   width: 100%;
   opacity: 1;
 }
+@include mq("md") {
+  .card {
+    max-width: none;
+  }
+}
 .card--voice {
   padding-top: rem(15);
 }
@@ -22,7 +27,6 @@
 //カード画像
 .card__img {
   position: relative;
-  padding-top: 66.966%;
 }
 .card__img > img {
   position: absolute;
@@ -37,6 +41,9 @@
   .card__img {
     padding-top: 67.142%;
   }
+}
+.card__img--blog {
+  aspect-ratio: (301/201);
 }
 //カード内容全体
 .card__contents {
@@ -98,5 +105,33 @@
     border: solid rem(1) $green;
     line-height: 1.833333;
     padding: rem(6) rem(16);
+  }
+}
+
+.card__text--voice {
+  margin-top: rem(16);
+}
+.card__text--voice {
+  margin-top: rem(40);
+}
+//カードお客様の声画像
+.card__voice-img {
+  position: relative;
+  aspect-ratio: (180/140);
+  width: 100%;
+}
+.card__voice-img > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+@include mq("md") {
+  .card__voice-img {
+    aspect-ratio: (150/117);
+    width: 38%;
   }
 }

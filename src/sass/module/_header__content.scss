@@ -1,6 +1,0 @@
-@use "global" as *;
-@include mq("md") {
-  .header__content {
-    height: inherit;
-  }
-}

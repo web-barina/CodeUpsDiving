@@ -1,5 +1,5 @@
 @use "global" as *;
-
+//トップキャンペーンセクション全体
 .top-campaign {
   padding-top: rem(40);
   overflow: hidden;
@@ -8,4 +8,23 @@
   .top-campaign {
     padding-top: rem(120);
   }
+}
+//トップキャンペーンスライダー周り
+.top-campaign-wrapper {
+  padding: rem(25) 0;
+  z-index: 10;
+  overflow: hidden;
+}
+//スライダーボタンrelative用
+@include mq("md") {
+  .top-campaign-swiper-button-relative {
+    position: relative;
+  }
+}
+//キャンペーン各スライド
+.top-campaign-slide {
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+  background-color: $white;
+  opacity: 1;
+  height: auto;
 }
