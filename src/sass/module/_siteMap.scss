@@ -1,0 +1,68 @@
+@use "global" as *;
+//サイトマップ
+.siteMap-contents {
+  max-width: rem(500);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  justify-content: space-around;
+  column-gap: rem(16);
+  background-color: $green;
+  color: $white;
+}
+.siteMap-contents--header {
+  height: calc(100vh - rem(80));
+  margin: rem(-17) auto 0 auto;
+  max-width: rem(500);
+  column-gap: rem(0);
+  overflow: scroll;
+}
+@include mq("md") {
+  .siteMap-contents {
+    width: 100%;
+    max-width: rem(1080);
+    flex-direction: row;
+    column-gap: rem(120);
+  }
+}
+//SPのときに2つに分かれるようにするため
+@include mq("md") {
+  .siteMap__sp-layout {
+    row-gap: 2.5rem;
+    display: flex;
+    column-gap: rem(120);
+  }
+}
+//リストマーク付きのところ
+.siteMap-main-title {
+  background: url(../../assets/images/common/site-map-list-icon.png) no-repeat 0 0;
+  background-size: auto rem(18);
+  padding-left: rem(22);
+  line-height: 1.125;
+  font-weight: $bold;
+  margin-top: rem(41);
+  list-style: none;
+}
+//リストマークつかないところ
+.siteMap-sub-title {
+  margin-left: rem(22);
+  margin-top: rem(24);
+  line-height: 1.125;
+}
+//PCの時並べ替え
+@include mq("md") {
+  .siteMap-main--order1 {
+    order: 1;
+  }
+  .siteMap-main--order2 {
+    order: 2;
+  }
+  .siteMap-main--order3 {
+    order: 3;
+  }
+  .siteMap-main--order4 {
+    order: 4;
+  }
+}

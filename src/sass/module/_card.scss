@@ -43,7 +43,7 @@
   }
 }
 .card__img--blog {
-  aspect-ratio: (301/201);
+  aspect-ratio: 301/201;
 }
 //カード内容全体
 .card__contents {
@@ -62,8 +62,6 @@
 }
 .card__body--campaign {
   padding: rem(16);
-  display: flex;
-  flex-direction: column;
 }
 .card__body--blog {
   margin-top: rem(24);
@@ -107,17 +105,26 @@
     padding: rem(6) rem(16);
   }
 }
-
 .card__text--voice {
   margin-top: rem(16);
 }
 .card__text--voice {
   margin-top: rem(40);
 }
+//カードキャンペーンスライダー画像
+.card__img--campaign {
+  aspect-ratio: 280/188;
+}
+@include mq("md") {
+  .card__img--campaign {
+    aspect-ratio: 333/223;
+  }
+}
+
 //カードお客様の声画像
 .card__voice-img {
   position: relative;
-  aspect-ratio: (180/140);
+  aspect-ratio: 180/140;
   width: 100%;
 }
 .card__voice-img > img {
@@ -131,7 +138,12 @@
 }
 @include mq("md") {
   .card__voice-img {
-    aspect-ratio: (150/117);
+    aspect-ratio: 150/117;
     width: 38%;
   }
+}
+//下ぞろえのため
+.card__arrange {
+  display: flex;
+  flex-direction: column;
 }

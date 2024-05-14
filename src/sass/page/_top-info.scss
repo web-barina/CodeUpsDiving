@@ -1,10 +1,12 @@
 @use "global" as *;
 .top-info {
   background-color: $light-green;
+  margin-top: rem(70);
   padding: rem(80) 0;
 }
 @include mq("md") {
   .top-info {
+    margin-top: rem(164);
     padding: rem(100) 0 rem(76);
   }
 }
@@ -29,7 +31,7 @@
 //ダイビング情報写真
 .top-info__img {
   position: relative;
-  aspect-ratio: (540/356);
+  aspect-ratio: 540/356;
 }
 .top-info__img > img {
   position: absolute;
@@ -43,6 +45,6 @@
 
 @include mq("md") {
   .top-info__img {
-    padding-top: 65.925%;
+    aspect-ratio: 345/227;
   }
 }

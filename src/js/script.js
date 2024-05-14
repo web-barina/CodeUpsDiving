@@ -35,30 +35,10 @@ jQuery(function ($) {
    * campaign-swiper*
    ******************/
   var topCampaignSwiper = new Swiper("#topCampaignSwiper", {
-    loop: true,
-    slidesPerView: 1.24,
-    spaceBetween: 24,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      500: {
-        slidesPerView: 1.8,
-        spaceBetween: 24,
-      },
-      768: {
-        slidesPerView: 2.8,
-        spaceBetween: 40,
-      },
-      1300: {
-        slidesPerView: 3.3,
-        spaceBetween: 40,
-      },
-    },
+    slidesPerView: auto,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".top-swiper-button-next",
+      prevEl: ".top-swiper-button-prev",
     },
   });
   /***************

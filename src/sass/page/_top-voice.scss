@@ -1,12 +1,12 @@
 @use "global" as *;
 //トップお客様の声
 .top-voice {
-  padding: rem(83) 0;
+  margin-top: rem(83);
 }
 @include mq("md") {
   .top-voice {
     position: relative;
-    padding: rem(145) 0;
+    margin-top: rem(145);
   }
 }
 //トップお客様の声周り

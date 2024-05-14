@@ -1,7 +1,8 @@
 @use "global" as *;
 //フッター全体
 .footer {
-  padding: rem(48) 0 rem(56);
+  margin-top: rem(160);
+  padding: rem(48) 0 rem(56) 0;
   background-color: $green;
   color: $white;
   opacity: 1;

@@ -1,9 +1,8 @@
 @use "global" as *;
-
+//about us画像全体
 .about-us__img {
   display: flex;
   flex-direction: row;
-  padding-top: 5rem;
 }
 //about us背景画像左側
 .about-us__img-left {

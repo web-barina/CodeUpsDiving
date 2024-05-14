@@ -3,9 +3,11 @@
 .top-price-section {
   padding: rem(82) 0;
   background-color: $light-green;
+  margin-top: rem(80);
 }
 @include mq("md") {
   .top-price-section {
+    margin-top: rem(140);
     padding: rem(100) 0 rem(105) 0;
     position: relative;
   }
@@ -74,6 +76,7 @@
 .top-price-img {
   width: 100%;
   position: relative;
+  aspect-ratio: 345/227;
 }
 .top-price-img > source {
   position: absolute;
@@ -87,6 +90,7 @@
 @include mq("md") {
   .top-price-img {
     width: 50%;
+    aspect-ratio: 746/492;
   }
 }
 
