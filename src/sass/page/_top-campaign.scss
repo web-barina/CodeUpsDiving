@@ -10,20 +10,20 @@
   }
 }
 //トップキャンペーンスライダー周り
-.top-campaign-wrapper {
+.top-campaign__wrapper {
   margin-top: rem(24);
   padding-bottom: rem(10);
   z-index: 10;
   overflow: hidden;
 }
 @include mq("md") {
-  .top-campaign-wrapper {
+  .top-campaign__wrapper {
     margin-top: rem(40);
   }
 }
 //スライダーボタンrelative用
 @include mq("md") {
-  .top-campaign-swiper-button-relative {
+  .top-campaign__swiper-button-relative {
     position: relative;
   }
 }
@@ -71,17 +71,18 @@
   top: 0;
 }
 //キャンペーン各スライド
-.top-campaign-slide {
+.top-campaign__slide {
   box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
   background-color: $white;
   opacity: 1;
   width: rem(280);
   height: auto;
   margin-right: rem(24);
+  display: flex;
+  flex-direction: column;
 }
 @include mq("md") {
-  .top-campaign-slide {
+  .top-campaign__slide {
     width: rem(333);
-    margin-right: rem(40);
   }
 }

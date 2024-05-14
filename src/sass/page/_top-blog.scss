@@ -15,22 +15,22 @@
   }
 }
 //トップブログカード周り
-.top-blog-cards-wrapper {
+.top-blog__cards-wrapper {
   margin-top: rem(28);
   display: flex;
   flex-direction: column;
 }
 @include mq("md") {
-  .top-blog-cards-wrapper {
+  .top-blog__cards-wrapper {
     margin-top: rem(80);
   }
 }
 //トップブログ装飾
-.top-blog-decoration {
+.top-blog__decoration {
   display: none;
 }
 @include mq("md") {
-  .top-blog-decoration {
+  .top-blog__decoration {
     display: block;
     position: absolute;
     top: 3%;

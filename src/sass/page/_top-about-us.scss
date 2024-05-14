@@ -23,11 +23,11 @@
   }
 }
 //トップabout us装飾
-.top-about-us-decoration {
+.top-about-us__decoration {
   display: none;
 }
 @include mq("md") {
-  .top-about-us-decoration {
+  .top-about-us__decoration {
     display: block;
     position: absolute;
     bottom: 7%;

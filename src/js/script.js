@@ -35,7 +35,14 @@ jQuery(function ($) {
    * campaign-swiper*
    ******************/
   var topCampaignSwiper = new Swiper("#topCampaignSwiper", {
-    slidesPerView: auto,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 24,
+    breakpoints: {
+      768: {
+        spaceBetween: 40,
+      },
+    },
     navigation: {
       nextEl: ".top-swiper-button-next",
       prevEl: ".top-swiper-button-prev",

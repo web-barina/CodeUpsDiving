@@ -48,7 +48,6 @@
 //カード内容全体
 .card__contents {
   margin-top: auto;
-  flex-grow: 1;
 }
 @include mq("md") {
   .card__contents {
@@ -68,7 +67,7 @@
 }
 @include mq("md") {
   .card__body--campaign {
-    padding: rem(24) rem(16) rem(33) rem(16);
+    padding: rem(24) rem(16) rem(0) rem(16);
   }
   .card__body--blog {
     margin-top: rem(18);
@@ -141,9 +140,4 @@
     aspect-ratio: 150/117;
     width: 38%;
   }
-}
-//下ぞろえのため
-.card__arrange {
-  display: flex;
-  flex-direction: column;
 }
