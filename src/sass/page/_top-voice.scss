@@ -10,14 +10,14 @@
   }
 }
 //トップお客様の声周り
-.top-voice__card-wrapper {
+.top-voice__cards-wrapper {
   margin: rem(40) auto 0 auto;
   display: flex;
   flex-direction: column;
 }
 
 @include mq("md") {
-  .top-voice__card-wrapper {
+  .top-voice__cards-wrapper {
     margin-top: rem(30);
   }
 }
@@ -29,7 +29,7 @@
   .top-voice__decoration-upper {
     display: block;
     position: absolute;
-    top: 2.5%;
+    top: -19.5%;
     left: calc(50% - min(48.4vw, 38.75rem));
     max-width: rem(301);
     height: auto;
@@ -43,8 +43,8 @@
   .top-voice__decoration-under {
     display: block;
     position: absolute;
-    bottom: 7.5%;
-    right: calc(50% - min(48.4vw, 38.75rem));
+    bottom: -10.5%;
+    right: calc(50% - min(48.4vw, 33.75rem));
     max-width: rem(71);
     width: 5%;
     height: auto;

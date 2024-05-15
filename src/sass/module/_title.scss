@@ -12,6 +12,7 @@
 .title--big {
   font-size: rem(20);
   line-height: 1.2;
+  padding-bottom: rem(4);
 }
 .title--blog {
   padding-bottom: rem(4);
@@ -27,6 +28,9 @@
   line-height: 1.4375;
 }
 @include mq("md") {
+  .title--big {
+    font-size: rem(24);
+  }
   .title--info {
     font-size: rem(24);
     line-height: 1;

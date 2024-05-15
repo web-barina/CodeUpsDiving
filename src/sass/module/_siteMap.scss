@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: row;
   height: fit-content;
-  justify-content: space-around;
   column-gap: rem(16);
   background-color: $green;
   color: $white;
@@ -16,8 +15,7 @@
   height: calc(100vh - rem(80));
   margin: rem(-17) auto 0 auto;
   max-width: rem(500);
-  column-gap: rem(0);
-  overflow: scroll;
+  column-gap: rem(8);
 }
 @include mq("md") {
   .siteMap-contents {

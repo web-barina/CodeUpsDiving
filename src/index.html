@@ -112,7 +112,7 @@
         </div>
       </div>
       <div class="sp-nav">
-        <div class="inner">
+        <div class="inner inner--sp-nav">
           <div class="siteMap-contents siteMap-contents--header">
             <div class="siteMap__sp-layout">
               <div class="siteMap-content">
@@ -127,19 +127,6 @@
                 <div class="siteMap-main-title"><a href="#">私たちについて</a></div>
               </div>
               <div class="siteMap-main">
-                <div class="siteMap-main-title"><a href="#">お客様の声</a></div>
-                <div class="siteMap-main-title"><a href="#">料金一覧</a></div>
-                <div class="siteMap-sub">
-                  <ul>
-                    <li class="siteMap-sub-title"><a href="#">ライセンス講習</a></li>
-                    <li class="siteMap-sub-title"><a href="#">体験ダイビング</a></li>
-                    <li class="siteMap-sub-title"><a href="#">ファンダイビング</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="siteMap__sp-layout">
-              <div class="siteMap-main">
                 <div class="siteMap-main-title"><a href="#">ダイビング情報</a></div>
                 <div class="siteMap-sub">
                   <ul>
@@ -150,6 +137,20 @@
                 </div>
                 <div class="siteMap-main-title"><a href="#">ブログ</a></div>
               </div>
+            </div>
+            <div class="siteMap__sp-layout">
+              <div class="siteMap-main">
+                <div class="siteMap-main-title"><a href="#">お客様の声</a></div>
+                <div class="siteMap-main-title"><a href="#">料金一覧</a></div>
+                <div class="siteMap-sub">
+                  <ul>
+                    <li class="siteMap-sub-title"><a href="#">ライセンス講習</a></li>
+                    <li class="siteMap-sub-title"><a href="#">体験ダイビング</a></li>
+                    <li class="siteMap-sub-title"><a href="#">ファンダイビング</a></li>
+                  </ul>
+                </div>
+              </div>
+
               <ul class="siteMap-main">
                 <li class="siteMap-main-title"><a href="#">よくある質問</a></li>
                 <li class="siteMap-main-title">
@@ -201,9 +202,9 @@
               <p class="section-title-en">Campaign</p>
               <h2 class="section-title-jp">キャンペーン</h2>
             </div>
-            <div class="top-swiper-button-wrapper">
-              <div class="top-swiper-button-prev"></div>
-              <div class="top-swiper-button-next"></div>
+            <div class="top-campaign__swiper-button-wrapper">
+              <div class="top-campaign__swiper-button-prev"></div>
+              <div class="top-campaign__swiper-button-next"></div>
             </div>
           </div>
           <div class="swiper topCampaignSwiper" id="topCampaignSwiper">
@@ -310,7 +311,7 @@
             <div class="top-about-us__texts">
               <p class="top-about-us__main-text">Dive into<br />the Ocean</p>
               <div class="about-us__text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                 <div class="btn-wrapper btn-wrapper--about">
                   <a href="#" class="btn"
                     >View more
@@ -333,7 +334,7 @@
             <div class="top-info-wrapper">
               <div class="top-info__img colorbox"><img src="./assets/images/common/information.png" alt="fish-and-sea" /></div>
               <div class="info__content">
-                <h3 class="title title--info">ライセンス講習</h3>
+                <h3 class="title title--big">ライセンス講習</h3>
                 <div class="info__text">
                   当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />
                   正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
@@ -359,34 +360,34 @@
           </div>
           <div class="top-blog__cards-wrapper">
             <div class="cards cards--3cards">
-              <a href="#" class="card">
+              <a href="#" class="card card--blog">
                 <figure class="card__img card__img--blog">
                   <img src="./assets/images/common/blog1.png" alt="coral" />
                 </figure>
                 <div class="card__body card__body--blog">
                   <time datetime="2023-11-17">2023.11.17</time>
                   <h3 class="title title--blog">ライセンス取得</h3>
-                  <div class="card__contents">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
+                  <div class="card__text card__text--blog">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
                 </div>
               </a>
-              <a href="#" class="card">
+              <a href="#" class="card card--blog">
                 <figure class="card__img card__img--blog">
                   <img src="./assets/images/common/blog2.png" alt="sea-turtle" />
                 </figure>
                 <div class="card__body card__body--blog">
                   <time datetime="2023-11-17">2023.11.17</time>
                   <h3 class="title title--blog">ウミガメと泳ぐ</h3>
-                  <div class="card__contents">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
+                  <div class="card__text card__text--blog">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
                 </div>
               </a>
-              <a href="#" class="card">
+              <a href="#" class="card card--blog">
                 <figure class="card__img card__img--blog">
                   <img src="./assets/images/common/blog3.png" alt="fish" />
                 </figure>
                 <div class="card__body card__body--blog">
                   <time datetime="2023-11-17">2023.11.17</time>
                   <h3 class="title title--blog">カクレクマノミ</h3>
-                  <div class="card__contents">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
+                  <div class="card__text card__text--blog">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
                 </div>
               </a>
             </div>
@@ -407,7 +408,7 @@
             <p class="section-title-en">Voice</p>
             <h2 class="section-title-jp">お客様の声</h2>
           </div>
-          <div class="top-voice__card-wrapper">
+          <div class="top-voice__cards-wrapper">
             <div class="cards cards--voice">
               <div class="card card--voice">
                 <div class="card__info">
@@ -550,23 +551,25 @@
         <div class="inner">
           <div class="contact-decoration"><img src="./assets/images/common/decoration-fish.png" alt="decoration-fish" /></div>
           <div class="contact-wrapper">
-            <div class="contact__address-wrapper">
-              <div class="contact__info-wrapper">
-                <div class="logo logo--top-contact"><img src="./assets/images/common/contact-logo.png" alt="logo" /></div>
-              </div>
-              <div class="contact__info">
-                <div class="contact__address">
-                  <p>沖縄県那覇市1-1</p>
-                  <p>TEL:0120-000-0000</p>
-                  <p>営業時間:8:30-19:00</p>
-                  <p>定休日:毎週火曜日</p>
+            <div class="contact-inner">
+              <div class="contact__address-wrapper">
+                <div class="contact__info-wrapper">
+                  <div class="logo logo--top-contact"><img src="./assets/images/common/contact-logo.png" alt="logo" /></div>
                 </div>
-                <div class="contact__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6888.6383644040225!2d127.68185319225111!3d26.211610509147523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1713793644657!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="contact__info">
+                  <div class="contact__address">
+                    <p>沖縄県那覇市1-1</p>
+                    <p>TEL:0120-000-0000</p>
+                    <p>営業時間:8:30-19:00</p>
+                    <p>定休日:毎週火曜日</p>
+                  </div>
+                  <div class="contact__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6888.6383644040225!2d127.68185319225111!3d26.211610509147523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1713793644657!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </div>
               </div>
-            </div>
-            <div class="contact__content">
-              <div class="section-title-wrapper">
-                <p class="section-title-en section-title-en--big">Contact</p>
+              <div class="contact__content">
+                <div class="section-title-wrapper">
+                  <p class="section-title-en section-title-en--big">Contact</p>
+                </div>
                 <h2 class="section-title-jp section-title-jp--shadow">お問い合わせ</h2>
                 <p class="contact-text">ご予約・お問い合わせはコチラ</p>
                 <div class="btn-wrapper btn-wrapper--in-content">
@@ -587,15 +590,15 @@
         <a href="#"><img src="./assets/images/common/scroll-top.png" alt="上へ戻る" /></a>
       </div>
       <div class="inner">
-        <div class="footer-icons">
-          <div class="footer-logo">
+        <div class="footer__icons">
+          <div class="footer__logo">
             <a href="#"><img src="./assets/images/common/logo.png" alt="logo" /></a>
           </div>
-          <div class="footer-sns-logos">
-            <div class="sns-logo">
+          <div class="footer__sns-logos">
+            <div class="footer__sns-logo">
               <a href="#"><img src="./assets/images/common/FacebookLogo.png" alt="facebook" /></a>
             </div>
-            <div class="sns-logo">
+            <div class="footer__sns-logo">
               <a href="#"><img src="./assets/images/common/Instagram.png" alt="instagram" /></a>
             </div>
           </div>
@@ -614,19 +617,6 @@
               <div class="siteMap-main-title"><a href="#">私たちについて</a></div>
             </div>
             <div class="siteMap-main">
-              <div class="siteMap-main-title"><a href="#">お客様の声</a></div>
-              <div class="siteMap-main-title"><a href="#">料金一覧</a></div>
-              <div class="siteMap-sub">
-                <ul>
-                  <li class="siteMap-sub-title"><a href="#">ライセンス講習</a></li>
-                  <li class="siteMap-sub-title"><a href="#">体験ダイビング</a></li>
-                  <li class="siteMap-sub-title"><a href="#">ファンダイビング</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="siteMap__sp-layout">
-            <div class="siteMap-main">
               <div class="siteMap-main-title"><a href="#">ダイビング情報</a></div>
               <div class="siteMap-sub">
                 <ul>
@@ -637,6 +627,20 @@
               </div>
               <div class="siteMap-main-title"><a href="#">ブログ</a></div>
             </div>
+          </div>
+          <div class="siteMap__sp-layout">
+            <div class="siteMap-main">
+              <div class="siteMap-main-title"><a href="#">お客様の声</a></div>
+              <div class="siteMap-main-title"><a href="#">料金一覧</a></div>
+              <div class="siteMap-sub">
+                <ul>
+                  <li class="siteMap-sub-title"><a href="#">ライセンス講習</a></li>
+                  <li class="siteMap-sub-title"><a href="#">体験ダイビング</a></li>
+                  <li class="siteMap-sub-title"><a href="#">ファンダイビング</a></li>
+                </ul>
+              </div>
+            </div>
+
             <ul class="siteMap-main">
               <li class="siteMap-main-title"><a href="#">よくある質問</a></li>
               <li class="siteMap-main-title">

@@ -27,3 +27,11 @@
     }
   }
 }
+
+.inner--sp-nav {
+  overflow: scroll;
+  overscroll-behavior-y: contain;
+  @include mq("md") {
+    overflow: visible;
+  }
+}

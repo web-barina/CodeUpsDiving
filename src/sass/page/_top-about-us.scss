@@ -30,19 +30,19 @@
   .top-about-us__decoration {
     display: block;
     position: absolute;
-    bottom: 7%;
-    right: calc(50% - min(48.4vw, 38.75rem));
+    bottom: -11%;
+    right: calc(50% - min(48.4vw, 39.5rem));
     max-width: rem(194);
-    width: 10.5%;
+    width: 13%;
   }
 }
-//トップのみテキスト
+//トップのみテキスト全体
 .top-about-us__texts {
   margin-top: rem(41);
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: rem(13);
 }
-
 @include mq("md") {
   .top-about-us__texts {
     width: min(rem(840), 80%);
@@ -50,8 +50,8 @@
     grid-template-columns: 1fr 1fr;
     column-gap: rem(40);
     color: $white;
-    top: 38.5%;
-    right: calc(50% - min(48.4vw, 31.75rem));
+    top: 35%;
+    right: calc(50% - min(48.4vw, 31rem));
   }
 }
 .top-about-us__main-text {
@@ -63,7 +63,7 @@
 @include mq("md") {
   .top-about-us__main-text {
     font-size: rem(80);
-    line-height: 1.125;
+    line-height: 1.2;
     color: $white;
   }
 }

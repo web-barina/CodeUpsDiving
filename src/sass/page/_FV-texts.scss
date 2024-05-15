@@ -35,13 +35,11 @@
 .FV-sub-text {
   font-family: $title-font-family;
   font-size: rem(20);
-  line-height: 1.65;
+  line-height: 1;
   margin-top: rem(0);
-  margin-left: rem(-20);
 }
 @include mq("md") {
   .FV-sub-text {
-    margin-top: rem(4);
-    margin-left: rem(-40);
+    margin-top: rem(10);
   }
 }

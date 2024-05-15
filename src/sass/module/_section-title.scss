@@ -49,7 +49,7 @@
   font-weight: $regular;
 }
 .section-title-jp--shadow {
-  margin-top: rem(-6);
+  line-height: 1;
   text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 @include mq("md") {
@@ -61,8 +61,6 @@
     color: $white;
   }
   .section-title-jp--shadow {
-    margin-top: rem(12);
     text-shadow: none;
-    margin-top: rem(-10);
   }
 }

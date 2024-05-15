@@ -11,14 +11,13 @@
 }
 //トップキャンペーンスライダー周り
 .top-campaign__wrapper {
-  margin-top: rem(24);
+  margin-top: rem(27);
   padding-bottom: rem(10);
   z-index: 10;
-  overflow: hidden;
 }
 @include mq("md") {
   .top-campaign__wrapper {
-    margin-top: rem(40);
+    margin-top: rem(44);
   }
 }
 //スライダーボタンrelative用
@@ -28,12 +27,12 @@
   }
 }
 //スライダーボタン周り
-.top-swiper-button-wrapper {
+.top-campaign__swiper-button-wrapper {
   display: none;
 }
 
 @include mq("md") {
-  .top-swiper-button-wrapper {
+  .top-campaign__swiper-button-wrapper {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -47,7 +46,7 @@
   }
 }
 //スライダーボタン左
-.top-swiper-button-prev::after {
+.top-campaign__swiper-button-prev::after {
   background-image: url(/assets/images/common/slider-left-arrow.png);
   content: "";
   background-size: cover;
@@ -59,7 +58,7 @@
   top: 0;
 }
 //スライダーボタン右
-.top-swiper-button-next::after {
+.top-campaign__swiper-button-next::after {
   background-image: url(/assets/images/common/slider-right-arrow.png);
   content: "";
   background-size: cover;
@@ -77,7 +76,6 @@
   opacity: 1;
   width: rem(280);
   height: auto;
-  margin-right: rem(24);
   display: flex;
   flex-direction: column;
 }

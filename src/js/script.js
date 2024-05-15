@@ -44,8 +44,8 @@ jQuery(function ($) {
       },
     },
     navigation: {
-      nextEl: ".top-swiper-button-next",
-      prevEl: ".top-swiper-button-prev",
+      nextEl: ".top-campaign__swiper-button-next",
+      prevEl: ".top-campaign__swiper-button-prev",
     },
   });
   /***************
