@@ -36,7 +36,6 @@
     margin: auto;
   }
 }
-
 //カード画像
 .card__img {
   position: relative;
@@ -87,7 +86,6 @@
     margin-top: rem(18);
   }
 }
-
 //カード本文
 .card__text {
   padding-top: rem(16);
@@ -136,7 +134,6 @@
     aspect-ratio: 333/223;
   }
 }
-
 //カードお客様の声画像
 .card__voice-img {
   position: relative;
@@ -157,4 +154,42 @@
     aspect-ratio: 150/117;
     width: 38%;
   }
+}
+//お客様の声、お客様情報
+.card__info {
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(13);
+  align-items: end;
+  justify-content: space-between;
+}
+
+@include mq("md") {
+  .card__info {
+    column-gap: rem(16);
+  }
+}
+//お客様の声、年齢、性別周り
+.card__customer-data-wrapper {
+  width: 100%;
+}
+@include mq("md") {
+  .card__customer-data-wrapper {
+    width: 58%;
+  }
+}
+//お客様の声、年齢、性別
+@include mq("md") {
+  .card__customer-data {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: rem(6);
+  }
+}
+//お客様の声、年齢
+.card__customer-age {
+  font-size: rem(12);
+  line-height: 1.5;
 }

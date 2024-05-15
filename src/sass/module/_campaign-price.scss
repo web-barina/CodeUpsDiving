@@ -1,4 +1,19 @@
 @use "global" as *;
+//キャンペーン、全部コミコミ
+.campaign-text {
+  text-align: center;
+  line-height: 1.71428;
+  font-size: rem(14);
+  margin-top: rem(8);
+}
+@include mq("md") {
+  .campaign-text {
+    line-height: 1.5;
+    font-size: rem(16);
+    margin-top: rem(16);
+  }
+}
+
 //キャンペーン値段
 .campaign-price-wrapper {
   display: flex;
