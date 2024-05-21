@@ -123,4 +123,12 @@ jQuery(function ($) {
     ); //ページトップスクロールの速さ。
     return false; //リンク自体の無効化
   });
+
+  /***
+    ローディング**/
+  $(window).on("load", function () {
+    $(".loading-start").delay(2000).fadeOut("fast");
+    $(".loading").delay(9000).fadeOut("fast");
+    $(".loading-turtle").delay(12000).fadeOut("slow");
+  });
 });
