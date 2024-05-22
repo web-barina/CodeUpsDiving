@@ -22,7 +22,7 @@ jQuery(function ($) {
   /*****
     FV-swiper
     *****/
-  var FVswiper = new Swiper("#FVswiper", {
+  var topFVswiper = new Swiper("#topFV-swiper", {
     effect: "fade",
     speed: 1500,
     autoplay: {

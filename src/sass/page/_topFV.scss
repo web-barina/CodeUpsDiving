@@ -1,5 +1,29 @@
 @use "global" as *;
-.FV-texts {
+#topFV-swiper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.topFV-swiper-slide {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topFV-swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.topFV-swiper-wrapper {
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+}
+.topFV-texts {
   z-index: 10;
   position: absolute;
   top: 49%;
@@ -8,17 +32,17 @@
   text-align: center;
   transform: translate(-50%, -50%);
 }
-.FV-texts--loading {
+.topFV-texts--loading {
   color: $green;
 }
 @include mq("md") {
-  .FV-texts {
+  .topFV-texts {
     top: 49%;
     left: 50%;
   }
 }
-//FV 大きいタイトル
-.FV-main-text {
+//topFV 大きいタイトル
+.topFV-main-text {
   font-family: $second-font-family;
   font-size: rem(40);
   letter-spacing: 0.5em;
@@ -27,22 +51,22 @@
   text-indent: 0.5em;
 }
 @include mq("md") {
-  .FV-main-text {
+  .topFV-main-text {
     font-size: rem(80);
     line-height: 1.125;
     letter-spacing: 0.53em;
     text-indent: 0.53em;
   }
 }
-//FV 小さいタイトル
-.FV-sub-text {
+//topFV 小さいタイトル
+.topFV-sub-text {
   font-family: $title-font-family;
   font-size: rem(20);
   line-height: 1;
   margin-top: rem(0);
 }
 @include mq("md") {
-  .FV-sub-text {
+  .topFV-sub-text {
     margin-top: rem(10);
   }
 }

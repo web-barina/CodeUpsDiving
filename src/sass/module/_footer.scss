@@ -71,3 +71,15 @@
     width: rem(24);
   }
 }
+//コピーライト
+.footer__copy {
+  margin-top: rem(40);
+  font-size: rem(12);
+  font-family: $title-font-family;
+  text-align: center;
+}
+@include mq("md") {
+  .footer__copy {
+    margin-top: rem(80);
+  }
+}
