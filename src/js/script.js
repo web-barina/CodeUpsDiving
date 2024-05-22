@@ -47,15 +47,6 @@ jQuery(function ($) {
       nextEl: ".top-campaign__swiper-button-next",
       prevEl: ".top-campaign__swiper-button-prev",
     },
-    on: {
-      //画面幅リサイズされても動くようにするためのコード
-      slideChangeTransitionStart: function () {
-        mySwiperWrapper.style.transitionTimingFunction = "linear";
-      },
-      resize: function () {
-        topCampaignSwiper.autoplay.start();
-      },
-    },
   });
   /***************
     カラーボックス
