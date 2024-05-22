@@ -13,7 +13,7 @@
   }
 }
 //ヘッダーインナー
-.header-inner {
+.header__inner {
   height: inherit;
   padding: 0 rem(15);
   display: flex;
@@ -23,7 +23,7 @@
   width: 100%;
 }
 @include mq("md") {
-  .header-inner {
+  .header__inner {
     width: 100%;
     margin: 0 auto;
     padding: 0 rem(40);
@@ -32,7 +32,7 @@
 }
 //ヘッダー日本語タイトル
 @include mq("md") {
-  .header-title-jp {
+  .header__title-jp {
     font-size: rem(10);
     line-height: 1.5;
     color: $white;
@@ -41,7 +41,7 @@
 }
 //ヘッダー英語タイトル
 @include mq("md") {
-  .header-title-en {
+  .header__title-en {
     font-size: rem(18);
     line-height: 1;
     color: $white;

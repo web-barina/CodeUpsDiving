@@ -1,66 +1,66 @@
 @use "global" as *;
 //セクションタイトル周り
-.section-title-wrapper {
+.section__title-wrapper {
   text-align: center;
 }
 
 //各セクションタイトル英語
-.section-title-en {
+.section__title-en {
   font-family: $title-font-family;
   font-size: rem(32);
   line-height: 1.25;
 }
-.section-title-en::first-letter {
+.section__title-en::first-letter {
   color: $green;
 }
-.section-title-en--big {
+.section__title-en--big {
   font-size: rem(80);
   line-height: 1;
   text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 @include mq("md") {
-  .section-title-en {
+  .section__title-en {
     font-size: rem(40);
     line-height: 1;
   }
-  .section-title-en--white {
+  .section__title-en--white {
     color: $white;
   }
-  .section-title-en--white::first-letter {
+  .section__title-en--white::first-letter {
     color: $white;
   }
-  .section-title-en--big {
+  .section__title-en--big {
     text-shadow: none;
     font-size: rem(80);
   }
 }
 
 //各セクションタイトル日本語
-.section-title-jp {
+.section__title-jp {
   font-size: rem(12);
   font-weight: $regular;
   color: $green;
   line-height: 1.5;
   margin-top: rem(4);
 }
-.section-title-jp--header {
+.section__title-jp--header {
   font-size: rem(10);
   color: $white;
   font-weight: $regular;
 }
-.section-title-jp--shadow {
+.section__title-jp--shadow {
   line-height: 1;
   text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 @include mq("md") {
-  .section-title-jp {
+  .section__title-jp {
     margin-top: rem(8);
     font-size: rem(10);
   }
-  .section-title-jp--white {
+  .section__title-jp--white {
     color: $white;
   }
-  .section-title-jp--shadow {
+  .section__title-jp--shadow {
     text-shadow: none;
   }
 }
