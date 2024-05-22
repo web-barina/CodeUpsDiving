@@ -1,0 +1,10 @@
+@use "global" as *;
+//今のところ使っていないが、下層ページで使うかも？
+.sp-none {
+  display: none;
+}
+@include mq("md") {
+  .sp-none {
+    display: block;
+  }
+}

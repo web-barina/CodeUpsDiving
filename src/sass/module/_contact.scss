@@ -82,6 +82,7 @@
 }
 .contact__address p {
   margin-top: rem(4);
+  white-space: nowrap;
 }
 .contact__address p:first-child {
   margin-top: rem(0);
