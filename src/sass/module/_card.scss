@@ -7,14 +7,8 @@
   padding-bottom: rem(24);
   box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
   background-color: $white;
-  max-width: rem(500);
   width: 100%;
   opacity: 1;
-}
-@include mq("md") {
-  .card {
-    max-width: none;
-  }
 }
 .card--voice {
   padding-top: rem(15);
@@ -25,16 +19,8 @@
   }
 }
 .card--blog {
-  max-width: rem(333);
   width: 100%;
   margin: 0 auto;
-}
-@include mq("md") {
-  .card--blog {
-    max-width: none;
-    width: auto;
-    margin: auto;
-  }
 }
 //カード画像
 .card__img {
@@ -111,11 +97,6 @@
 }
 @include mq("md") {
   .card__category {
-    display: inline-block;
-    font-size: rem(12);
-    color: $green;
-    border: solid rem(1) $green;
-    line-height: 1.833333;
     padding: rem(6) rem(16);
   }
 }

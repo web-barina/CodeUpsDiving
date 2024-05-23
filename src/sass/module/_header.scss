@@ -6,6 +6,7 @@
   height: rem(80);
   background-color: rgba($color: $black, $alpha: 0.68);
   z-index: 9999;
+  overscroll-behavior-y: contain;
 }
 @include mq("md") {
   .header {

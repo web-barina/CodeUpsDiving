@@ -6,24 +6,22 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   height: fit-content;
   column-gap: rem(16);
-  background-color: $green;
-  color: $white;
+  @include mq("md") {
+    width: 100%;
+    max-width: rem(1080);
+    flex-direction: row;
+    justify-content: normal;
+    column-gap: rem(120);
+  }
 }
 .siteMap__contents--header {
   height: calc(100vh - rem(80));
   margin: rem(-17) auto 0 auto;
   max-width: rem(500);
   column-gap: rem(8);
-}
-@include mq("md") {
-  .siteMap__contents {
-    width: 100%;
-    max-width: rem(1080);
-    flex-direction: row;
-    column-gap: rem(120);
-  }
 }
 //SPのときに2つに分かれるようにするため
 @include mq("md") {

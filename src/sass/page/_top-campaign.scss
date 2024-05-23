@@ -1,11 +1,9 @@
 @use "global" as *;
 //トップキャンペーンセクション全体
-.top-campaign {
+.top-campaign-wrapper {
   margin-top: rem(40);
   overflow: hidden;
-}
-@include mq("md") {
-  .top-campaign {
+  @include mq("md") {
     margin-top: rem(120);
   }
 }
@@ -14,9 +12,7 @@
   margin-top: rem(27);
   padding-bottom: rem(10);
   z-index: 10;
-}
-@include mq("md") {
-  .top-campaign__wrapper {
+  @include mq("md") {
     margin-top: rem(44);
   }
 }
@@ -29,10 +25,7 @@
 //スライダーボタン周り
 .top-campaign__swiper-button-wrapper {
   display: none;
-}
-
-@include mq("md") {
-  .top-campaign__swiper-button-wrapper {
+  @include mq("md") {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -80,9 +73,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
-}
-@include mq("md") {
-  .top-campaign__slide {
+  @include mq("md") {
     width: rem(333);
   }
 }

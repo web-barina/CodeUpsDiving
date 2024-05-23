@@ -1,10 +1,8 @@
 @use "global" as *;
 //トップお客様の声
-.top-voice {
+.top-voice-wrapper {
   margin-top: rem(83);
-}
-@include mq("md") {
-  .top-voice {
+  @include mq("md") {
     position: relative;
     margin-top: rem(145);
   }
@@ -14,19 +12,14 @@
   margin: rem(40) auto 0 auto;
   display: flex;
   flex-direction: column;
-}
-
-@include mq("md") {
-  .top-voice__cards-wrapper {
+  @include mq("md") {
     margin-top: rem(30);
   }
 }
 //トップお客様の声、装飾上
 .top-voice__decoration-upper {
   display: none;
-}
-@include mq("md") {
-  .top-voice__decoration-upper {
+  @include mq("md") {
     display: block;
     position: absolute;
     top: -19.5%;
@@ -38,9 +31,7 @@
 //トップお客様の声、装飾下
 .top-voice__decoration-under {
   display: none;
-}
-@include mq("md") {
-  .top-voice__decoration-under {
+  @include mq("md") {
     display: block;
     position: absolute;
     bottom: -10.5%;

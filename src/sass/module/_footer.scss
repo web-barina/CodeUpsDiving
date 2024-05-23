@@ -1,29 +1,21 @@
 @use "global" as *;
 //フッター全体
-.footer {
+.footer-wrapper {
   margin-top: rem(100);
   padding: rem(48) 0 rem(56) 0;
   background-color: $green;
   color: $white;
   opacity: 1;
-}
-@include mq("md") {
-  .footer {
+  @include mq("md") {
     margin-top: rem(160);
     padding: rem(80) 0;
   }
-}
-//フッターインナー
-.footer__inner {
-  padding: 0 rem(15) 0 rem(15);
 }
 //フッターCodeUpsロゴ
 .footer__logo {
   width: rem(120);
   height: auto;
-}
-@include mq("md") {
-  .footer__logo {
+  @include mq("md") {
     width: rem(200);
   }
 }
@@ -34,9 +26,7 @@
   max-width: rem(500);
   width: 100%;
   margin: 0 auto;
-}
-@include mq("md") {
-  .footer__icons {
+  @include mq("md") {
     max-width: rem(1080);
     width: 100%;
     margin: 0 auto;
@@ -51,10 +41,7 @@
   flex-direction: row;
   margin-left: rem(0);
   column-gap: rem(18.25);
-}
-
-@include mq("md") {
-  .footer__sns-logos {
+  @include mq("md") {
     margin-top: rem(0);
     margin-left: rem(40);
     padding-bottom: rem(10);
@@ -65,9 +52,7 @@
 .footer__sns-logo {
   width: rem(19.5);
   height: auto;
-}
-@include mq("md") {
-  .footer__sns-logo {
+  @include mq("md") {
     width: rem(24);
   }
 }

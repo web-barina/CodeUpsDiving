@@ -1,11 +1,9 @@
 @use "global" as *;
 //トップブログセクション
-.top-blog {
+.top-blog-wrapper {
   padding-top: rem(80);
   background-image: none;
-}
-@include mq("md") {
-  .top-blog {
+  @include mq("md") {
     width: 100%;
     padding-top: rem(100);
     background-image: url(/assets/images/common/blog-back.png);
@@ -19,18 +17,14 @@
   margin-top: rem(28);
   display: flex;
   flex-direction: column;
-}
-@include mq("md") {
-  .top-blog__cards-wrapper {
+  @include mq("md") {
     margin-top: rem(80);
   }
 }
 //トップブログ装飾
 .top-blog__decoration {
   display: none;
-}
-@include mq("md") {
-  .top-blog__decoration {
+  @include mq("md") {
     display: block;
     position: absolute;
     top: 3%;
