@@ -1,5 +1,5 @@
 @use "global" as *;
-#scroll-top a {
+#js-scroll-top a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,12 +9,12 @@
   transition: all 0.3s;
 }
 
-#scroll-top a:hover {
+#js-scroll-top a:hover {
   background: transparent;
 }
 
 /*リンクを右下に固定*/
-#scroll-top {
+#js-scroll-top {
   position: fixed;
   right: rem(15);
   z-index: 2;
@@ -23,9 +23,9 @@
   transform: translateY(rem(100));
 }
 
-/*　上に上がる動き　*/
+/*上に上がる動き*/
 
-#scroll-top.UpMove {
+#js-scroll-top.UpMove {
   animation: UpAnime 0.5s forwards;
 }
 @keyframes UpAnime {
@@ -39,9 +39,9 @@
   }
 }
 
-/*　下に下がる動き　*/
+/*下に下がる動き*/
 
-#scroll-top.DownMove {
+#js-scroll-top.DownMove {
   animation: DownAnime 0.5s forwards;
 }
 @keyframes DownAnime {
@@ -55,7 +55,7 @@
   }
 }
 @include mq("md") {
-  #scroll-top a {
+  #js-scroll-top a {
     width: rem(80);
     height: rem(80);
   }
