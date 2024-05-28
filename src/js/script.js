@@ -4,7 +4,7 @@ jQuery(function ($) {
     ハンバーガーメニュー
     *****/
   $("#js-hamburger").on("click", function () {
-    if ($("js-#hamburger").hasClass("active")) {
+    if ($("#js-hamburger").hasClass("active")) {
       $(".sp-nav").fadeOut();
       $(this).removeClass("active");
     } else {
