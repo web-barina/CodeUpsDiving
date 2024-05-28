@@ -1,6 +1,6 @@
 @use "global" as *;
 //
-.loading__start {
+.js-loading__start {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -9,18 +9,18 @@
   opacity: 1;
 }
 //
-.loading {
+.js-loading {
   width: 100%;
   height: 100vh;
   text-align: center;
   background-color: $white;
   opacity: 1;
 }
-.loading__flex {
+.js-loading__flex {
   display: flex;
   flex-direction: row;
 }
-.loading__left {
+.js-loading__left {
   width: 100%;
   height: 100vh;
   background-image: url(/assets/images/common/loading__left.png);
@@ -28,7 +28,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.loading__right {
+.js-loading__right {
   width: 100%;
   height: 100vh;
   background-image: url(/assets/images/common/loading__right.png);
@@ -37,7 +37,7 @@
   background-size: cover;
 }
 //
-.loading__last {
+.js-loading__last {
   opacity: 1;
   position: relative;
   width: 100%;
