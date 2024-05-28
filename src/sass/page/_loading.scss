@@ -1,96 +1,44 @@
 @use "global" as *;
 //
-.loading-start {
+.loading__start {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 999;
   background-color: #fff;
+  opacity: 1;
 }
 //
 .loading {
-  animation-name: loading;
+  width: 100%;
   height: 100vh;
   text-align: center;
   background-color: $white;
-  animation-delay: 2s;
-  animation-duration: 9s;
-  animation-iteration-count: 1;
+  opacity: 1;
 }
-@keyframes loading {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.loading-flex {
+.loading__flex {
   display: flex;
   flex-direction: row;
-  animation-name: loading-flex;
-  animation-duration: 9s;
-  animation-iteration-count: 1;
-  @keyframes loading {
-    0% {
-      opacity: 1;
-    }
-    70% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 0;
-    }
-  }
 }
-.loading-left {
+.loading__left {
   width: 100%;
   height: 100vh;
-  animation-name: loading-left;
-  animation-duration: 9s;
-  animation-delay: 2s;
-  background-image: url(/assets/images/common/loading-left.png);
+  background-image: url(/assets/images/common/loading__left.png);
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
-  animation-iteration-count: 1;
 }
-@keyframes loading-left {
-  0% {
-    transform: translateY(100vh);
-  }
-  70% {
-    transform: translateY(0px);
-  }
-}
-.loading-right {
+.loading__right {
   width: 100%;
   height: 100vh;
-  animation-name: loading-right;
-  animation-duration: 9s;
-  animation-delay: 2s;
-  background-image: url(/assets/images/common/loading-right.png);
+  background-image: url(/assets/images/common/loading__right.png);
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0;
-  animation-iteration-count: 1;
-}
-@keyframes loading-right {
-  0% {
-    opacity: 1;
-    transform: translateY(calc(100vh + 80px));
-  }
-  70% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
 }
 //
-.loading-turtle {
+.loading__last {
+  opacity: 1;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -98,5 +46,4 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 1;
 }

@@ -3,8 +3,8 @@ jQuery(function ($) {
   /*****
     ハンバーガーメニュー
     *****/
-  $("#hamburger").on("click", function () {
-    if ($("#hamburger").hasClass("active")) {
+  $("#js-hamburger").on("click", function () {
+    if ($("js-#hamburger").hasClass("active")) {
       $(".sp-nav").fadeOut();
       $(this).removeClass("active");
     } else {
@@ -15,14 +15,14 @@ jQuery(function ($) {
   //768px以上でドロワーを非表示にする
   $(window).on("resize", function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
-      $("#hamburger").removeClass("active");
+      $("#js-hamburger").removeClass("active");
       $(".sp-nav").fadeOut();
     }
   });
   /*****
     FV-swiper
     *****/
-  var topFVswiper = new Swiper("#topFV-swiper", {
+  var topFVswiper = new Swiper("#js-topFV-swiper", {
     effect: "fade",
     speed: 1500,
     autoplay: {
@@ -34,7 +34,7 @@ jQuery(function ($) {
   /******************
    * campaign-swiper*
    ******************/
-  var topCampaignSwiper = new Swiper("#topCampaignSwiper", {
+  var topCampaignSwiper = new Swiper("#js-topCampaignSwiper", {
     slidesPerView: "auto",
     loop: true,
     spaceBetween: 24,
@@ -51,7 +51,7 @@ jQuery(function ($) {
   /***************
     カラーボックス
     **************/
-  var box = $(".colorbox"),
+  var box = $(".js-colorbox"),
     speed = 700;
 
   box.each(function () {
@@ -84,24 +84,24 @@ jQuery(function ($) {
   function PageTopAnime() {
     var scroll = $(window).scrollTop();
     if (scroll >= 300) {
-      $("#scroll-top").removeClass("DownMove");
-      $("#scroll-top").addClass("UpMove");
+      $("#js-scroll-top").removeClass("DownMove");
+      $("#js-scroll-top").addClass("UpMove");
     } else {
-      if ($("#scroll-top").hasClass("UpMove")) {
-        $("#scroll-top").removeClass("UpMove");
-        $("#scroll-top").addClass("DownMove");
+      if ($("js-#scroll-top").hasClass("UpMove")) {
+        $("#js-scroll-top").removeClass("UpMove");
+        $("#js-scroll-top").addClass("DownMove");
       }
     }
 
     var wH = window.innerHeight;
     var footerPos = $("#footer").offset().top;
     if (scroll + wH >= footerPos + 10) {
-      var pos = scroll + wH - footerPos + 16; //スクロールの値＋画面の高さからfooterの位置＋16pxを引いた場所を取得し
-      $("#scroll-top").css("bottom", pos);
+      var pos = scroll + wH - footerPos + 90; //スクロールの値＋画面の高さからfooterの位置＋90pxを引いた場所を取得し
+      $("#js-scroll-top").css("bottom", pos);
     } else {
       //それ以外は
-      if ($("#scroll-top").hasClass("UpMove")) {
-        $("#scroll-top").css("bottom", "10px");
+      if ($("#js-scroll-top").hasClass("UpMove")) {
+        $("#js-scroll-top").css("bottom", "10px");
       }
     }
   }
@@ -114,7 +114,7 @@ jQuery(function ($) {
     PageTopAnime();
   });
   // #scroll-topをクリックした際の設定
-  $("#scroll-top").click(function () {
+  $("#js-scroll-top").click(function () {
     $("body,html").animate(
       {
         scrollTop: 0, //ページトップまでスクロール
@@ -122,13 +122,5 @@ jQuery(function ($) {
       500
     ); //ページトップスクロールの速さ。
     return false; //リンク自体の無効化
-  });
-
-  /***
-    ローディング**/
-  $(window).on("load", function () {
-    $(".loading-start").delay(2000).fadeOut("fast");
-    $(".loading").delay(9000).fadeOut("fast");
-    $(".loading-turtle").delay(12000).fadeOut("slow");
   });
 });

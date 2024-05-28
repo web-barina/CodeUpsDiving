@@ -32,36 +32,39 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/jquery.inview.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script defer src="./assets/js/gsap.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
     <!--header-->
     <header class="header">
-      <div class="loading-wrapper">
-        <div class="loading-start">
-          <div class="topFV-texts topFV-texts--loading">
-            <h1 class="topFV-main-text">DIVING</h1>
-            <p class="topFV-sub-text">into the ocean</p>
-          </div>
-        </div>
-        <div class="loading" id="loading">
-          <div class="loading-flex">
-            <div class="loading-left"></div>
-            <div class="loading-right"></div>
-          </div>
-        </div>
-        <div class="loading-turtle">
-          <div class="topFV-texts">
-            <h1 class="topFV-main-text">DIVING</h1>
-            <p class="topFV-sub-text">into the ocean</p>
-          </div>
+      <!--loading-->
+      <div class="js-loading__start">
+        <div class="topFV-texts topFV-texts--loading">
+          <h1 class="topFV-main-text">DIVING</h1>
+          <p class="topFV-sub-text">into the ocean</p>
         </div>
       </div>
+      <div class="js-loading__" id="loading">
+        <div class="js-loading__flex">
+          <div class="js-loading__left"></div>
+          <div class="js-loading__right"></div>
+        </div>
+      </div>
+      <div class="js-loading__last">
+        <div class="topFV-texts">
+          <h1 class="topFV-main-text">DIVING</h1>
+          <p class="topFV-sub-text">into the ocean</p>
+        </div>
+      </div>
+      <!--SP-hamburger-header-->
       <div class="header__inner">
         <div class="logo logo--header"><img src="./assets/images/common/logo.png" alt="logo" /></div>
         <div class="header__content">
-          <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+          <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+          <!--PC-header-->
           <div class="pc-nav">
             <ul>
               <li>
@@ -132,6 +135,7 @@
           </div>
         </div>
       </div>
+      <!--SP-header-->
       <div class="sp-nav">
         <div class="inner inner--sp-nav">
           <div class="siteMap__contents siteMap__contents--header">
@@ -187,7 +191,7 @@
     </header>
     <main>
       <!--first-view-->
-      <div class="swiper topFVswiper" id="topFV-swiper">
+      <div class="swiper topFVswiper" id="js-topFV-swiper">
         <div class="topFV-wrapper swiper-wrapper">
           <picture class="swiper-slide topFV-swiper-slide">
             <source srcset="./assets/images/common/FV-pc1.png" media="(min-width: 768px)" />
@@ -216,8 +220,8 @@
         <p class="topFV-sub-text">into the ocean</p>
       </div>
       <!--Campaign-->
-      <section class="top-campaign">
-        <div class="top-campaign-wrapper">
+      <div class="top-campaign-wrapper">
+        <section class="top-campaign">
           <div class="inner">
             <div class="top-campaign__swiper-button-relative">
               <div class="section__title-wrapper">
@@ -229,7 +233,7 @@
                 <div class="top-campaign__swiper-button-next"></div>
               </div>
             </div>
-            <div class="swiper topCampaignSwiper" id="topCampaignSwiper">
+            <div class="swiper topCampaignSwiper" id="js-topCampaignSwiper">
               <div class="swiper-wrapper top-campaign__wrapper">
                 <a href="#" class="swiper-slide top-campaign__slide">
                   <figure class="card__img card__img--campaign">
@@ -312,12 +316,12 @@
               </a>
             </div>
           </div>
-        </div>
-        <!--inner閉じタグ-->
-      </section>
+          <!--inner閉じタグ-->
+        </section>
+      </div>
       <!--About us-->
-      <section class="top-about-us">
-        <div class="top-about-us-wrapper">
+      <div class="top-about-us-wrapper">
+        <section class="top-about-us">
           <div class="inner">
             <div class="section__title-wrapper">
               <p class="section__title-en">About us</p>
@@ -347,18 +351,18 @@
             </div>
             <div class="top-about-us__decoration"><img src="./assets/images/common/about-us-decoratoin.png" alt="coral&sea-anemone" /></div>
           </div>
-        </div>
-        <!--inner閉じタグ-->
-      </section>
+          <!--inner閉じタグ-->
+        </section>
+      </div>
       <!--Information-->
-      <section class="top-info">
-        <div class="top-info-wrapper">
+      <div class="top-info-wrapper">
+        <section class="top-info">
           <div class="inner inner--maxWidth540">
             <div class="section__title-wrapper">
               <p class="section__title-en">Information</p>
               <h2 class="section__title-jp">ダイビング情報</h2>
               <div class="top-info__content-wrapper">
-                <div class="top-info__img colorbox"><img src="./assets/images/common/information.png" alt="fish-and-sea" /></div>
+                <div class="top-info__img js-colorbox"><img src="./assets/images/common/information.png" alt="fish-and-sea" /></div>
                 <div class="info__content">
                   <h3 class="title title--big">ライセンス講習</h3>
                   <div class="info__text">
@@ -375,11 +379,11 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!--Blog-->
-      <section class="top-blog">
-        <div class="top-blog-wrapper">
+      <div class="top-blog-wrapper">
+        <section class="top-blog">
           <div class="inner inner--maxWidth540">
             <div class="top-blog__decoration"><img src="./assets/images/common/decoration-fish-white.png" alt="decoration-fish" /></div>
             <div class="section__title-wrapper">
@@ -427,11 +431,11 @@
               </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!--Voice-->
-      <section class="top-voice">
-        <div class="top-voice-wrapper">
+      <div class="top-voice-wrapper">
+        <section class="top-voice">
           <div class="inner inner--maxWidth540">
             <div class="top-voice__decoration-upper"><img src="./assets/images/common/decoration-fish-right.svg" alt="decoration-fish" /></div>
             <div class="section__title-wrapper">
@@ -451,7 +455,7 @@
                         <h3 class="title title--voice">ここにタイトルが入ります。ここにタイトル</h3>
                       </div>
                     </div>
-                    <div class="card__voice-img colorbox"><img src="./assets/images/common/voice1.png" alt="お客様女性" /></div>
+                    <div class="card__voice-img js-colorbox"><img src="./assets/images/common/voice1.png" alt="お客様女性" /></div>
                   </div>
                   <div class="card__text">
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
@@ -469,7 +473,7 @@
                         <h3 class="title title--voice">ここにタイトルが入ります。ここにタイトル</h3>
                       </div>
                     </div>
-                    <div class="card__voice-img colorbox"><img src="./assets/images/common/voice2.png" alt="お客様男性" /></div>
+                    <div class="card__voice-img js-colorbox"><img src="./assets/images/common/voice2.png" alt="お客様男性" /></div>
                   </div>
                   <div class="card__text">
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
@@ -486,11 +490,11 @@
             </div>
           </div>
           <div class="top-voice__decoration-under"><img src="./assets/images/common/decoration-dragon-fish.png" alt="decoration-dragon-fish" /></div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!--price-->
-      <section class="top-price-section">
-        <div class="top-price-wrapper">
+      <div class="top-price-wrapper">
+        <section class="top-price-section">
           <div class="inner inner--maxWidth540">
             <div class="section__title-wrapper">
               <p class="section__title-en">Price</p>
@@ -577,11 +581,11 @@
             </div>
             <div class="top-price__decoration"><img src="./assets/images/common/decoration-fish.png" alt="decoration-fish" /></div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!--contact-->
-      <section class="contact">
-        <div class="contact-wrapper">
+      <div class="contact-wrapper">
+        <section class="contact">
           <div class="inner inner--maxWidth540">
             <div class="contact-decoration"><img src="./assets/images/common/decoration-fish.png" alt="decoration-fish" /></div>
             <div class="contact__content-inner">
@@ -614,13 +618,13 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <!--footer-->
-    <footer class="footer" id="footer">
-      <div class="footer-wrapper">
-        <div id="scroll-top">
+    <div class="footer-wrapper">
+      <footer class="footer" id="footer">
+        <div id="js-scroll-top">
           <a href="#"><img src="./assets/images/common/scroll-top.png" alt="上へ戻る" /></a>
         </div>
         <div class="inner">
@@ -686,7 +690,7 @@
           </div>
         </div>
         <div class="footer__copy">Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

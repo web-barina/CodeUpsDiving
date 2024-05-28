@@ -29,10 +29,9 @@
 }
 
 .inner--sp-nav {
-  overflow: scroll;
-  overscroll-behavior-y: contain;
+  overflow-y: scroll;
   @include mq("md") {
-    overflow: visible;
+    overflow-y: visible;
   }
 }
 .inner--maxWidth540 {

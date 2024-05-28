@@ -15,8 +15,6 @@
 //トップブログカード周り
 .top-blog__cards-wrapper {
   margin-top: rem(28);
-  display: flex;
-  flex-direction: column;
   @include mq("md") {
     margin-top: rem(80);
   }
