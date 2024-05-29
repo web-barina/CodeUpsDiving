@@ -30,6 +30,7 @@
 
 .inner--sp-nav {
   overflow-y: scroll;
+  overscroll-behavior: contain;
   @include mq("md") {
     overflow-y: visible;
     overscroll-behavior: contain;
