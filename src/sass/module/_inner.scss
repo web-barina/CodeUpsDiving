@@ -32,6 +32,7 @@
   overflow-y: scroll;
   @include mq("md") {
     overflow-y: visible;
+    overscroll-behavior: contain;
   }
 }
 .inner--maxWidth540 {
