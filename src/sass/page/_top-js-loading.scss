@@ -1,43 +1,39 @@
 @use "global" as *;
 //
-.js-loading__start {
+.top-js-loading__start {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 999;
   background-color: #fff;
-  opacity: 1;
 }
 //
-.js-loading {
+.top-js-loading__middle {
   width: 100%;
   height: 100vh;
   text-align: center;
   background-color: $white;
-  opacity: 1;
-}
-.js-loading__flex {
   display: flex;
   flex-direction: row;
 }
-.js-loading__left {
+.top-js-loading__middle__left {
   width: 100%;
   height: 100vh;
-  background-image: url(/assets/images/common/loading__left.png);
+  background-image: url(/assets/images/common/loading-left.png);
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.js-loading__right {
+.top-js-loading__middle__right {
   width: 100%;
   height: 100vh;
-  background-image: url(/assets/images/common/loading__right.png);
+  background-image: url(/assets/images/common/loading-right.png);
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
 }
 //
-.js-loading__last {
+.top-js-loading__last {
   opacity: 1;
   position: relative;
   width: 100%;

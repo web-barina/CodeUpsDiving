@@ -1,6 +1,6 @@
 @use "global" as *;
 //サイトマップ
-.siteMap__contents {
+.siteMap-contents {
   max-width: rem(500);
   margin: 0 auto;
   width: 100%;
@@ -17,22 +17,16 @@
     column-gap: rem(120);
   }
 }
-.siteMap__contents--header {
-  height: calc(100vh - rem(80));
-  margin: rem(-17) auto 0 auto;
-  max-width: rem(500);
-  column-gap: rem(8);
-}
 //SPのときに2つに分かれるようにするため
 @include mq("md") {
-  .siteMap__sp-layout {
+  .siteMap-sp-layout {
     row-gap: 2.5rem;
     display: flex;
     column-gap: rem(120);
   }
 }
 //リストマーク付きのところ
-.siteMap__main-title {
+.siteMap-main-title {
   background: url(../../assets/images/common/site-map-list-icon.png) no-repeat 0 0;
   background-size: auto rem(18);
   padding-left: rem(22);
@@ -42,23 +36,23 @@
   list-style: none;
 }
 //リストマークつかないところ
-.siteMap__sub-title {
+.siteMap-sub-title {
   margin-left: rem(22);
   margin-top: rem(24);
   line-height: 1.125;
 }
 //PCの時並べ替え
 @include mq("md") {
-  .siteMap__main--order1 {
+  .siteMap-main--order1 {
     order: 1;
   }
-  .siteMap__main--order2 {
+  .siteMap-main--order2 {
     order: 2;
   }
-  .siteMap__main--order3 {
+  .siteMap-main--order3 {
     order: 3;
   }
-  .siteMap__main--order4 {
+  .siteMap-main--order4 {
     order: 4;
   }
 }

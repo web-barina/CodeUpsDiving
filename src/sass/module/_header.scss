@@ -33,7 +33,7 @@
 }
 //ヘッダー日本語タイトル
 @include mq("md") {
-  .header__title-jp {
+  .header__section-titles__japanese {
     font-size: rem(10);
     line-height: 1.5;
     color: $white;
@@ -42,7 +42,7 @@
 }
 //ヘッダー英語タイトル
 @include mq("md") {
-  .header__title-en {
+  .header__section-titles__english {
     font-size: rem(18);
     line-height: 1;
     color: $white;
@@ -54,4 +54,86 @@
   .header__content {
     height: inherit;
   }
+}
+//ヘッダーpc-nav
+
+.header__inner__pc-nav {
+  display: none;
+}
+
+@include mq("md") {
+  .header__inner__pc-nav {
+    display: block;
+    height: inherit;
+  }
+  .header__inner__pc-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: rem(40);
+    height: inherit;
+  }
+  .header__inner__pc-nav li {
+    display: inline-block;
+    height: inherit;
+  }
+
+  .header__inner__pc-nav li a {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+    height: inherit;
+    display: inline-block;
+    align-content: center;
+  }
+
+  .header__inner__pc-nav li.current a,
+  .header__inner__pc-nav li a:hover {
+    color: $white;
+  }
+
+  .header__inner__pc-nav li a::after {
+    content: "";
+    position: absolute;
+    bottom: rem(27);
+    left: 0;
+    width: 100%;
+    height: rem(1);
+    background: $white;
+    transition: all 0.3s;
+    transform: scale(0, 1);
+    transform-origin: center top; /*上部中央基点*/
+  }
+  /*現在地とhoverの設定*/
+  .header__inner__pc-nav li.current a::after,
+  .header__inner__pc-nav li a:hover::after {
+    transform: scale(1, 1);
+  }
+}
+//ヘッダーSP-nav
+.header__sp-nav {
+  display: none;
+  background-color: $green;
+  color: $white;
+  margin-top: rem(-80);
+  padding-top: rem(80);
+  width: 100%;
+  height: 100vh;
+  @include mq("md") {
+    display: none;
+  }
+}
+//SP-navのインナー
+.header__sp-nav__inner {
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  @include mq("md") {
+    overflow-y: visible;
+    overscroll-behavior: contain;
+  }
+}
+//sp-navの中身
+.header__sp-nav__siteMap__contents {
+  height: calc(100vh - rem(80));
+  margin: rem(-17) auto 0 auto;
+  max-width: rem(500);
+  column-gap: rem(8);
 }

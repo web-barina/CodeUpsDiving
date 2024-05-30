@@ -5,10 +5,10 @@ jQuery(function ($) {
     *****/
   $("#js-hamburger").on("click", function () {
     if ($("#js-hamburger").hasClass("active")) {
-      $(".sp-nav").fadeOut();
+      $(".header__sp-nav").fadeOut();
       $(this).removeClass("active");
     } else {
-      $(".sp-nav").fadeIn();
+      $(".header__sp-nav").fadeIn();
       $(this).addClass("active");
     }
   }); //ハンバーガーメニュー閉じタグ
@@ -16,7 +16,7 @@ jQuery(function ($) {
   $(window).on("resize", function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
       $("#js-hamburger").removeClass("active");
-      $(".sp-nav").fadeOut();
+      $(".header__sp-nav").fadeOut();
     }
   });
   /*****
@@ -84,24 +84,24 @@ jQuery(function ($) {
   function PageTopAnime() {
     var scroll = $(window).scrollTop();
     if (scroll >= 300) {
-      $("#js-scroll-top").removeClass("DownMove");
-      $("#js-scroll-top").addClass("UpMove");
+      $("#footer__js-scroll-top").removeClass("DownMove");
+      $("#footer__js-scroll-top").addClass("UpMove");
     } else {
-      if ($("js-#scroll-top").hasClass("UpMove")) {
-        $("#js-scroll-top").removeClass("UpMove");
-        $("#js-scroll-top").addClass("DownMove");
+      if ($("#footer__js-scroll-top").hasClass("UpMove")) {
+        $("#footer__js-scroll-top").removeClass("UpMove");
+        $("#footer__js-scroll-top").addClass("DownMove");
       }
     }
 
     var wH = window.innerHeight;
     var footerPos = $("#footer").offset().top;
     if (scroll + wH >= footerPos + 10) {
-      var pos = scroll + wH - footerPos + 90; //スクロールの値＋画面の高さからfooterの位置＋90pxを引いた場所を取得し
-      $("#js-scroll-top").css("bottom", pos);
+      var pos = scroll + wH - footerPos + 10; //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+      $("#footer__js-scroll-top").css("bottom", pos);
     } else {
       //それ以外は
-      if ($("#js-scroll-top").hasClass("UpMove")) {
-        $("#js-scroll-top").css("bottom", "10px");
+      if ($("#footer__js-scroll-top").hasClass("UpMove")) {
+        $("#footer__js-scroll-top").css("bottom", "10px");
       }
     }
   }

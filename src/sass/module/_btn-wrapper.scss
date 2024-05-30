@@ -5,18 +5,12 @@
   text-align: center;
   padding-bottom: rem(5);
 }
-.btn-wrapper--about {
-  margin-top: rem(25);
-}
 .btn-wrapper--campaign {
   margin-top: rem(30);
 }
 @include mq("md") {
   .btn-wrapper {
     margin-top: rem(80);
-  }
-  .btn-wrapper--about {
-    margin-top: rem(40);
   }
   .btn-wrapper--in-content {
     margin-top: rem(40);

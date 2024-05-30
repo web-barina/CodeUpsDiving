@@ -7,6 +7,13 @@
     margin-top: rem(145);
   }
 }
+//トップお客様の声インナー
+.top-voice__inner {
+  max-width: rem(540);
+  @include mq("md") {
+    max-width: auto;
+  }
+}
 //トップお客様の声周り
 .top-voice__cards-wrapper {
   margin: rem(40) auto 0 auto;

@@ -1,12 +1,21 @@
 @use "global" as *;
 //ダイビング情報タイトル・テキスト周り
 @include mq("md") {
-  .info__content {
+  .info__content__texts {
     padding-left: rem(48);
     align-content: center;
   }
 }
 //ダイビング情報テキスト
-.info__text {
+.info__content__text {
   margin-top: rem(8);
+}
+//ダイビング情報タイトル
+.info__content__texts__title {
+  font-size: rem(20);
+  line-height: 1.2;
+  padding-bottom: rem(4);
+  @include mq("md") {
+    font-size: rem(24);
+  }
 }

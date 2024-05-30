@@ -12,7 +12,7 @@
   }
 }
 //フッターCodeUpsロゴ
-.footer__logo {
+.footer__inner__icons__logo {
   width: rem(120);
   height: auto;
   @include mq("md") {
@@ -20,7 +20,7 @@
   }
 }
 //フッターCodeUpsロゴ・SNSロゴ周り
-.footer__icons {
+.footer__inner__icons {
   display: flex;
   flex-direction: column;
   max-width: rem(500);
@@ -35,7 +35,7 @@
   }
 }
 //フッターSNSロゴ周り
-.footer__sns-logos {
+.footer__inner__icons__sns-logos {
   margin-top: rem(18.25);
   display: flex;
   flex-direction: row;
@@ -49,7 +49,7 @@
   }
 }
 //各SNS
-.footer__sns-logo {
+.footer__inner__icons__sns-logo {
   width: rem(19.5);
   height: auto;
   @include mq("md") {
@@ -66,5 +66,66 @@
 @include mq("md") {
   .footer__copy {
     margin-top: rem(80);
+  }
+}
+//スクロールトップ
+#footer__js-scroll-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: rem(48);
+  height: rem(48);
+  transition: all 0.3s;
+}
+
+#footer__js-scroll-top a:hover {
+  background: transparent;
+}
+
+/*リンクを右下に固定*/
+#footer__js-scroll-top {
+  position: fixed;
+  right: rem(15);
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(rem(100));
+}
+
+/*上に上がる動き*/
+
+#footer__js-scroll-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(trm(100));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*下に下がる動き*/
+#footer__js-scroll-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(rem(100));
+  }
+}
+@include mq("md") {
+  #footer__js-scroll-top a {
+    width: rem(80);
+    height: rem(80);
   }
 }
