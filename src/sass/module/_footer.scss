@@ -12,7 +12,7 @@
   }
 }
 //フッターCodeUpsロゴ
-.footer__inner__icons__logo {
+.footer__logo {
   width: rem(120);
   height: auto;
   @include mq("md") {
@@ -20,7 +20,7 @@
   }
 }
 //フッターCodeUpsロゴ・SNSロゴ周り
-.footer__inner__icons {
+.footer__icons {
   display: flex;
   flex-direction: column;
   max-width: rem(500);
@@ -35,7 +35,7 @@
   }
 }
 //フッターSNSロゴ周り
-.footer__inner__icons__sns-logos {
+.footer__sns-logos {
   margin-top: rem(18.25);
   display: flex;
   flex-direction: row;
@@ -49,7 +49,7 @@
   }
 }
 //各SNS
-.footer__inner__icons__sns-logo {
+.footer__sns-logo {
   width: rem(19.5);
   height: auto;
   @include mq("md") {

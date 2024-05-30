@@ -3,8 +3,8 @@ jQuery(function ($) {
   /*****
     ハンバーガーメニュー
     *****/
-  $("#js-hamburger").on("click", function () {
-    if ($("#js-hamburger").hasClass("active")) {
+  $("#js-header__hamburger").on("click", function () {
+    if ($("#js-header__hamburger").hasClass("active")) {
       $(".header__sp-nav").fadeOut();
       $(this).removeClass("active");
     } else {
@@ -15,7 +15,7 @@ jQuery(function ($) {
   //768px以上でドロワーを非表示にする
   $(window).on("resize", function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
-      $("#js-hamburger").removeClass("active");
+      $("#js-header__hamburger").removeClass("active");
       $(".header__sp-nav").fadeOut();
     }
   });

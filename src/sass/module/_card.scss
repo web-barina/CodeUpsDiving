@@ -18,10 +18,6 @@
     padding: rem(24);
   }
 }
-.card--blog {
-  width: 100%;
-  margin: 0 auto;
-}
 //カード画像
 .card__img {
   position: relative;
@@ -39,9 +35,6 @@
   .card__img {
     padding-top: 67.142%;
   }
-}
-.card__img--blog {
-  aspect-ratio: 301/201;
 }
 //カード内容全体
 .card__contents {
@@ -61,15 +54,9 @@
 .card__body--campaign {
   padding: rem(16) rem(16) 0 rem(16);
 }
-.card__body--blog {
-  margin-top: rem(18);
-}
 @include mq("md") {
   .card__body--campaign {
     padding: rem(24) rem(16) rem(0) rem(16);
-  }
-  .card__body--blog {
-    margin-top: rem(18);
   }
 }
 //カード本文
@@ -80,9 +67,6 @@
 @include mq("md") {
   .card__text {
     padding-top: rem(40);
-  }
-  .card__text--blog {
-    padding-top: rem(16);
   }
 }
 //カテゴリー

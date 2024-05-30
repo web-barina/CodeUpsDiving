@@ -29,7 +29,7 @@
   }
 }
 //お問い合わせ装飾
-.contact-decoration {
+.contact__decoration {
   position: absolute;
   right: calc(50% - min(46.4vw, 38.75rem));
   top: -0.8%;
@@ -135,5 +135,15 @@
   @include mq("md") {
     text-shadow: none;
     margin-top: rem(8);
+  }
+}
+//お問い合わせ
+.contact__logo {
+  width: rem(174);
+  height: auto;
+  margin: 0 auto;
+  @include mq("md") {
+    width: rem(200);
+    height: auto;
   }
 }

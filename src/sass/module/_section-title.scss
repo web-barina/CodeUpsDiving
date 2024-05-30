@@ -23,12 +23,6 @@
     font-size: rem(40);
     line-height: 1;
   }
-  .section-titles__english--white {
-    color: $white;
-  }
-  .section-titles__english--white::first-letter {
-    color: $white;
-  }
   .section-titles__english--big {
     text-shadow: none;
     font-size: rem(80);
@@ -56,9 +50,6 @@
   .section-titles__japanese {
     margin-top: rem(8);
     font-size: rem(10);
-  }
-  .section-titles__japanese--white {
-    color: $white;
   }
   .section-titles__japanese--shadow {
     text-shadow: none;

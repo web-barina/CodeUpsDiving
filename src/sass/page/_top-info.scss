@@ -31,14 +31,14 @@
   }
 }
 //ダイビング情報写真
-.top-info__content__img {
+.top-info__img {
   position: relative;
   aspect-ratio: 540/356;
   @include mq("md") {
     aspect-ratio: 345/227;
   }
 }
-.top-info__content__img > img {
+.top-info__img > img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -48,6 +48,6 @@
   object-fit: cover;
 }
 //ダイビング情報ボタン
-.top-info__content__texts__btn-wrapper {
+.top-info__btn-wrapper {
   margin-top: rem(40);
 }

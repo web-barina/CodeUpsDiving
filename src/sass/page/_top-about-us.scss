@@ -31,7 +31,7 @@
   }
 }
 //トップのみテキスト全体
-.top-about-us__img-wrapper__texts {
+.top-about-us__texts {
   margin-top: rem(41);
   display: grid;
   grid-template-columns: 1fr;
@@ -46,7 +46,7 @@
     right: calc(50% - min(48.4vw, 31rem));
   }
 }
-.top-about-us__img-wrapper__main-text {
+.top-about-us__main-text {
   font-size: rem(40);
   line-height: 1;
   font-family: $title-font-family;
@@ -57,14 +57,14 @@
     color: $white;
   }
 }
-.top-about-us__img-wrapper__text {
+.top-about-us__text {
   margin-top: rem(16);
   font-weight: $regular;
   @include mq("md") {
     margin-top: rem(0);
   }
 }
-.top-about-us__img-wrapper__text__btn-wrapper {
+.top-about-us__btn-wrapper {
   margin-top: rem(25);
   @include mq("md") {
     margin-top: rem(40);

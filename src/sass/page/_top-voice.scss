@@ -24,7 +24,7 @@
   }
 }
 //トップお客様の声、装飾上
-.top-voice__decoration-upper {
+.top-voice__inner__decoration-upper {
   display: none;
   @include mq("md") {
     display: block;
