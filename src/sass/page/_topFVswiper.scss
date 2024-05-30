@@ -1,29 +1,29 @@
 @use "global" as *;
-#topFV-swiper {
+#js-topFVswiper {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
-.topFV-swiper-slide {
+.topFVswiper__slide {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.topFV-swiper-slide img {
+.topFVswiper__slide img {
   display: block;
   width: 100%;
   height: 100vh;
   object-fit: cover;
 }
-.topFV-swiper-wrapper {
+.topFVswiper__wrapper {
   flex-direction: row;
   width: 100%;
   margin: 0 auto;
 }
-.topFV-texts {
+.topFVswiper__texts {
   z-index: 10;
   position: absolute;
   top: 49%;
@@ -32,26 +32,24 @@
   text-align: center;
   transform: translate(-50%, -50%);
 }
-.topFV-texts--loading {
+.topFVswiper__texts--loading {
   color: $green;
 }
 @include mq("md") {
-  .topFV-texts {
+  .topFVswiper__texts {
     top: 49%;
     left: 50%;
   }
 }
 //topFV 大きいタイトル
-.topFV-main-text {
+.topFVswiper__main-text {
   font-family: $second-font-family;
   font-size: rem(40);
   letter-spacing: 0.5em;
   left: 1.2;
   font-weight: 400;
   text-indent: 0.5em;
-}
-@include mq("md") {
-  .topFV-main-text {
+  @include mq("md") {
     font-size: rem(80);
     line-height: 1.125;
     letter-spacing: 0.53em;
@@ -59,14 +57,12 @@
   }
 }
 //topFV 小さいタイトル
-.topFV-sub-text {
+.topFVswiper__sub-text {
   font-family: $title-font-family;
   font-size: rem(20);
   line-height: 1;
   margin-top: rem(0);
-}
-@include mq("md") {
-  .topFV-sub-text {
+  @include mq("md") {
     margin-top: rem(10);
   }
 }

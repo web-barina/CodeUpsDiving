@@ -1,33 +1,19 @@
 @use "global" as *;
-//キャンペーン、全部コミコミ
-.campaign-text {
-  text-align: center;
-  line-height: 1.71428;
-  font-size: rem(14);
-  margin-top: rem(8);
-}
-@include mq("md") {
-  .campaign-text {
-    line-height: 1.5;
-    font-size: rem(16);
-    margin-top: rem(16);
-  }
-}
 
 //キャンペーン値段
-.campaign-price-wrapper {
+.campaign-card__price-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
 }
 @include mq("md") {
-  .campaign-price-wrapper {
+  .campaign-card__price-wrapper {
     margin-top: rem(0);
   }
 }
 //キャンペーン値段変更前
-.campaign-pre-price {
+.campaign-card__pre-price {
   line-height: 1;
   font-size: rem(20);
   font-family: $second-font-family;
@@ -36,12 +22,12 @@
 }
 
 @include mq("md") {
-  .campaign-pre-price {
+  .campaign-card__pre-price {
     font-size: rem(24);
   }
 }
 //キャンペーン値段変更後
-.campaign-after-price {
+.campaign-card__after-price {
   margin-left: rem(16);
   font-size: rem(32);
   font-weight: $bold;
@@ -49,7 +35,7 @@
   color: $green;
 }
 @include mq("md") {
-  .campaign-after-price {
+  .campaign-card__after-price {
     margin-left: rem(24);
     font-size: rem(40);
   }

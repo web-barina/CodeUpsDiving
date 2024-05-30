@@ -77,3 +77,11 @@
     width: rem(333);
   }
 }
+.top-campaign__btn-wrapper {
+  margin-top: rem(30);
+  text-align: center;
+  padding-bottom: rem(5);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

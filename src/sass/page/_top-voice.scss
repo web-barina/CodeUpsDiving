@@ -24,7 +24,7 @@
   }
 }
 //トップお客様の声、装飾上
-.top-voice__inner__decoration-upper {
+.top-voice__decoration-upper {
   display: none;
   @include mq("md") {
     display: block;
@@ -47,5 +47,13 @@
     width: 5%;
     height: auto;
     z-index: 10;
+  }
+}
+//
+.top-voice__btn-wrapper {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(80);
   }
 }
