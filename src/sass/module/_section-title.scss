@@ -3,32 +3,19 @@
 .section-titles {
   text-align: center;
 }
-
 //各セクションタイトル英語
 .section-titles__english {
   font-family: $title-font-family;
   font-size: rem(32);
   line-height: 1.25;
+  @include mq("md") {
+    font-size: rem(40);
+    line-height: 1;
+  }
 }
 .section-titles__english::first-letter {
   color: $green;
 }
-.section-titles__english--big {
-  font-size: rem(80);
-  line-height: 1;
-  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
-}
-@include mq("md") {
-  .section-titles__english {
-    font-size: rem(40);
-    line-height: 1;
-  }
-  .section-titles__english--big {
-    text-shadow: none;
-    font-size: rem(80);
-  }
-}
-
 //各セクションタイトル日本語
 .section-titles__japanese {
   font-size: rem(12);
@@ -36,22 +23,8 @@
   color: $green;
   line-height: 1.5;
   margin-top: rem(4);
-}
-.section-titles__japanese--header {
-  font-size: rem(10);
-  color: $white;
-  font-weight: $regular;
-}
-.section-titles__japanese--shadow {
-  line-height: 1;
-  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
-}
-@include mq("md") {
-  .section-titles__japanese {
+  @include mq("md") {
     margin-top: rem(8);
     font-size: rem(10);
-  }
-  .section-titles__japanese--shadow {
-    text-shadow: none;
   }
 }

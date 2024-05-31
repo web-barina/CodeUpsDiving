@@ -152,3 +152,27 @@
   text-align: center;
   padding-bottom: rem(5);
 }
+//お問い合わせ、セクションタイトル
+.contact__section-titles__english {
+  font-family: $title-font-family;
+  font-size: rem(80);
+  line-height: 1;
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+  @include mq("md") {
+    text-shadow: none;
+  }
+}
+.contact__section-titles__english::first-letter {
+  color: $green;
+}
+.contact__section-titles__japanese {
+  font-size: rem(12);
+  font-weight: $regular;
+  color: $green;
+  line-height: 1;
+  margin-top: rem(4);
+  text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+  @include mq("md") {
+    text-shadow: none;
+  }
+}

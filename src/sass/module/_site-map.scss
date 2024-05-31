@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: fit-content;
   column-gap: rem(16);
   @include mq("md") {
     width: 100%;
@@ -34,6 +33,9 @@
   font-weight: $bold;
   margin-top: rem(41);
   list-style: none;
+}
+.site-map__main-title--hamburger {
+  margin-top: 0;
 }
 //リストマークつかないところ
 .site-map__sub-title {

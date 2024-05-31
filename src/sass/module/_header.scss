@@ -138,7 +138,6 @@
   overscroll-behavior: contain;
   @include mq("md") {
     overflow-y: visible;
-    overscroll-behavior: contain;
   }
 }
 //sp-navの中身
