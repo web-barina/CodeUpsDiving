@@ -21,6 +21,7 @@
 }
 .info__content--top {
   @include mq("md") {
+    margin: 0 auto;
     flex-direction: row;
     max-width: rem(1080);
   }
