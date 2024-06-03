@@ -10,8 +10,11 @@
 //お問い合わせインナー
 .contact__inner {
   max-width: rem(540);
+  padding: 0 rem(25);
+  margin: 0 auto;
   @include mq("md") {
-    max-width: auto;
+    max-width: rem(1080);
+    padding: 0 rem(15);
   }
 }
 //お問い合わせコンテンツインナー
@@ -126,7 +129,7 @@
   }
 }
 //お問い合わせ右側テキスト
-.contact-text {
+.contact__text {
   color: $green;
   margin-top: rem(8);
   line-height: 1.2857;
@@ -153,7 +156,7 @@
   padding-bottom: rem(5);
 }
 //お問い合わせ、セクションタイトル
-.contact__section-titles__english {
+.contact__titles-english {
   font-family: $title-font-family;
   font-size: rem(80);
   line-height: 1;
@@ -162,10 +165,10 @@
     text-shadow: none;
   }
 }
-.contact__section-titles__english::first-letter {
+.contact__titles-english::first-letter {
   color: $green;
 }
-.contact__section-titles__japanese {
+.contact__titles-japanese {
   font-size: rem(12);
   font-weight: $regular;
   color: $green;

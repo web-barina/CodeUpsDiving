@@ -64,7 +64,7 @@
   top: 0;
   cursor: pointer;
 }
-//キャンペーン各スライド
+/*キャンペーン各スライド
 .top-campaign__slide {
   box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
   background-color: $white;
@@ -76,7 +76,7 @@
   @include mq("md") {
     width: rem(333);
   }
-}
+}*/
 .top-campaign__btn-wrapper {
   margin-top: rem(30);
   text-align: center;

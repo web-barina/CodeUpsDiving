@@ -7,9 +7,7 @@
   background-color: rgba($color: $black, $alpha: 0.68);
   z-index: 9999;
   overscroll-behavior-y: contain;
-}
-@include mq("md") {
-  .header {
+  @include mq("md") {
     height: rem(90);
   }
 }
@@ -22,9 +20,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-@include mq("md") {
-  .header__inner {
+  @include mq("md") {
     width: 100%;
     margin: 0 auto;
     padding: 0 rem(40);
@@ -42,7 +38,7 @@
 }
 //ヘッダー日本語タイトル
 @include mq("md") {
-  .header__section-titles__japanese {
+  .header__titles-japanese {
     font-size: rem(10);
     line-height: 1.5;
     color: $white;
@@ -52,7 +48,7 @@
 }
 //ヘッダー英語タイトル
 @include mq("md") {
-  .header__section-titles__english {
+  .header__titles-english {
     font-size: rem(18);
     line-height: 1;
     color: $white;
@@ -133,9 +129,11 @@
   }
 }
 //SP-navのインナー
-.header__sp-nav__inner {
+.header__sp-nav-inner {
+  margin-top: rem(24);
   overflow-y: scroll;
   overscroll-behavior: contain;
+  height: inherit;
   @include mq("md") {
     overflow-y: visible;
   }
@@ -177,14 +175,14 @@
   bottom: 0;
 }
 
-#js-header__hamburger.active span:nth-of-type(1) {
+#js-header-hamburger.active span:nth-of-type(1) {
   -webkit-transform: translateY(rem(11)) rotate(37deg);
   transform: translateY(rem(11)) rotate(37deg);
 }
-#js-header__hamburger.active span:nth-of-type(2) {
+#js-header-hamburger.active span:nth-of-type(2) {
   opacity: 0;
 }
-#js-header__hamburger.active span:nth-of-type(3) {
+#js-header-hamburger.active span:nth-of-type(3) {
   -webkit-transform: translateY(rem(-11)) rotate(-37deg);
   transform: translateY(rem(-11)) rotate(-37deg);
 }

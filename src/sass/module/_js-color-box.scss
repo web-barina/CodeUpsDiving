@@ -1,10 +1,10 @@
 @use "global" as *;
 //カード画像のアニメーション
-.js-colorbox {
+.js-color-box {
   position: relative;
   width: 100%;
 }
-.js-colorbox div.color {
+.js-color-box div.color {
   position: absolute;
   top: 0;
   right: 0;
@@ -13,7 +13,7 @@
   z-index: 2;
   background-color: $green;
 }
-.js-colorbox img {
+.js-color-box img {
   display: block;
   width: 100%;
 }

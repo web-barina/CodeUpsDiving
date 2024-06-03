@@ -11,42 +11,14 @@
 }
 .top-info__inner {
   max-width: rem(540);
-  @include mq("md") {
-    max-width: auto;
-  }
-}
-//ダイビング情報コンテンツ周り
-.top-info__content {
-  max-width: rem(500);
-  width: 100%;
-  margin-top: rem(28);
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: left;
-  row-gap: rem(24);
+  padding: 0 rem(25);
+  margin: 0 auto;
   @include mq("md") {
     max-width: rem(1080);
-    grid-template-columns: 1fr 1fr;
-    margin-top: rem(40);
+    padding: 0 rem(15);
   }
 }
-//ダイビング情報写真
-.top-info__img {
-  position: relative;
-  aspect-ratio: 540/356;
-  @include mq("md") {
-    aspect-ratio: 345/227;
-  }
-}
-.top-info__img > img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
+
 //ダイビング情報ボタン
 .top-info__btn-wrapper {
   text-align: center;

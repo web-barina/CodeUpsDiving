@@ -13,8 +13,11 @@
 //トップ料金インナー
 .top-price__inner {
   max-width: rem(540);
+  padding: 0 rem(25);
+  margin: 0 auto;
   @include mq("md") {
-    max-width: auto;
+    max-width: none;
+    padding: 0 rem(15);
   }
 }
 //トップ料金、メニュー＆写真全体
@@ -26,7 +29,7 @@
   @include mq("md") {
     flex-direction: row-reverse;
     column-gap: rem(93);
-    margin-top: rem(40);
+    margin: rem(40) auto 0 auto;
     max-width: rem(1077);
     width: 100%;
   }

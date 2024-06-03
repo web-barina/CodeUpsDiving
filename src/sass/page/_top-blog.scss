@@ -48,8 +48,11 @@
 //トップブログインナー
 .top-blog__inner {
   max-width: rem(540);
+  padding: 0 rem(25);
+  margin: 0 auto;
   @include mq("md") {
-    max-width: auto;
+    max-width: rem(1080);
+    padding: 0 rem(15);
   }
 }
 //トップブログカード周り

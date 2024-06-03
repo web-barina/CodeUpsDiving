@@ -1,4 +1,28 @@
 @use "global" as *;
+
+//キャンペーン、下層ページ用
+.campaign-card {
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+  background-color: $white;
+  opacity: 1;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  @include mq("md") {
+    flex-direction: row;
+  }
+}
+//キャンペーン、トップスライダー用
+.campaign-card--slide {
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+  background-color: $white;
+  opacity: 1;
+  height: auto;
+  width: rem(280);
+  @include mq("md") {
+    width: rem(333);
+  }
+}
 .campaign-card__img {
   position: relative;
   aspect-ratio: 280/188;
@@ -20,6 +44,15 @@
   @include mq("md") {
     padding: rem(24) rem(16) rem(0) rem(16);
   }
+}
+.campaign-card__category {
+  display: inline-block;
+  font-size: rem(12);
+  color: $green;
+  border: solid rem(1) $green;
+  line-height: 1.833333;
+  padding: rem(4) rem(12);
+  width: fit-content;
 }
 .campaign-card__title {
   overflow-wrap: anywhere;
