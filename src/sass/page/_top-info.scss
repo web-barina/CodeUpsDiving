@@ -11,14 +11,13 @@
 }
 .top-info__inner {
   max-width: rem(540);
-  padding: 0 rem(25);
+  padding: 0 rem(15);
   margin: 0 auto;
   @include mq("md") {
-    max-width: rem(1080);
-    padding: 0 rem(15);
+    max-width: none;
+    padding: 0 rem(25);
   }
 }
-
 //ダイビング情報ボタン
 .top-info__btn-wrapper {
   text-align: center;
