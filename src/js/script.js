@@ -34,7 +34,7 @@ jQuery(function ($) {
   /******************
    * campaign-swiper*
    ******************/
-  var topCampaignSwiper = new Swiper("#js-topCampaignSwiper", {
+  var topCampaign = new Swiper("#js-topCampaignSwiper", {
     slidesPerView: "auto",
     loop: true,
     spaceBetween: 24,
@@ -44,8 +44,8 @@ jQuery(function ($) {
       },
     },
     navigation: {
-      nextEl: ".top-campaign__swiper-button-next",
-      prevEl: ".top-campaign__swiper-button-prev",
+      nextEl: ".topCampaign__swiper-button-next",
+      prevEl: ".topCampaign__swiper-button-prev",
     },
   });
   /***************
