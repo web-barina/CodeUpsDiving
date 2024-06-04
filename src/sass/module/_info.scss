@@ -29,7 +29,6 @@
 //ダイビング情報タイトル・テキスト周り
 @include mq("md") {
   .info__texts {
-    padding-left: rem(48);
     align-content: center;
   }
 }
