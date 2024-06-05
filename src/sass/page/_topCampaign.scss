@@ -3,6 +3,7 @@
 .topCampaign-wrapper {
   margin-top: rem(40);
   overflow: hidden;
+  width: 100%;
   @include mq("md") {
     margin-top: rem(120);
   }
@@ -68,19 +69,6 @@
   top: 0;
   cursor: pointer;
 }
-/*キャンペーン各スライド
-.topCampaign__slide {
-  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
-  background-color: $white;
-  opacity: 1;
-  width: rem(280);
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  @include mq("md") {
-    width: rem(333);
-  }
-}*/
 .topCampaign__btn-wrapper {
   margin-top: rem(30);
   text-align: center;

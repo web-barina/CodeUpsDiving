@@ -1,5 +1,5 @@
 @use "global" as *;
-//トップabout us全体
+//about us全体
 .about-us-wrapper {
   position: relative;
   margin-top: rem(80);
@@ -7,15 +7,20 @@
     margin-top: rem(140);
   }
 }
-//トップabout us画像全体
-.about-us__img-wrapper {
+//about us インナー
+.about-us__inner {
   max-width: rem(500);
   width: 100%;
-  margin: rem(28) auto 0 auto;
   @include mq("md") {
-    margin: rem(40) auto 0 auto;
     max-width: rem(1100);
     width: 100%;
+  }
+}
+//about us画像全体
+.about-us__img-wrapper {
+  margin-top: rem(28);
+  @include mq("md") {
+    margin-top: rem(40);
   }
 }
 //トップabout us装飾
@@ -30,7 +35,7 @@
     width: 13%;
   }
 }
-//トップのみテキスト全体
+//テキスト全体
 .about-us__texts {
   margin-top: rem(41);
   display: grid;

@@ -10,11 +10,8 @@
 //お問い合わせインナー
 .contact__inner {
   max-width: rem(540);
-  padding: 0 rem(25);
-  margin: 0 auto;
   @include mq("md") {
     max-width: rem(1080);
-    padding: 0 rem(15);
   }
 }
 //お問い合わせコンテンツインナー

@@ -12,47 +12,11 @@
     position: relative;
   }
 }
-//トップブログ セクションタイトル
-.top-blog__section-titles {
-  text-align: center;
-}
-.top-blog__section-titles__english {
-  color: $black;
-  font-family: $title-font-family;
-  font-size: rem(32);
-  line-height: 1.25;
-  @include mq("md") {
-    color: $white;
-    font-size: rem(40);
-    line-height: 1;
-  }
-}
-.top-blog__section-titles__english::first-letter {
-  color: $green;
-  @include mq("md") {
-    color: $white;
-  }
-}
-.top-blog__section-titles__japanese {
-  color: $green;
-  font-size: rem(12);
-  font-weight: $regular;
-  line-height: 1.5;
-  margin-top: rem(4);
-  @include mq("md") {
-    color: $white;
-    margin-top: rem(8);
-    font-size: rem(10);
-  }
-}
 //トップブログインナー
 .top-blog__inner {
   max-width: rem(540);
-  padding: 0 rem(15);
-  margin: 0 auto;
   @include mq("md") {
-    max-width: rem(1080);
-    padding: 0 rem(25);
+    max-width: none;
   }
 }
 //トップブログカード周り

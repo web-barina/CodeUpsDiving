@@ -16,6 +16,16 @@
 .section-titles__english::first-letter {
   color: $green;
 }
+.section-titles__english--white {
+  @include mq("md") {
+    color: $white;
+  }
+}
+.section-titles__english--white::first-letter {
+  @include mq("md") {
+    color: $white;
+  }
+}
 //各セクションタイトル日本語
 .section-titles__japanese {
   font-size: rem(12);
@@ -26,5 +36,10 @@
   @include mq("md") {
     margin-top: rem(8);
     font-size: rem(10);
+  }
+}
+.section-titles__japanese--white {
+  @include mq("md") {
+    color: $white;
   }
 }
