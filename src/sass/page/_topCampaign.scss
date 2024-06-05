@@ -44,7 +44,7 @@
   }
 }
 //スライダーボタン左
-.topCampaign__swiper-button-prev::after {
+.topCampaign__prev::after {
   background-image: url(/assets/images/common/slider-left-arrow.png);
   content: "";
   background-size: cover;
@@ -57,7 +57,7 @@
   cursor: pointer;
 }
 //スライダーボタン右
-.topCampaign__swiper-button-next::after {
+.topCampaign__next::after {
   background-image: url(/assets/images/common/slider-right-arrow.png);
   content: "";
   background-size: cover;

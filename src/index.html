@@ -135,7 +135,7 @@
       </div>
       <!--SP-header-->
       <div class="header__sp-nav">
-        <div class="header__sp-nav-inner">
+        <div class="header__scroll">
           <div class="header__site-map site-map">
             <div class="site-map__sp-layout">
               <div class="site-map__content">
@@ -188,7 +188,7 @@
     </header>
     <main>
       <!--first-view-->
-      <div class="swiper topFVswiper" id="js-topFVswiper">
+      <div class="topFVswiper swiper" id="js-topFVswiper">
         <div class="topFVswiper__wrapper swiper-wrapper">
           <picture class="topFVswiper__slide swiper-slide">
             <source srcset="./assets/images/common/FV-pc1.png" media="(min-width: 768px)" />
@@ -218,15 +218,15 @@
       </div>
       <!--Campaign-->
       <section class="topCampaign topCampaign-wrapper">
-        <div class="inner">
+        <div class="topCampaign__inner inner">
           <div class="topCampaign__swiper-button-relative">
             <div class="topCampaign__titles section-titles">
               <p class="section-titles__english">Campaign</p>
               <h2 class="section-titles__japanese">キャンペーン</h2>
             </div>
             <div class="topCampaign__swiper-button-wrapper">
-              <div class="topCampaign__swiper-button-prev"></div>
-              <div class="topCampaign__swiper-button-next"></div>
+              <div class="topCampaign__prev"></div>
+              <div class="topCampaign__next"></div>
             </div>
           </div>
           <div class="topCampaign swiper" id="js-topCampaignSwiper">
@@ -237,7 +237,7 @@
                 </figure>
                 <div class="campaign-card__body">
                   <div class="campaign-card__category">ライセンス講習</div>
-                  <div class="campaign-card__title-wrapper title-wrapper">
+                  <div class="campaign-card__title-wrapper">
                     <h3 class="campaign-card__title">ライセンス取得</h3>
                   </div>
                 </div>
@@ -255,7 +255,7 @@
                 </figure>
                 <div class="campaign-card__body">
                   <div class="campaign-card__category">体験ダイビング</div>
-                  <div class="campaign-card__title-wrapper title-wrapper">
+                  <div class="campaign-card__title-wrapper">
                     <h3 class="campaign-card__title">貸切体験ダイビング</h3>
                   </div>
                 </div>
@@ -273,7 +273,7 @@
                 </figure>
                 <div class="campaign-card__body">
                   <div class="campaign-card__category">体験ダイビング</div>
-                  <div class="campaign-card__title-wrapper title-wrapper">
+                  <div class="campaign-card__title-wrapper">
                     <h3 class="campaign-card__title">ナイトダイビング</h3>
                   </div>
                 </div>
@@ -291,7 +291,7 @@
                 </figure>
                 <div class="campaign-card__body">
                   <div class="campaign-card__category">ファンダイビング</div>
-                  <div class="campaign-card__title-wrapper title-wrapper">
+                  <div class="campaign-card__title-wrapper">
                     <h3 class="campaign-card__title">貸切ファンダイビング</h3>
                   </div>
                 </div>
@@ -384,7 +384,7 @@
           </div>
           <div class="top-blog__cards-wrapper">
             <div class="top-blog__cards">
-              <a href="#" class="top-blog__card blog-card">
+              <a href="#" class="top-blog__cards-item top-blog__card blog-card">
                 <figure class="blog-card__img">
                   <img src="./assets/images/common/blog1.png" alt="ピンク色の珊瑚の写真" />
                 </figure>
@@ -394,7 +394,7 @@
                   <div class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
                 </div>
               </a>
-              <a href="#" class="top-blog__card blog-card">
+              <a href="#" class="top-blog__cards-item top-blog__card blog-card">
                 <figure class="blog-card__img">
                   <img src="./assets/images/common/blog2.png" alt="こちらに向かって泳ぐウミガメの写真" />
                 </figure>
@@ -404,7 +404,7 @@
                   <div class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
                 </div>
               </a>
-              <a href="#" class="top-blog__card blog-card">
+              <a href="#" class="top-blog__cards-item top-blog__card blog-card">
                 <figure class="blog-card__img">
                   <img src="./assets/images/common/blog3.png" alt="イソギンチャクの中から顔をのぞかせているカクレクマノミ" />
                 </figure>
@@ -434,7 +434,7 @@
           </div>
           <div class="top-voice__cards-wrapper">
             <div class="top-voice__cards voice-cards">
-              <div class="voice-card">
+              <div class="voice-cards__item voice-card">
                 <div class="voice-card__info">
                   <div class="voice-card__customer-data-wrapper">
                     <div class="voice-card__customer-data">
@@ -452,7 +452,7 @@
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
                 </div>
               </div>
-              <div class="voice-card">
+              <div class="voice-cards__item voice-card">
                 <div class="voice-card__info">
                   <div class="voice-card__customer-data-wrapper">
                     <div class="voice-card__customer-data">
