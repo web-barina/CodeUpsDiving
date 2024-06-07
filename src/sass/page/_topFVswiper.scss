@@ -32,9 +32,6 @@
   text-align: center;
   transform: translate(-50%, -50%);
 }
-.topFVswiper__texts--loading {
-  color: $green;
-}
 @include mq("md") {
   .topFVswiper__texts {
     top: 49%;
