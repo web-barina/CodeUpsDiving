@@ -1,39 +1,9 @@
 @use "global" as *;
-//about us全体
-.about-us-wrapper {
-  position: relative;
-  margin-top: rem(80);
-  @include mq("md") {
-    margin-top: rem(140);
-  }
-}
-//about us インナー
-.about-us__inner {
-  max-width: rem(500);
-  width: 100%;
-  @include mq("md") {
-    max-width: rem(1100);
-    width: 100%;
-  }
-}
+
 //about us画像全体
-.about-us__img-wrapper {
-  margin-top: rem(28);
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}
-//トップabout us装飾
-.about-us__decoration {
-  display: none;
-  @include mq("md") {
-    display: block;
-    position: absolute;
-    bottom: -11%;
-    right: calc(50% - min(48.4vw, 39.5rem));
-    max-width: rem(194);
-    width: 13%;
-  }
+.about-us {
+  display: flex;
+  flex-direction: row;
 }
 //テキスト全体
 .about-us__texts {
@@ -68,19 +38,6 @@
   @include mq("md") {
     margin-top: rem(0);
   }
-}
-.about-us__btn-wrapper {
-  margin-top: rem(25);
-  text-align: center;
-  padding-bottom: rem(5);
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}
-//about us画像全体
-.about-us__img {
-  display: flex;
-  flex-direction: row;
 }
 //about us背景画像左側
 .about-us__img-left {

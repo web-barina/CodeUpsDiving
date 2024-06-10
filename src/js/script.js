@@ -37,6 +37,7 @@ jQuery(function ($) {
   var topCampaign = new Swiper("#js-topCampaignSwiper", {
     slidesPerView: "auto",
     loop: true,
+    autoplay: 5000,
     spaceBetween: 24,
     breakpoints: {
       768: {
