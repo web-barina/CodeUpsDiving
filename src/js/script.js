@@ -3,8 +3,8 @@ jQuery(function ($) {
   /*****
     ハンバーガーメニュー
     *****/
-  $("#js-header-hamburger").on("click", function () {
-    if ($("#js-header-hamburger").hasClass("active")) {
+  $("#js-hamburger").on("click", function () {
+    if ($("#js-hamburger").hasClass("active")) {
       $(".header__sp-nav").fadeOut();
       $(this).removeClass("active");
     } else {
@@ -15,7 +15,7 @@ jQuery(function ($) {
   //768px以上でドロワーを非表示にする
   $(window).on("resize", function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
-      $("#js-header-hamburger").removeClass("active");
+      $("#js-hamburger").removeClass("active");
       $(".header__sp-nav").fadeOut();
     }
   });
@@ -34,10 +34,13 @@ jQuery(function ($) {
   /******************
    * campaign-swiper*
    ******************/
-  var topCampaign = new Swiper("#js-topCampaignSwiper", {
+  var topCampaign = new Swiper("#js-topCampaign", {
     slidesPerView: "auto",
     loop: true,
-    autoplay: 5000,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
     spaceBetween: 24,
     breakpoints: {
       768: {
@@ -45,8 +48,8 @@ jQuery(function ($) {
       },
     },
     navigation: {
-      nextEl: ".topCampaign__swiper-button-next",
-      prevEl: ".topCampaign__swiper-button-prev",
+      nextEl: ".topCampaign__next",
+      prevEl: ".topCampaign__prev",
     },
   });
   /***************

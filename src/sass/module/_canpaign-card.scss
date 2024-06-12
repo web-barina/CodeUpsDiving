@@ -9,13 +9,6 @@
   display: flex;
   flex-direction: column;
 }
-//キャンペーン、トップスライダー用
-.campaign-card--slide {
-  width: rem(280);
-  @include mq("md") {
-    width: rem(333);
-  }
-}
 .campaign-card__img {
   position: relative;
   aspect-ratio: 280/188;

@@ -60,6 +60,7 @@
 .top-info__img {
   position: relative;
   aspect-ratio: 540/356;
+  width: 100%;
   @include mq("md") {
     aspect-ratio: 345/227;
   }

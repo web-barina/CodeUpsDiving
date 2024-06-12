@@ -20,15 +20,18 @@
   }
 }
 //トップブログカード周り
+.top-blog__cards-wrapper {
+  margin-top: rem(28);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
 .top-blog__cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: rem(40);
-  margin-top: rem(28);
-
   @include mq("md") {
     grid-template-columns: repeat(3, 1fr);
-    margin-top: rem(80);
   }
 }
 //トップブログ装飾

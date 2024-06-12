@@ -32,7 +32,6 @@
 //トップお客様の声周り
 .top-voice__cards-wrapper {
   margin: rem(40) auto 0 auto;
-  display: flex;
   flex-direction: column;
   @include mq("md") {
     margin-top: rem(30);

@@ -63,11 +63,9 @@
   }
 }
 //ヘッダーpc-nav
-
 .header__pc-nav {
   display: none;
 }
-
 @include mq("md") {
   .header__pc-nav {
     display: block;
@@ -129,21 +127,18 @@
     display: none;
   }
 }
-//SP-navのインナー
-.header__scroll {
-  overflow-y: scroll;
-  overscroll-behavior: contain;
-  height: inherit;
-  @include mq("md") {
-    overflow-y: visible;
-  }
-}
 //sp-navの中身
 .header__site-map {
   height: calc(100vh - rem(80));
   margin: rem(-17) auto 0 auto;
   max-width: rem(500);
   column-gap: rem(8);
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  height: inherit;
+  @include mq("md") {
+    overflow-y: visible;
+  }
 }
 //ハンバーガーメニュー
 .header__hamburger {
