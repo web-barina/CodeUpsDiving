@@ -115,7 +115,7 @@
 }
 .header__site-map-wrapper {
   width: 100%;
-  height: inherit;
+  height: -webkit-fill-available;
   overflow-y: scroll;
   overscroll-behavior: contain;
   @include mq("md") {
