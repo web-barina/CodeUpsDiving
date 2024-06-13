@@ -115,13 +115,19 @@
 }
 .header__site-map-wrapper {
   width: 100%;
-  height: auto;
+  height: inherit;
   overflow-y: scroll;
   overscroll-behavior: contain;
   @include mq("md") {
     display: none;
-    overflow-y: visible;
   }
+}
+//スクロールバーを出すところと分けたかったため、innerとwrapperを分けた
+.header__site-map-inner {
+  max-width: rem(540);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(15);
 }
 //ヘッダーSP-nav
 .header__sp-nav {
