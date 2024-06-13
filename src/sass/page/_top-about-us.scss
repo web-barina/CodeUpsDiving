@@ -2,7 +2,7 @@
 //about us全体
 .top-about-us-wrapper {
   position: relative;
-  margin-top: rem(80);
+  margin-top: rem(78);
   @include mq("md") {
     margin-top: rem(140);
   }
@@ -52,17 +52,18 @@
 }
 //テキスト全体
 .top-about-us__texts {
-  margin-top: rem(41);
+  margin-top: rem(39);
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: rem(13);
+  row-gap: rem(0);
   @include mq("md") {
+    margin-top: rem(41);
     width: min(rem(840), 80%);
     position: absolute;
     grid-template-columns: 1fr 1fr;
     column-gap: rem(40);
     color: $white;
-    top: 35%;
+    top: 34.5%;
     right: calc(50% - min(48.4vw, 31rem));
   }
 }

@@ -1,17 +1,17 @@
 @use "global" as *;
 //トップお客様の声
 .top-voice-wrapper {
-  margin-top: rem(83);
+  margin-top: rem(76);
   @include mq("md") {
     position: relative;
-    margin-top: rem(145);
+    margin-top: rem(140);
   }
 }
 .top-voice__cards {
   margin-top: rem(40);
   display: grid;
   grid-template-columns: 1fr;
-  gap: rem(40);
+  gap: rem(49);
   @include mq("md") {
     margin-top: rem(30);
     gap: rem(80) rem(40);
@@ -31,7 +31,7 @@
 }
 //トップお客様の声周り
 .top-voice__cards-wrapper {
-  margin: rem(40) auto 0 auto;
+  margin: rem(44) auto 0 auto;
   flex-direction: column;
   @include mq("md") {
     margin-top: rem(30);
@@ -55,7 +55,7 @@
   @include mq("md") {
     display: block;
     position: absolute;
-    bottom: -10.5%;
+    bottom: -11%;
     right: calc(50% - min(48.4vw, 33.75rem));
     max-width: rem(71);
     width: 5%;

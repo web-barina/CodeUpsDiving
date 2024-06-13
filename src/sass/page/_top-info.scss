@@ -2,11 +2,11 @@
 
 .top-info-wrapper {
   margin-top: rem(70);
-  padding: rem(80) 0;
+  padding: rem(80) 0 rem(77);
   background-color: $light-green;
   @include mq("md") {
-    margin-top: rem(164);
-    padding: rem(100) 0 rem(76);
+    margin-top: rem(160);
+    padding: rem(100) 0 rem(77);
   }
 }
 .top-info__inner {
@@ -23,7 +23,7 @@
 }
 //ダイビング情報コンテンツ
 .top-info__content {
-  margin-top: rem(24);
+  margin-top: rem(28);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -59,10 +59,12 @@
 //ダイビング情報写真
 .top-info__img {
   position: relative;
-  aspect-ratio: 540/356;
+  aspect-ratio: 345/227;
+  max-width: rem(345);
   width: 100%;
   @include mq("md") {
-    aspect-ratio: 345/227;
+    aspect-ratio: 540/356;
+    max-width: rem(537);
   }
 }
 .top-info__img > img {

@@ -40,12 +40,12 @@
   display: flex;
   flex-direction: row;
   margin-left: rem(0);
-  column-gap: rem(18.25);
+  column-gap: rem(23);
   @include mq("md") {
     margin-top: rem(0);
-    margin-left: rem(40);
+    margin-left: rem(43);
     padding-bottom: rem(10);
-    column-gap: rem(20);
+    column-gap: rem(25);
   }
 }
 //各SNS
@@ -66,6 +66,13 @@
 @include mq("md") {
   .footer__copy {
     margin-top: rem(80);
+  }
+}
+//サイトマップ上余白
+.footer__site-map-wrapper {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(24);
   }
 }
 //スクロールトップ

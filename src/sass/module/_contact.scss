@@ -2,7 +2,7 @@
 //お問い合わせセクション全体
 .contact-wrapper {
   position: relative;
-  margin: rem(54) auto 0 auto;
+  margin: rem(63) auto 0 auto;
   @include mq("md") {
     margin: rem(140) auto 0 auto;
   }
@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   @include mq("md") {
-    padding: rem(70) rem(112) rem(70) rem(50);
+    padding: rem(80) rem(112) rem(78) rem(50);
     max-width: rem(1080);
     width: 100%;
     flex-direction: row;
@@ -32,12 +32,12 @@
 .contact__decoration {
   position: absolute;
   right: calc(50% - min(46.4vw, 38.75rem));
-  top: -0.8%;
+  top: -1.6%;
   max-width: rem(109);
   width: 29%;
   z-index: 10;
   @include mq("md") {
-    top: -8.5%;
+    top: -9.5%;
     right: calc(50% - min(48.4vw, 41.75rem));
     max-width: rem(301);
     width: 21%;
@@ -47,7 +47,7 @@
 .contact__info-wrapper {
   margin-top: rem(16);
   @include mq("md") {
-    margin-top: rem(18);
+    margin-top: rem(0);
   }
 }
 //お問い合わせ左側住所と地図まとまり
@@ -128,7 +128,7 @@
 //お問い合わせ右側テキスト
 .contact__text {
   color: $green;
-  margin-top: rem(8);
+  margin-top: rem(10);
   line-height: 1.2857;
   font-size: rem(14);
   text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
@@ -139,12 +139,12 @@
 }
 //お問い合わせ
 .contact__logo {
-  width: rem(174);
+  max-width: rem(174);
+  width: 100%;
   height: auto;
   margin: 0 auto;
   @include mq("md") {
-    width: rem(200);
-    height: auto;
+    max-width: rem(210);
   }
 }
 .contact__btn-wrapper {
@@ -170,9 +170,10 @@
   font-weight: $regular;
   color: $green;
   line-height: 1;
-  margin-top: rem(4);
+  margin-top: rem(-3);
   text-shadow: 0 rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
   @include mq("md") {
     text-shadow: none;
+    margin-top: rem(0);
   }
 }
