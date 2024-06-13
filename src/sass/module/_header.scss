@@ -113,7 +113,16 @@
     transform: scale(1, 1);
   }
 }
-
+.header__site-map-wrapper {
+  width: 100%;
+  height: auto;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  @include mq("md") {
+    display: none;
+    overflow-y: visible;
+  }
+}
 //ヘッダーSP-nav
 .header__sp-nav {
   display: none;
@@ -133,12 +142,6 @@
   margin: rem(-17) auto 0 auto;
   max-width: rem(500);
   column-gap: rem(8);
-  overflow-y: scroll;
-  overscroll-behavior: contain;
-  height: inherit;
-  @include mq("md") {
-    overflow-y: visible;
-  }
 }
 //ハンバーガーメニュー
 .header__hamburger {
