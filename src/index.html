@@ -34,8 +34,8 @@
     <script src="./assets/js/jquery.inview.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-    <script defer src="./assets/js/gsap.js" defer></script>
-    <script defer src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/gsap.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
     <!--loading
@@ -191,22 +191,18 @@
         <div class="topFVswiper__wrapper swiper-wrapper">
           <picture class="topFVswiper__slide swiper-slide">
             <source srcset="./assets/images/common/FV-pc1.png" media="(min-width: 768px)" />
-            <source srcset="./assets/images/common/FV-sp1.png" media="(min-width: 767px)" />
             <img src="./assets/images/common/FV-sp1.png" alt="海の中を泳ぐウミガメ"
           /></picture>
           <picture class="topFVswiper__slide swiper-slide">
             <source srcset="./assets/images/common/FV-pc2.png" media="(min-width: 768px)" />
-            <source srcset="./assets/images/common/FV-sp2.png" media="(min-width: 767px)" />
             <img src="./assets/images/common/FV-sp2.png" alt="海の中でウミガメとダイビングを楽しむ二人組"
           /></picture>
           <picture class="topFVswiper__slide swiper-slide">
             <source srcset="./assets/images/common/FV-pc3.png" media="(min-width: 768px)" />
-            <source srcset="./assets/images/common/FV-sp3.png" media="(min-width: 767px)" />
             <img src="./assets/images/common/FV-sp3.png" alt="日光がさす青空と海"
           /></picture>
           <picture class="topFVswiper__slide swiper-slide">
             <source srcset="./assets/images/common/FV-pc4.png" media="(min-width: 768px)" />
-            <source srcset="./assets/images/common/FV-sp4.png" media="(min-width: 767px)" />
             <img src="./assets/images/common/FV-sp4.png" alt="青空と砂浜"
           /></picture>
         </div>
@@ -338,7 +334,6 @@
               </div>
             </div>
           </div>
-          <div class="top-about-us__decoration"><img src="./assets/images/common/about-us-decoratoin.png" alt="珊瑚のイラスト" /></div>
         </div>
         <!--inner閉じタグ-->
       </section>
@@ -370,13 +365,12 @@
       <!--Blog-->
       <section class="top-blog top-blog-wrapper">
         <div class="top-blog__inner inner">
-          <div class="top-blog__decoration"><img src="./assets/images/common/decoration-fish-white.png" alt="魚群のイラスト" /></div>
           <div class="top-blog__section-titles section-titles">
             <p class="section-titles__english section-titles__english--white">Blog</p>
             <h2 class="section-titles__japanese section-titles__japanese--white">ブログ</h2>
           </div>
-          <div class="top-blog__cards top-blog__cards-wrapper">
-            <a href="#" class="top-blog__card blog-card">
+          <div class="top-blog__cards blog-cards">
+            <a href="#" class="blog-cards__item blog-card">
               <figure class="blog-card__img">
                 <img src="./assets/images/common/blog1.png" alt="ピンク色の珊瑚の写真" />
               </figure>
@@ -418,13 +412,12 @@
       <!--Voice-->
       <section class="top-voice top-voice-wrapper">
         <div class="top-voice__inner inner">
-          <div class="top-voice__decoration-upper"><img src="./assets/images/common/decoration-fish-right.svg" alt="魚群のイラスト" /></div>
           <div class="top-voice__section-titles section-titles">
             <p class="section-titles__english">Voice</p>
             <h2 class="section-titles__japanese">お客様の声</h2>
           </div>
-          <div class="top-voice__cards top-voice__cards-wrapper">
-            <div class="top-voice__card voice-card">
+          <div class="top-voice__cards voice-cards">
+            <div class="voice-cards__item voice-card">
               <div class="voice-card__info">
                 <div class="voice-card__customer-data-wrapper">
                   <div class="voice-card__customer-data">
@@ -468,7 +461,6 @@
             </a>
           </div>
         </div>
-        <div class="top-voice__decoration-under"><img src="./assets/images/common/decoration-dragon-fish.png" alt="タツノオトシゴのイラスト" /></div>
       </section>
       <!--price-->
       <section class="top-price top-price-wrapper">
@@ -480,7 +472,6 @@
           <div class="top-price__contents-wrapper">
             <picture class="top-price__img js-color-box">
               <source srcset="./assets/images/common/price-pc.png" media="(min-width: 768px)" type="image/jpg" />
-              <source srcset="./assets/images/common/price-sp.png" media="(max-width: 767px)" type="image/png" />
               <img src="./assets/images/common/price-sp.png" alt="ウミガメ" />
             </picture>
             <div class="top-price__contents">
@@ -556,13 +547,11 @@
               <span></span>
             </a>
           </div>
-          <div class="top-price__decoration"><img src="./assets/images/common/decoration-fish.png" alt="魚群のイラスト" /></div>
         </div>
       </section>
       <!--contact-->
       <section class="contact contact-wrapper">
         <div class="contact__inner inner">
-          <div class="contact__decoration"><img src="./assets/images/common/decoration-fish.png" alt="魚群のイラスト" /></div>
           <div class="contact__content-inner">
             <div class="contact__address-wrapper">
               <div class="contact__info-wrapper">
@@ -597,7 +586,7 @@
     </main>
     <!--footer-->
     <footer class="footer footer-wrapper" id="footer">
-      <div class="footer__js-scroll-top" id="footer__js-scroll-top">
+      <div class="footer__js-scroll-top" id="js-scroll-top">
         <a href="#"><img src="./assets/images/common/scroll-top.png" alt="上へ戻る矢印" /></a>
       </div>
       <div class="footer__inner inner">

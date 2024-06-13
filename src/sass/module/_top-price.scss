@@ -1,15 +1,4 @@
 @use "global" as *;
-//トップ料金セクション
-.top-price-wrapper {
-  padding: rem(82) 0 rem(77);
-  background-color: $light-green;
-  margin-top: rem(80);
-  @include mq("md") {
-    margin-top: rem(144);
-    padding: rem(100) 0 rem(98) 0;
-    position: relative;
-  }
-}
 //トップ料金インナー
 .top-price__inner {
   max-width: rem(540);
@@ -102,19 +91,6 @@
   flex-shrink: 0;
   margin-top: auto;
   padding-bottom: rem(4);
-}
-//装飾
-.top-price__decoration {
-  display: none;
-  @include mq("md") {
-    display: block;
-    position: absolute;
-    bottom: 4.9%;
-    left: calc(50% - min(48.4vw, 38.75rem));
-    max-width: rem(437);
-    width: 100%;
-    z-index: 10;
-  }
 }
 .top-price__btn-wrapper {
   margin-top: rem(40);

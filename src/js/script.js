@@ -88,12 +88,12 @@ jQuery(function ($) {
   function PageTopAnime() {
     var scroll = $(window).scrollTop();
     if (scroll >= 300) {
-      $("#footer__js-scroll-top").removeClass("DownMove");
-      $("#footer__js-scroll-top").addClass("UpMove");
+      $("#js-scroll-top").removeClass("DownMove");
+      $("#js-scroll-top").addClass("UpMove");
     } else {
-      if ($("#footer__js-scroll-top").hasClass("UpMove")) {
-        $("#footer__js-scroll-top").removeClass("UpMove");
-        $("#footer__js-scroll-top").addClass("DownMove");
+      if ($("#js-scroll-top").hasClass("UpMove")) {
+        $("#js-scroll-top").removeClass("UpMove");
+        $("#js-scroll-top").addClass("DownMove");
       }
     }
 
@@ -101,11 +101,11 @@ jQuery(function ($) {
     var footerPos = $("#footer").offset().top;
     if (scroll + wH >= footerPos + 10) {
       var pos = scroll + wH - footerPos + 10; //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
-      $("#footer__js-scroll-top").css("bottom", pos);
+      $("#js-scroll-top").css("bottom", pos);
     } else {
       //それ以外は
-      if ($("#footer__js-scroll-top").hasClass("UpMove")) {
-        $("#footer__js-scroll-top").css("bottom", "10px");
+      if ($("#js-scroll-top").hasClass("UpMove")) {
+        $("#js-scroll-top").css("bottom", "10px");
       }
     }
   }

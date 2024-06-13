@@ -1,16 +1,5 @@
 @use "global" as *;
 //フッター全体
-.footer-wrapper {
-  margin-top: rem(100);
-  padding: rem(48) 0 rem(56) 0;
-  background-color: $green;
-  color: $white;
-  opacity: 1;
-  @include mq("md") {
-    margin-top: rem(160);
-    padding: rem(80) 0;
-  }
-}
 .footer__inner {
   max-width: rem(540);
   width: 100%;
@@ -81,66 +70,5 @@
   margin-top: rem(40);
   @include mq("md") {
     margin-top: rem(24);
-  }
-}
-//スクロールトップ
-#footer__js-scroll-top a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  width: rem(48);
-  height: rem(48);
-  transition: all 0.3s;
-}
-
-#footer__js-scroll-top a:hover {
-  background: transparent;
-}
-
-/*リンクを右下に固定*/
-#footer__js-scroll-top {
-  position: fixed;
-  right: rem(15);
-  z-index: 2;
-  /*はじめは非表示*/
-  opacity: 0;
-  transform: translateY(rem(100));
-}
-
-/*上に上がる動き*/
-
-#footer__js-scroll-top.UpMove {
-  animation: UpAnime 0.5s forwards;
-}
-@keyframes UpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(trm(100));
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/*下に下がる動き*/
-#footer__js-scroll-top.DownMove {
-  animation: DownAnime 0.5s forwards;
-}
-@keyframes DownAnime {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(rem(100));
-  }
-}
-@include mq("md") {
-  #footer__js-scroll-top a {
-    width: rem(80);
-    height: rem(80);
   }
 }

@@ -1,0 +1,27 @@
+@use "global" as *;
+//トップブログインナー
+.top-blog__inner {
+  max-width: rem(540);
+  @include mq("md") {
+    max-width: rem(1080);
+  }
+}
+.top-blog__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: rem(28);
+  gap: rem(40);
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: rem(80);
+  }
+}
+//ボタン周り
+.top-blog__btn-wrapper {
+  margin-top: rem(40);
+  text-align: center;
+  padding-bottom: rem(5);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

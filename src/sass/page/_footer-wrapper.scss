@@ -1,0 +1,13 @@
+@use "global" as *;
+//フッター全体余白
+.footer-wrapper {
+  margin-top: rem(100);
+  padding: rem(48) 0 rem(56) 0;
+  background-color: $green;
+  color: $white;
+  opacity: 1;
+  @include mq("md") {
+    margin-top: rem(160);
+    padding: rem(80) 0;
+  }
+}

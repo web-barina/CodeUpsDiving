@@ -1,12 +1,4 @@
 @use "global" as *;
-//about us全体
-.top-about-us-wrapper {
-  position: relative;
-  margin-top: rem(78);
-  @include mq("md") {
-    margin-top: rem(140);
-  }
-}
 //インナー
 .top-about-us__inner {
   max-width: rem(500);
@@ -22,17 +14,23 @@
   flex-direction: row;
   @include mq("md") {
     margin-top: rem(40);
+    position: relative;
   }
-} //トップabout us装飾
-.top-about-us__decoration {
+}
+//トップabout us装飾
+.top-about-us__img-wrapper::after {
   display: none;
   @include mq("md") {
-    display: block;
     position: absolute;
+    content: "";
+    background-image: url(/assets/images/common/about-us-decoration.png);
+    display: block;
     bottom: -11%;
     right: calc(50% - min(48.4vw, 39.5rem));
-    max-width: rem(194);
-    width: 13%;
+    width: rem(194);
+    height: rem(181);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 //ボタン周り
