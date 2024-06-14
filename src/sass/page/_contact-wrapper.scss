@@ -12,15 +12,15 @@
   content: "";
   display: block;
   background-image: url(/assets/images/common/decoration-fish.png);
-  top: 0;
-  right: calc(50% - min(48.4vw, 39.5rem));
+  top: rem(-10);
+  right: calc(50% - min(46.4vw, 10.8rem));
   width: rem(109);
   height: rem(50);
   background-size: contain;
   background-repeat: no-repeat;
   @include mq("md") {
-    top: 0;
-    right: calc(50% - min(48.4vw, 39.5rem));
+    top: rem(-40);
+    right: calc(50% - min(46.4vw, 42rem));
     width: rem(301);
     height: rem(138);
   }
