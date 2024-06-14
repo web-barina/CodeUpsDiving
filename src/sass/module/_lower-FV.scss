@@ -1,0 +1,32 @@
+@use "global" as *;
+.lower-FV__img {
+  position: relative;
+  width: 100vw;
+  height: rem(460);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/assets/sitemap-privacy-FV-sp.png);
+  @include mq("md") {
+    height: rem(548);
+    background-image: url(/assets/sitemap-privacy-FV.png);
+  }
+}
+.lower-FV h1 {
+  position: absolute;
+  top: rem(274);
+  color: $white;
+  font-size: rem(40);
+  text-align: center;
+  @include mq("md") {
+    color: $white;
+    line-height: 1.25;
+    font-size: rem(80);
+  }
+}
+.lower-FV__img--fish {
+  background-image: url(/assets/sitemap-privacy-FV-sp.png);
+  @include mq("md") {
+    background-image: url(/assets/sitemap-privacy-FV.png);
+  }
+}
