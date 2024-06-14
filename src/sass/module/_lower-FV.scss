@@ -3,7 +3,7 @@
   position: relative;
   width: 100vw;
   height: rem(460);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(/assets/sitemap-privacy-FV-sp.png);
@@ -12,7 +12,7 @@
     background-image: url(/assets/sitemap-privacy-FV.png);
   }
 }
-.lower-FV h1 {
+.lower-FV__img h1 {
   position: absolute;
   top: rem(274);
   color: $white;
