@@ -9,3 +9,10 @@
     margin-top: rem(80);
   }
 }
+.blog-cards--blog-page {
+  margin-top: rem(80);
+  @include mq("md") {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: rem(180);
+  }
+}
