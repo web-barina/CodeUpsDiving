@@ -1,0 +1,107 @@
+@use "global" as *;
+.price__menu-wrapper {
+  margin-top: rem(80);
+  position: relative;
+  @include mq("md") {
+    margin-top: rem(160);
+  }
+}
+.price__menu-wrapper::after {
+  position: absolute;
+  content: "";
+  background-image: url(/assets/images/common/decoration-fish-right.png);
+  top: rem(0);
+  left: calc(50% - min(46.4vw, 10.8rem));
+  max-width: rem(120);
+  width: 100%;
+  height: rem(50);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include mq("md") {
+    top: rem(-40);
+    left: calc(50% - min(46.4vw, 42rem));
+    max-width: rem(301);
+    height: rem(138);
+  }
+}
+.price__menu {
+  width: 100%;
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+.price__menu:first-child {
+  margin-top: 0;
+}
+.price__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include mq("md") {
+    flex-direction: row;
+  }
+}
+.price__ {
+  background-color: $green;
+  display: flex;
+  flex-direction: row;
+  gap: rem(8);
+  color: $white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: rem(8) 0;
+  @include mq("md") {
+    padding: 0;
+    max-width: rem(200);
+    flex-direction: column;
+  }
+}
+.price__title {
+  text-align: center;
+  font-size: rem(16);
+}
+.price__title-img {
+  width: rem(24);
+  @include mq("md") {
+    width: rem(64);
+    margin: rem(8) auto 0;
+  }
+}
+.price__lists {
+  max-width: rem(346);
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(402);
+  }
+}
+.price__list {
+  display: flex;
+  flex-direction: row;
+}
+.price__name {
+  max-width: rem(240);
+  width: 69.37%;
+  text-align: start;
+  border: solid rem(1) $green;
+  padding: rem(18) 0 rem(18) rem(16);
+  @include mq("md") {
+    max-width: rem(340);
+    text-align: center;
+    width: 68.12%;
+  }
+}
+.price__yen {
+  max-width: rem(106);
+  width: 30.63%;
+  text-align: end;
+  border-top: solid rem(1) $green;
+  border-right: solid rem(1) $green;
+  border-bottom: solid rem(1) $green;
+  padding: rem(18) rem(18) rem(16) 0;
+  @include mq("md") {
+    max-width: rem(162);
+    width: 31.89%;
+  }
+}

@@ -1,0 +1,7 @@
+@use "global" as *;
+.site-map-wrapper {
+  margin: rem(50) auto 0;
+  @include mq("md") {
+    margin: rem(150) auto 0;
+  }
+}

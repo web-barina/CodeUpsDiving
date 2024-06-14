@@ -19,7 +19,9 @@
   text-align: center;
   transform: translate(-50%, -50%);
   color: $white;
+  font-weight: $regular;
   font-size: rem(40);
+  font-family: $second-font-family;
   @include mq("md") {
     color: $white;
     line-height: 1.25;

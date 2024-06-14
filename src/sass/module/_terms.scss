@@ -21,7 +21,7 @@
   position: absolute;
   content: "";
   display: block;
-  background-image: url(/assets/images/common/decoration-fish.png);
+  background-image: url(/assets/images/common/decoration-fish-right.svg);
   top: rem(-10);
   left: calc(50% - min(46.4vw, 10.8rem));
   max-width: rem(109);
@@ -38,4 +38,15 @@
 }
 .terms__text-wrapper {
   margin-top: rem(40);
+  line-height: 2;
+}
+.terms__lists {
+  list-style: decimal;
+  margin-top: rem(32);
+}
+.terms__list {
+  margin-left: rem(16);
+}
+.terms__text--last {
+  margin-top: rem(32);
 }

@@ -1,0 +1,22 @@
+@use "global" as *;
+.privacy__title-wrapper {
+  margin-top: rem(50);
+  @include mq("md") {
+    margin-top: rem(150);
+  }
+}
+.privacy__title-wrapper {
+  margin-top: rem(40);
+}
+.privacy__lists {
+  list-style: decimal;
+}
+.privacy__list {
+  margin-left: rem(16);
+}
+.privacy__text {
+  margin-top: rem(32);
+}
+.privacy__text:first-child {
+  margin-top: 0;
+}

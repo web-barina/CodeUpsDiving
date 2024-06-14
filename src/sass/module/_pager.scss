@@ -1,0 +1,42 @@
+@use "global" as *;
+.pager {
+  display: flex;
+  flex-direction: row;
+  gap: rem(40);
+}
+.pager__before,
+.pager__after {
+  display: inline-block;
+  width: rem(38);
+  height: rem(38);
+  background-color: $white;
+  border: solid rem(1) $green;
+  text-align: center;
+  line-height: 1;
+  padding: rem(11) rem(15);
+}
+.pager__before img,
+.pager__after img {
+  width: rem(8);
+  height: auto;
+}
+.pager__number-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: rem(12);
+}
+.pager__number {
+  display: inline-block;
+  width: rem(38);
+  height: rem(38);
+  background-color: $white;
+  color: $green;
+  border: solid rem(1) $green;
+  text-align: center;
+  line-height: 1;
+  padding: rem(11) 0;
+}
+.pager__number:first-child {
+  background-color: $green;
+  color: $white;
+}

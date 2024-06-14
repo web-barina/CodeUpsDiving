@@ -26,13 +26,16 @@
 }
 //リストマーク付きのところ
 .site-map__main-title {
-  background: url(../../assets/images/common/site-map__list-icon.png) no-repeat 0 0;
+  background: url(/assets/images/common/site-map__list-icon.png) no-repeat 0 0;
   background-size: auto rem(18);
   padding-left: rem(22);
   line-height: 1.125;
   font-weight: $bold;
   margin-top: rem(40);
   list-style: none;
+}
+.site-map__main-title--black {
+  background: url(/assets/images/common/site-map__list-icon--black.png) no-repeat 0 0;
 }
 .site-map__main-title--layout {
   margin-top: rem(0);
