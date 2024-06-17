@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.blog-layout__2column {
+  display: flex;
+  flex-direction: column;
+  @include mq("md") {
+    flex-direction: row;
+  }
+}

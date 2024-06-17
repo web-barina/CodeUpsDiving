@@ -1,8 +1,10 @@
 @use "global" as *;
+
 .tabs {
   display: flex;
   gap: rem(21);
 }
+
 .tabs label {
   display: block;
   padding: rem(6) 0;
@@ -14,10 +16,12 @@
   cursor: pointer;
   border: solid rem(1) $green;
 }
-.tabs input:checked + label {
+
+.tabs input:checked+label {
   background: $green;
   color: $white;
 }
+
 .tabs input {
   display: none;
 }

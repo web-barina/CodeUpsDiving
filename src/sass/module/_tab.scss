@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.tab {
+    display: block;
+    padding: rem(6) 0;
+    width: rem(162);
+    background: $white;
+    color: $black;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    border: solid rem(1) $green;
+}
+
+.is-button-active {
+    background: $green;
+    color: $white;
+}

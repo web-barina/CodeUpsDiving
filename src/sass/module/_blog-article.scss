@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.blog-article {
+    margin-top: rem(80);
+
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+
+}
+
+.blog-article__content {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.blog-article__time {
+    font-size: rem(14);
+    font-family: $title-font-family;
+}
+
+.blog-article__title {
+    font-size: rem(24);
+    border-bottom: solid rem(1) $green;
+    margin-top: rem(8);
+
+    @include mq("md") {
+        font-size: rem(32);
+    }
+}
+
+.blog-article__img {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.blog-article__text {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.blog-article__lists {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.blog-article__list {}
+
+.blog-article__pager-wrapper {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}

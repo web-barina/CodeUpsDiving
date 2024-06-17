@@ -1,5 +1,6 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
+
   /*****
     ハンバーガーメニュー
     *****/
@@ -19,6 +20,7 @@ jQuery(function ($) {
       $(".header__sp-nav").fadeOut();
     }
   });
+
   /*****
     FV-swiper
     *****/
@@ -52,6 +54,7 @@ jQuery(function ($) {
       prevEl: ".topCampaign__prev",
     },
   });
+
   /***************
     カラーボックス
     **************/
@@ -109,6 +112,7 @@ jQuery(function ($) {
       }
     }
   }
+
   // 画面をスクロールをしたら動かしたい場合の記述
   $(window).scroll(function () {
     PageTopAnime();
@@ -127,13 +131,68 @@ jQuery(function ($) {
     ); //ページトップスクロールの速さ。
     return false; //リンク自体の無効化
   });
-  /*******
-   * FAQアコーディオン
-   */
+
+  /* FAQアコーディオン */
 });
 $(function () {
   $("#js-accordion-question").on("click", function () {
     $(this).next().slideToggle(300);
     $(this).toggleClass("open", 300);
+  });
+
+  /*campaignタブメニュー*/
+  $(function () {
+    // 変数を要素をセット
+    var $tab = $(".campaign__tabs [tab]"),
+      $category = $(".campaign__category [category]");
+
+    // カテゴリをクリックしたら
+    $tab.click(function (e) {
+      // デフォルトの動作をキャンセル
+      e.preventDefault();
+      var $this = $(this);
+
+      // クリックしたカテゴリにクラスを付与
+      $tab.removeClass("is-button-active");
+      $this.addClass("is-active");
+
+      // クリックした要素のdata属性を取得
+      var $tabItem = $this.attr("tab");
+
+      // データ属性が all なら全ての要素を表示
+      if ($tabItem == "campaign-all") {
+        $item
+          .removeClass("is-active")
+          .fadeOut()
+          .promise()
+          .done(function () {
+            $item.addClass("is-active").fadeIn();
+          });
+        // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
+      } else {
+        $item
+          .removeClass("is-active")
+          .fadeOut()
+          .promise()
+          .done(function () {
+            $item
+              .tab('[category = "' + $tabItem + '"]')
+              .addClass("is-active")
+              .fadeIn();
+          });
+      }
+    });
+  });
+
+  /*infoタブメニュー*/
+  $(function () {
+    $(".info__button").on("click", function () {
+      let index = $(".info__button").index(this);
+
+      $(".info__button").removeClass("is-btn-active");
+      $(this).addClass("is-btn-active");
+      $(".info__content").removeClass("is-content-active");
+      $(".info__content").eq(index).addClass("is-content-active");
+    });
   });
 });

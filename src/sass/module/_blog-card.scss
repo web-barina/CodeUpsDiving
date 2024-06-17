@@ -10,11 +10,19 @@
   width: 100%;
   opacity: 1;
 }
+
+.blog-card__img-wrapper {
+  overflow: hidden;
+}
+
 .blog-card__img {
   position: relative;
+  overflow: hidden;
   aspect-ratio: 301/201;
+  transition: ease 0.5s all;
 }
-.blog-card__img > img {
+
+.blog-card__img>img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -23,9 +31,16 @@
   transform: translate(-50%, -50%);
   object-fit: cover;
 }
+
+.blog-card__img:hover {
+  transform: scale(1.2, 1.2);
+  transition: ease 0.5s all;
+}
+
 .blog-card__body {
   margin-top: rem(17);
 }
+
 .blog-card__title {
   overflow-wrap: anywhere;
   font-size: rem(16);
@@ -36,12 +51,18 @@
   margin-top: rem(2);
   padding-bottom: rem(4);
 }
+
 .blog-card__text {
   margin-top: 0;
   padding-top: rem(16);
 }
+
 .blog-card__time {
   font-size: rem(12);
   font-family: $second-font-family;
   line-height: 1.5;
+}
+
+.blog-card__pager-wrapper {
+  margin-top: rem(80);
 }
