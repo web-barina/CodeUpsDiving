@@ -1,0 +1,48 @@
+@use "global" as *;
+.contact-form__inner {
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(700);
+  }
+}
+.contact-form__item {
+  display: flex;
+  padding: rem(24) 0;
+  flex-direction: column;
+  @include mq("md") {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: rem(40) 0;
+  }
+}
+.contact-form__label {
+  font-weight: $bold;
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(220);
+  }
+}
+.contact-form__label span {
+  display: inline-block;
+  width: rem(61);
+  padding: rem(5);
+  text-align: center;
+  background-color: $red;
+  color: $white;
+  font-size: rem(12);
+  margin-left: rem(8);
+}
+.contact-form__item {
+  border-bottom: solid rem(1) $green;
+}
+.contact-form__textarea {
+  width: 100%;
+  border: solid rem(1) $green;
+  @include mq("md") {
+    max-width: rem(480);
+  }
+}
+.contact-form__checkbox {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,26 @@
+@use "global" as *;
+.voice__cards {
+  margin-top: rem(40);
+}
+.voice__tabs {
+  display: flex;
+  gap: rem(21);
+}
+.voice__tabs label {
+  display: block;
+  padding: rem(6) 0;
+  width: rem(162);
+  background: $white;
+  color: $black;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  border: solid rem(1) $green;
+}
+.voice__tabs input:checked + label {
+  background: $green;
+  color: $white;
+}
+.voice__tabs input {
+  display: none;
+}

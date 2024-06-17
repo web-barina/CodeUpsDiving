@@ -127,4 +127,13 @@ jQuery(function ($) {
     ); //ページトップスクロールの速さ。
     return false; //リンク自体の無効化
   });
+  /*******
+   * FAQアコーディオン
+   */
+});
+$(function () {
+  $("#js-accordion-question").on("click", function () {
+    $(this).next().slideToggle(300);
+    $(this).toggleClass("open", 300);
+  });
 });

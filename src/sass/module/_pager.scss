@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row;
   gap: rem(40);
+  justify-content: center;
 }
 .pager__before,
 .pager__after {
@@ -39,4 +40,11 @@
 .pager__number:first-child {
   background-color: $green;
   color: $white;
+}
+.pager__before:hover,
+.pager__after:hover,
+.pager__number:hover {
+  background-color: $green;
+  color: $white;
+  transition: ease 0.3s;
 }
