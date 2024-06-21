@@ -1,10 +1,12 @@
 @use "global" as *;
+
 .pager {
   display: flex;
   flex-direction: row;
   gap: rem(40);
   justify-content: center;
 }
+
 .pager__before,
 .pager__after {
   display: inline-block;
@@ -16,16 +18,19 @@
   line-height: 1;
   padding: rem(11) rem(15);
 }
+
 .pager__before img,
 .pager__after img {
   width: rem(8);
   height: auto;
 }
+
 .pager__number-wrapper {
   display: flex;
   flex-direction: row;
   gap: rem(12);
 }
+
 .pager__number {
   display: inline-block;
   width: rem(38);
@@ -37,10 +42,21 @@
   line-height: 1;
   padding: rem(11) 0;
 }
+
 .pager__number:first-child {
   background-color: $green;
   color: $white;
 }
+
+.pager__number:nth-child(5),
+.pager__number:nth-child(6) {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+  }
+}
+
 .pager__before:hover,
 .pager__after:hover,
 .pager__number:hover {

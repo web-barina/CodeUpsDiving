@@ -1,7 +1,28 @@
 @use "global" as *;
+
 .site-map-wrapper {
-  margin: rem(50) auto 0;
+  position: relative;
+  margin-top: rem(50);
+
   @include mq("md") {
-    margin: rem(150) auto 0;
+    margin: rem(110) auto 0;
+  }
+}
+
+.site-map-wrapper::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(/assets/images/common/decoration-fish-right.svg);
+  top: rem(-23);
+  left: calc(50% - min(45.5vw, 10.7rem));
+  max-width: rem(117);
+  width: 100%;
+  height: rem(55);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mq("md") {
+    display: none;
   }
 }

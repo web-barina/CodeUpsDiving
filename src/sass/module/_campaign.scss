@@ -1,13 +1,65 @@
 @use "global" as *;
+
+.campaign__inner {
+  max-width: rem(311);
+
+  @include mq("md") {}
+}
+
+.campaign__tabs-wrapper {
+  margin-top: rem(51);
+  position: relative;
+
+  @include mq("md") {
+    margin-top: rem(150);
+  }
+}
+
+.campaign__tabs-wrapper::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(/assets/images/common/decoration-fish-right.svg);
+  top: rem(-24);
+  left: calc(50% - min(46vw, 10.8rem));
+  max-width: rem(121);
+  width: 100%;
+  height: rem(55);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+  @include mq("md") {
+    top: rem(-70);
+    left: calc(50% - min(43.1vw, 38.9rem));
+    max-width: rem(301);
+    height: rem(138);
+  }
+}
+
+.campaign__tabs {
+  flex-wrap: wrap;
+}
+
 .campaign__cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: rem(40);
-  row-gap: rem(80);
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: rem(41);
   margin-top: rem(40);
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(80);
+    margin-top: rem(40);
+  }
 }
-.campaign__detail {
-  margin-top: rem(24);
-  padding: 0 rem(16);
-  text-align: start;
+
+.campaign__pager-wrapper {
+  margin-top: rem(83);
+
+  @include mq("md") {
+    margin-top: rem(85);
+  }
 }

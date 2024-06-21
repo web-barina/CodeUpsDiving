@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .blog-article {
-    margin-top: rem(80);
+    position: relative;
+    margin-top: rem(43);
 
     @include mq("md") {
         margin-top: rem(150);
@@ -26,9 +27,31 @@
     font-size: rem(24);
     border-bottom: solid rem(1) $green;
     margin-top: rem(8);
+    padding-bottom: rem(3);
 
     @include mq("md") {
         font-size: rem(32);
+    }
+}
+
+.blog-article::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/assets/images/common/decoration-fish-right.svg);
+    top: rem(-16);
+    left: calc(50% - min(44.4vw, 10.8rem));
+    max-width: rem(109);
+    width: 100%;
+    height: rem(50);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mq("md") {
+        top: rem(-40);
+        left: calc(50% - min(46.4vw, 42rem));
+        max-width: rem(301);
+        height: rem(138);
     }
 }
 
@@ -56,7 +79,25 @@
     }
 }
 
-.blog-article__list {}
+.blog-article__list {
+    position: relative;
+    padding-left: rem(28);
+    margin-top: rem(5);
+}
+
+.blog-article__list::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/assets/images/common/blog-article-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(18);
+    height: rem(18);
+    top: rem(3);
+    left: rem(0);
+}
 
 .blog-article__pager-wrapper {
     margin-top: rem(40);
@@ -64,4 +105,30 @@
     @include mq("md") {
         margin-top: rem(80);
     }
+}
+
+.blog-article__pager {
+    display: flex;
+    flex-direction: row;
+    gap: rem(82);
+    justify-content: center;
+}
+
+.blog-article__pager-before,
+.blog-article__pager-after {
+    display: inline-block;
+    width: rem(38);
+    height: rem(38);
+    background-color: $white;
+    border: solid rem(1) $green;
+    text-align: center;
+    line-height: 1;
+    padding: rem(11) rem(15);
+}
+
+.blog-article__pager-before:hover,
+.blog-article__pager-after:hover {
+    background-color: $green;
+    color: $white;
+    transition: ease 0.3s;
 }

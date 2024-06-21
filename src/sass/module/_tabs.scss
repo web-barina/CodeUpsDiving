@@ -2,15 +2,22 @@
 
 .tabs {
   display: flex;
-  gap: rem(21);
+  row-gap: rem(16);
+  column-gap: rem(21);
+
+  @include mq("md") {
+
+    column-gap: rem(32);
+  }
 }
 
 .tabs label {
   display: block;
   padding: rem(6) 0;
   width: rem(162);
+  font-size: rem(14);
   background: $white;
-  color: $black;
+  color: $green;
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;

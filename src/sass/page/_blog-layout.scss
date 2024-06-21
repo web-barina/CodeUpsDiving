@@ -1,9 +1,32 @@
 @use "global" as *;
 
 .blog-layout__2column {
+  position: relative;
   display: flex;
   flex-direction: column;
+
   @include mq("md") {
     flex-direction: row;
+  }
+}
+
+.blog-layout__2column::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(/assets/images/common/decoration-fish-right.svg);
+  top: rem(-10);
+  left: calc(50% - min(46.4vw, 10.8rem));
+  max-width: rem(109);
+  width: 100%;
+  height: rem(50);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mq("md") {
+    top: rem(-40);
+    left: calc(50% - min(46.4vw, 42rem));
+    max-width: rem(301);
+    height: rem(138);
   }
 }

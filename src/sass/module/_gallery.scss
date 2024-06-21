@@ -1,3 +1,109 @@
 @use "global" as *;
-.gallery__photos tr {
+
+.gallery__photo-wrapper {
+    position: relative;
+    margin-top: rem(40);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    @include mq("md") {
+        margin-top: rem(80);
+        gap: rem(8);
+    }
+}
+
+.gallery__photo-wrapper::before {
+    display: none;
+
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url(/assets/images/common/contact-fish.png);
+        right: calc(50% - min(46.4vw, 10.8rem));
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        top: rem(-40);
+        max-width: rem(301);
+        height: rem(138);
+    }
+}
+
+.gallery__photo {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+
+    @include mq("md") {
+        flex-direction: row;
+        gap: rem(8);
+        align-items: initial;
+    }
+}
+
+.gallery__photo-large {
+    aspect-ratio: 345/523;
+    position: relative;
+    max-width: rem(345);
+    width: 100%;
+    max-height: rem(746);
+    top: 0;
+    left: 0;
+
+    @include mq("md") {
+        aspect-ratio: 746/492;
+        max-width: rem(492);
+    }
+}
+
+.gallery__photo-large>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.gallery__photo-smalls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+
+    @include mq("md") {
+        width: 50%;
+        gap: rem(8);
+    }
+}
+
+.gallery__photo-small {
+    position: relative;
+    aspect-ratio: 345/219;
+    max-width: rem(345);
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+
+    @include mq("md") {
+        aspect-ratio: 580/369;
+        max-width: rem(580);
+    }
+}
+
+.gallery__photo-small>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }

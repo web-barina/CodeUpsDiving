@@ -8,6 +8,10 @@
   }
 }
 
+.sidebar__inner {
+  padding: 0 rem(25);
+}
+
 .sidebar {
   width: 100%;
 
@@ -17,10 +21,25 @@
 }
 
 .sidebar__title {
+  position: relative;
   border-left: solid rem(8) $green;
-  padding: rem(13);
+  padding: rem(13) 0 rem(13) rem(75);
   line-height: 1;
   font-size: rem(24);
+}
+
+.sidebar__title::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(/assets/images/common/sidebar-icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(50);
+  height: rem(50);
+  top: rem(0);
+  left: rem(16);
 }
 
 .sidebar__popular-cards {
@@ -66,12 +85,14 @@
 
 .sidebar__popular-title {
   margin-top: rem(4);
+  font-size: rem(16);
+  margin-top: rem(-4);
 }
 
 .sidebar__reviews-wrapper,
 .sidebar__campaign-wrapper,
 .sidebar__archive-wrapper {
-  margin-top: rem(80);
+  margin-top: rem(83);
 }
 
 .sidebar__reviews-card {
@@ -80,7 +101,7 @@
 }
 
 .sidebar__reviews-info {
-  margin-top: rem(16);
+  margin-top: rem(14);
   font-size: rem(12);
 }
 
@@ -95,14 +116,47 @@
 }
 
 .sidebar__campaign-cards {
-  margin-top: rem(24);
+  margin-top: rem(23);
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(43);
 }
 
 .sidebar__archive-content {
-  margin-top: rem(24);
+  margin-top: rem(29);
   color: $green;
   font-size: rem(24);
+  padding-left: rem(32);
+}
+
+.sidebar__archive-months {
+  display: none;
+  padding-left: rem(25);
+}
+
+//アーカイブ三角
+.sidebar__archive-year,
+.sidebar__archive-month {
+  position: relative;
+  margin-top: rem(2);
+}
+
+.sidebar__archive-year::after,
+.sidebar__archive-month::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(/assets/images/common/sidebar-archive-arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform .3s ease-in-out, top .3s ease-in-out;
+  width: rem(24);
+  height: rem(24);
+  top: rem(8);
+  left: rem(-30);
+}
+
+.sidebar__archive-year.open::after {
+  transform: rotate(90deg);
 }

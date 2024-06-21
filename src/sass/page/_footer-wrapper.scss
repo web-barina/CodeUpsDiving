@@ -1,4 +1,5 @@
 @use "global" as *;
+
 //フッター全体余白
 .footer-wrapper {
   margin-top: rem(100);
@@ -6,8 +7,17 @@
   background-color: $green;
   color: $white;
   opacity: 1;
+
   @include mq("md") {
     margin-top: rem(160);
     padding: rem(80) 0;
+  }
+}
+
+.footer-wrapper--404 {
+  margin-top: rem(44);
+
+  @include mq("md") {
+    margin-top: rem(151);
   }
 }

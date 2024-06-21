@@ -1,8 +1,10 @@
 @use "global" as *;
+
 .voice-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: rem(40);
+  gap: rem(49);
+
   @include mq("md") {
     gap: rem(80) rem(40);
     width: 100%;

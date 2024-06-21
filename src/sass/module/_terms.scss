@@ -1,52 +1,63 @@
 @use "global" as *;
+
 .terms__inner {
   @include mq("md") {
-    max-width: rem(800);
+    max-width: rem(852);
   }
 }
+
 .terms__title-wrapper {
-  margin-top: rem(80);
+  margin-top: rem(50);
+
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(147);
   }
 }
+
 .terms__title {
   position: relative;
   font-size: rem(24);
+
   @include mq("md") {
     font-size: rem(32);
   }
 }
+
 .terms__title::before {
   position: absolute;
   content: "";
   display: block;
   background-image: url(/assets/images/common/decoration-fish-right.svg);
-  top: rem(-10);
-  left: calc(50% - min(46.4vw, 10.8rem));
-  max-width: rem(109);
+  top: rem(-23);
+  left: calc(50% - min(45.5vw, 10.7rem));
+  max-width: rem(117);
   width: 100%;
-  height: rem(50);
+  height: rem(55);
   background-size: contain;
   background-repeat: no-repeat;
+
   @include mq("md") {
-    top: rem(-40);
-    left: calc(50% - min(46.4vw, 42rem));
+    top: rem(-69);
+    left: calc(50% - min(43.1vw, 38.8rem));
     max-width: rem(301);
     height: rem(138);
   }
 }
+
 .terms__text-wrapper {
   margin-top: rem(40);
   line-height: 2;
 }
+
 .terms__lists {
   list-style: decimal;
   margin-top: rem(32);
 }
+
 .terms__list {
-  margin-left: rem(16);
+  margin-left: rem(23);
 }
+
 .terms__text--last {
   margin-top: rem(32);
 }

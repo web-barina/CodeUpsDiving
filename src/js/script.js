@@ -5,18 +5,18 @@ jQuery(function ($) {
     ハンバーガーメニュー
     *****/
   $("#js-hamburger").on("click", function () {
-    if ($("#js-hamburger").hasClass("active")) {
+    if ($("#js-hamburger").hasClass("js-active")) {
       $(".header__sp-nav").fadeOut();
-      $(this).removeClass("active");
+      $(this).removeClass("js-active");
     } else {
       $(".header__sp-nav").fadeIn();
-      $(this).addClass("active");
+      $(this).addClass("js-active");
     }
   }); //ハンバーガーメニュー閉じタグ
   //768px以上でドロワーを非表示にする
   $(window).on("resize", function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
-      $("#js-hamburger").removeClass("active");
+      $("#js-hamburger").removeClass("js-active");
       $(".header__sp-nav").fadeOut();
     }
   });
@@ -103,7 +103,7 @@ jQuery(function ($) {
     var wH = window.innerHeight;
     var footerPos = $("#footer").offset().top;
     if (scroll + wH >= footerPos + 10) {
-      var pos = scroll + wH - footerPos + 10; //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+      var pos = scroll + wH - footerPos + 15; //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
       $("#js-scroll-top").css("bottom", pos);
     } else {
       //それ以外は
@@ -133,66 +133,89 @@ jQuery(function ($) {
   });
 
   /* FAQアコーディオン */
-});
-$(function () {
-  $("#js-accordion-question").on("click", function () {
-    $(this).next().slideToggle(300);
-    $(this).toggleClass("open", 300);
+  $(function () {
+    $(".contact-FAQ__question").on("click", function () {
+      $(this).next().slideToggle(300);
+      // タイトルにopenクラスを付け外しして矢印の向きを変更
+      $(this).toggleClass("open", 300);
+    });
   });
 
   /*campaignタブメニュー*/
   $(function () {
-    // 変数を要素をセット
-    var $tab = $(".campaign__tabs [tab]"),
-      $category = $(".campaign__category [category]");
+    var $btn = $(".info__info__info__tabs__item [data-filter]"),
+      $list = $(".campaign-card [data-category]");
 
-    // カテゴリをクリックしたら
-    $tab.click(function (e) {
-      // デフォルトの動作をキャンセル
+    $btn.on("click", function (e) {
       e.preventDefault();
-      var $this = $(this);
 
-      // クリックしたカテゴリにクラスを付与
-      $tab.removeClass("is-button-active");
-      $this.addClass("is-active");
+      var $btnTxt = $(this).attr("data-filter");
 
-      // クリックした要素のdata属性を取得
-      var $tabItem = $this.attr("tab");
-
-      // データ属性が all なら全ての要素を表示
-      if ($tabItem == "campaign-all") {
-        $item
-          .removeClass("is-active")
+      if ($btnTxt == "all") {
+        $list
           .fadeOut()
           .promise()
           .done(function () {
-            $item.addClass("is-active").fadeIn();
+            $list.addClass("animate").fadeIn();
           });
-        // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
       } else {
-        $item
-          .removeClass("is-active")
+        $list
           .fadeOut()
           .promise()
           .done(function () {
-            $item
-              .tab('[category = "' + $tabItem + '"]')
-              .addClass("is-active")
+            $list
+              .filter('[data-category = "' + $btnTxt + '"]')
+              .addClass("animate")
               .fadeIn();
           });
       }
     });
   });
 
+  /*AboutUs モーダル */
+  $(function () {
+    // 変数に要素を入れる
+    var open = $(".modal-open"),
+      close = $(".modal-close"),
+      container = $(".modal-container");
+
+    //開くボタンをクリックしたらモーダルを表示する
+    open.on("click", function () {
+      container.addClass("js-active");
+      return false;
+    });
+
+    //閉じるボタンをクリックしたらモーダルを閉じる
+    close.on("click", function () {
+      container.removeClass("js-active");
+    });
+
+    //モーダルの外側をクリックしたらモーダルを閉じる
+    $(document).on("click", function (e) {
+      if (!$(e.target).closest(".modal-body").length) {
+        container.removeClass("js-active");
+      }
+    });
+  });
+
   /*infoタブメニュー*/
   $(function () {
-    $(".info__button").on("click", function () {
-      let index = $(".info__button").index(this);
+    $(".info__tab").on("click", function () {
+      $(".info__tab, .info__content").removeClass("js-active");
 
-      $(".info__button").removeClass("is-btn-active");
-      $(this).addClass("is-btn-active");
-      $(".info__content").removeClass("is-content-active");
-      $(".info__content").eq(index).addClass("is-content-active");
+      $(this).addClass("js-active");
+
+      var index = $(".info__tab").index(this);
+      $(".info__content").eq(index).addClass("js-active");
+    });
+  });
+
+  /*サイドバーアーカイブ*/
+  $(function () {
+    $(".sidebar__archive-year").on("click", function () {
+      $(this).next().slideToggle(300);
+      // タイトルにopenクラスを付け外しして矢印の向きを変更
+      $(this).toggleClass("open", 300);
     });
   });
 });
