@@ -19,23 +19,10 @@
 
 }
 
-.contact-wrapper--FAQ {
-  margin: rem(91) auto 0 auto;
-
-  @include mq("md") {
-    margin: rem(140) auto 0 auto;
-  }
-
-}
-
-.contact-wrapper--campaign {
-  margin: rem(91) auto 0 auto;
-
-  @include mq("md") {
-    margin: rem(140) auto 0 auto;
-  }
-}
-
+.contact-wrapper--site-map,
+.contact-wrapper--FAQ,
+.contact-wrapper--campaign,
+.contact-wrapper--voice,
 .contact-wrapper--privacy {
   margin: rem(91) auto 0 auto;
 
@@ -44,15 +31,8 @@
   }
 }
 
-.contact-wrapper--voice {
-  margin: rem(91) auto 0 auto;
-
-  @include mq("md") {
-    margin: rem(140) auto 0 auto;
-  }
-}
-
-.contact-wrapper--terms {
+.contact-wrapper--terms,
+.contact-wrapper--about {
   margin: rem(92) auto 0 auto;
 
   @include mq("md") {
@@ -66,15 +46,6 @@
   @include mq("md") {
     margin: rem(100) auto 0 auto;
   }
-}
-
-.contact-wrapper--site-map {
-  margin: rem(91) auto 0 auto;
-
-  @include mq("md") {
-    margin: rem(140) auto 0 auto;
-  }
-
 }
 
 .contact-wrapper::after {

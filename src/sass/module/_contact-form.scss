@@ -50,7 +50,22 @@
 }
 
 .contact-form__item {
-  border-bottom: solid rem(1) $green;
+  position: relative;
+}
+
+.contact-form__item::after {
+  position: absolute;
+  content: '';
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: contain;
+  display: block;
+  height: rem(1);
+  max-width: rem(700);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-image: url(/assets/images/common/contact-form-line.png);
 }
 
 .contact-form__text {
@@ -106,10 +121,27 @@ input[type=checkbox] {
   border: solid rem(1) $green;
   width: rem(14);
   height: rem(14);
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked:before {
+  position: absolute;
+  content: '';
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: rem(8);
+  width: rem(14);
+  top: rem(2);
+  left: 0;
+  background-image: url(/assets/images/common/contact-form-check.png);
 }
 
 .contact-form__checkbox {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .control input:checked+.control__indicator {
@@ -120,7 +152,6 @@ input[type=checkbox] {
   margin-top: rem(16);
   border: solid rem(1) $green;
   font-size: rem(12);
-  padding-left: rem(8);
   position: relative;
   height: rem(40);
 
@@ -134,17 +165,22 @@ input[type=checkbox] {
 
 .contact-form__contents::after {
   position: absolute;
-  content: "";
-  display: block;
-  background-image: url(/assets/images/common/contact-form-triangle.png);
-  //top: rem(-23);
-  //left: calc(50% - min(44.5vw, 10.4rem));
-  max-width: rem(16);
-  width: 100%;
-  height: rem(16);
-  background-size: contain;
+  content: '';
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: rem(15);
+  width: rem(15);
+  top: rem(5);
+  right: rem(10);
+  background-image: url(/assets/images/common/contact-form-triangle.png);
+}
 
+.contact-form__select {
+  width: 100%;
+  height: inherit;
+  padding-left: rem(10);
 }
 
 .contact-form__content {
@@ -158,12 +194,22 @@ input[type=checkbox] {
   margin: rem(40) auto 0;
   max-width: rem(280);
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @include mq("md") {
     margin-top: rem(80);
     max-width: none;
     text-align: center;
   }
+}
+
+.contact-form__doui label {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: nowrap;
+
 }
 
 .contact-form__btn-wrapper {
@@ -175,11 +221,36 @@ input[type=checkbox] {
   }
 }
 
+.contact-form__text::placeholder {
+  color: $light-green;
+}
+
 //エラー
+
 .contact-form__error {
-  display: none;
-  text-align: center;
   color: $red;
+  font-size: rem(14);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+
+  @include mq("md") {
+    flex-direction: row;
+  }
+}
+
+.contact-form__error-text {
+  display: none;
+}
+
+.contact-form__error-text:nth-child(2) {
+  text-indent: rem(14);
+
+  @include mq("md") {
+    text-indent: rem(0);
+  }
 }
 
 //お問い合わせ完了
@@ -200,7 +271,8 @@ input[type=checkbox] {
 }
 
 .contact-form__success {
-  margin-top: rem(40);
+  margin-top: rem(38);
   text-wrap: nowrap;
+  line-height: 1.44;
 
 }

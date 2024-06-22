@@ -9,7 +9,7 @@
 }
 
 .sidebar__inner {
-  padding: 0 rem(25);
+  padding: 0 rem(21);
 }
 
 .sidebar {
@@ -79,6 +79,7 @@
 }
 
 .sidebar__popular-time {
+  display: block;
   font-size: rem(12);
   font-family: $title-font-family;
 }
@@ -86,7 +87,6 @@
 .sidebar__popular-title {
   margin-top: rem(4);
   font-size: rem(16);
-  margin-top: rem(-4);
 }
 
 .sidebar__reviews-wrapper,
@@ -96,18 +96,33 @@
 }
 
 .sidebar__reviews-card {
-  margin-top: rem(24);
+  margin-top: rem(22);
   display: block;
 }
 
 .sidebar__reviews-info {
-  margin-top: rem(14);
+  margin-top: rem(16);
   font-size: rem(12);
 }
 
 .sidebar__reviews-title {
   margin-top: rem(8);
   font-size: rem(24);
+}
+
+.sidebar__reviews-img {
+  position: relative;
+  aspect-ratio: 294/218;
+}
+
+.sidebar__reviews-img>img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .sidebar__btn-wrapper {

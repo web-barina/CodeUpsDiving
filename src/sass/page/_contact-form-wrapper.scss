@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .contact-form-wrapper {
-    margin-top: rem(52);
+    margin-top: rem(46);
     position: relative;
 
     @include mq("md") {
-        margin-top: rem(150);
+        margin-top: rem(146);
     }
 }
 
@@ -14,19 +14,23 @@
     content: "";
     display: block;
     background-image: url(/assets/images/common/decoration-fish-right.svg);
-    top: rem(-10);
-    left: calc(50% - min(46.4vw, 10.8rem));
-    max-width: rem(109);
+    top: rem(-20);
+    left: calc(50% - min(45.7vw, 10.8rem));
+    max-width: rem(118);
     width: 100%;
-    height: rem(50);
+    height: rem(55);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
 
     @include mq("md") {
-        top: rem(-40);
-        left: calc(50% - min(46.4vw, 42rem));
+        top: rem(-67);
+        left: calc(50% - min(43vw, 38.7rem));
         max-width: rem(301);
         height: rem(138);
     }
+}
+
+.contact-form-wrapper--success {
+    text-align: center;
 }

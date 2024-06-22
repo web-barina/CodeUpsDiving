@@ -173,30 +173,23 @@ jQuery(function ($) {
   });
 
   /*AboutUs モーダル */
-  $(function () {
-    // 変数に要素を入れる
-    var open = $(".modal-open"),
-      close = $(".modal-close"),
-      container = $(".modal-container");
+  $(document).ready(
+    $(function () {
+      $(".gallery__photo-large,.gallery__photo-small").on("click", function () {
+        var modal_id = $(this).attr("id");
+        $(".modal#cont-" + modal_id).fadeIn(300);
+        $(".modal#cont-" + modal_id).addClass("active");
+        $("html, body").css("overflow-y", "hidden");
+      });
 
-    //開くボタンをクリックしたらモーダルを表示する
-    open.on("click", function () {
-      container.addClass("js-active");
-      return false;
-    });
-
-    //閉じるボタンをクリックしたらモーダルを閉じる
-    close.on("click", function () {
-      container.removeClass("js-active");
-    });
-
-    //モーダルの外側をクリックしたらモーダルを閉じる
-    $(document).on("click", function (e) {
-      if (!$(e.target).closest(".modal-body").length) {
-        container.removeClass("js-active");
-      }
-    });
-  });
+      $(".modal").on("click", function () {
+        if ($(this).hasClass("active")) {
+          $(this).fadeOut();
+          $("html, body").css("overflow-y", "auto");
+        }
+      });
+    })
+  );
 
   /*infoタブメニュー*/
   $(function () {

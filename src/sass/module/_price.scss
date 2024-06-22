@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .price__menu-wrapper {
-  margin-top: rem(80);
+  margin-top: rem(52);
   position: relative;
 
   @include mq("md") {
@@ -13,11 +13,11 @@
   position: absolute;
   content: "";
   background-image: url(/assets/images/common/decoration-fish-right.png);
-  top: rem(0);
-  left: calc(50% - min(46.4vw, 10.8rem));
-  max-width: rem(120);
+  top: rem(-25);
+  left: calc(50% - min(45vw, 11rem));
+  max-width: rem(123);
   width: 100%;
-  height: rem(50);
+  height: rem(55);
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -33,24 +33,18 @@
   width: 100%;
   margin-top: rem(40);
   align-items: center;
-
-  @include mq("md") {
-    margin-top: rem(80);
-  }
-}
-
-.price__menu:first-child {
-  margin-top: 0;
-}
-
-.price__menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @include mq("md") {
+    margin-top: rem(80);
     flex-direction: row;
   }
+}
+
+.price__menu:first-child {
+  margin-top: 0;
 }
 
 .price__title-wrapper {
@@ -99,16 +93,20 @@
 .price__list {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .price__name {
   width: 67.7%;
-  text-align: start;
+  text-align: center;
   border: solid rem(1) $green;
-  padding: rem(18) 0 rem(18) rem(16);
+  padding: rem(6) rem(40);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: nowrap;
 
   @include mq("md") {
-    text-align: center;
+    padding: rem(18) rem(16);
   }
 }
 
@@ -118,7 +116,7 @@
   border-top: solid rem(1) $green;
   border-right: solid rem(1) $green;
   border-bottom: solid rem(1) $green;
-  padding: rem(18) rem(18) rem(16) 0;
+  padding: rem(18) rem(16);
 
   @include mq("md") {}
 }
