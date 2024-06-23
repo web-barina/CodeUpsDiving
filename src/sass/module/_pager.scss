@@ -3,8 +3,12 @@
 .pager {
   display: flex;
   flex-direction: row;
-  gap: rem(40);
+  gap: rem(39);
   justify-content: center;
+}
+
+.pager--blog-article {
+  gap: rem(82);
 }
 
 .pager__before,
@@ -19,16 +23,14 @@
   padding: rem(11) rem(15);
 }
 
-.pager__before img,
-.pager__after img {
-  width: rem(8);
-  height: auto;
-}
-
 .pager__number-wrapper {
   display: flex;
   flex-direction: row;
-  gap: rem(12);
+  gap: rem(11);
+
+  @include mq("md") {
+    gap: rem(12);
+  }
 }
 
 .pager__number {
@@ -41,6 +43,10 @@
   text-align: center;
   line-height: 1;
   padding: rem(11) 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .pager__number:first-child {
@@ -57,10 +63,28 @@
   }
 }
 
-.pager__before:hover,
-.pager__after:hover,
 .pager__number:hover {
   background-color: $green;
   color: $white;
-  transition: ease 0.3s;
+  transition: fill 0.3s;
+}
+
+.pager__path {
+  transition: fill 0.3s;
+}
+
+
+.pager__before:hover,
+.pager__after:hover {
+  background-color: $green;
+  color: $white;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pager__before:hover .pager__path,
+.pager__after:hover .pager__path {
+  stroke: $white;
 }

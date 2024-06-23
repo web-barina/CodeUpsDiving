@@ -184,7 +184,9 @@
     <div class="bread">
       <div class="bread__inner inner">
         <a href="index.html" class="bread__top">TOP</a>
-        <div class="bread__arrow">></div>
+        <div class="bread__arrow"><img src="./assets/images/common/pager.png" alt="パンくず矢印"></div>
+        <div class="bread__detail">ブログ一覧</div>
+        <div class="bread__arrow"><img src="./assets/images/common/pager.png" alt="パンくず矢印"></div>
         <div class="bread__detail">ブログ詳細</div>
       </div>
     </div>
@@ -211,16 +213,25 @@
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
             </p>
             <div class="blog-article__pager-wrapper">
-              <div class="blog-article__pager">
-                <a href="#" class="blog-article__pager-before"><img src="./assets/images/common/pager-before.png"
-                    alt="前のページへ" /></a>
-                <a href="#" class="blog-article__pager-after"><img src="./assets/images/common/pager-after.png"
-                    alt="次のページへ" /></a>
+              <div class="blog-article__pager pager pager--blog-article">
+                <a href="#" class="pager__before">
+                  <svg class="pager__svg" width="10" height="18" viewBox="0 0 10 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="pager__path" d="M9 1L1 9L9 17" stroke="#408F95" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+                <a href="#" class="pager__after">
+                  <svg class="pager__svg" width="10" height="18" viewBox="0 0 10 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="pager__path" d="M1 1L9 9L1 17" stroke="#408F95" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></a>
               </div>
             </div>
           </div>
         </article>
-        <aside class="sidebar sidebar-wrapper">
+        <aside class="sidebar sidebar-wrapper sidebar-wrapper--blog-article">
           <div class="sidebar__inner">
             <section class="sidebar__popular sidebar__popular-wrapper">
               <h4 class="sidebar__title">人気記事</h4>
@@ -235,13 +246,13 @@
                   <div class="sidebar__popular-img"><img src="./assets/images/common/blog2.png" alt="" /></div>
                   <div class="sidebar__popular-text">
                     <time class="sidebar__popular-time" datetime="2023-11-17">2023.11.17</time>
-                    <h5 class="sidebar__popular-title">ライセンス取得</h5>
+                    <h5 class="sidebar__popular-title">ウミガメと泳ぐ</h5>
                   </div>
                 </a><a href="#" class="sidebar__popular-card">
                   <div class="sidebar__popular-img"><img src="./assets/images/common/blog3.png" alt="" /></div>
                   <div class="sidebar__popular-text">
                     <time class="sidebar__popular-time" datetime="2023-11-17">2023.11.17</time>
-                    <h5 class="sidebar__popular-title">ライセンス取得</h5>
+                    <h5 class="sidebar__popular-title">カクレクマノミ</h5>
                   </div>
                 </a>
               </div>
@@ -249,7 +260,7 @@
             <section class="sidebar__reviews sidebar__reviews-wrapper">
               <h4 class="sidebar__title">口コミ</h4>
               <a href="#" class="sidebar__reviews-card">
-                <div class="sidebar__reviews-img"><img src="./assets/images/common/voice3.png" alt="" /></div>
+                <div class="sidebar__reviews-img"><img src="./assets/images/common/sidebar-voice.png" alt="" /></div>
                 <p class="sidebar__reviews-info">30代(カップル)</p>
                 <h5 class="sidebar__reviews-title">ここにタイトルが入ります。ここにタイトル</h5>
               </a>
@@ -262,7 +273,7 @@
             <section class="sidebar__campaign sidebar__campaign-wrapper">
               <h4 class="sidebar__title">キャンペーン</h4>
               <div class="sidebar__campaign-cards">
-                <a href="#" class="campaign__cards__item campaign-card">
+                <a href="#" class="campaign__cards-item campaign-card">
                   <figure class="campaign-card__img campaign-card__img--side">
                     <img src="./assets/images/common/campaign1.png" alt="色鮮やかな魚たちの写真" />
                   </figure>
@@ -273,9 +284,9 @@
                   </div>
                   <div class="campaign-card__contents">
                     <p class="campaign-card__text campaign-card__text--side">全部コミコミ(お一人様)</p>
-                    <div class="campaign-card__price-wrapper">
-                      <p class="campaign-card__pre-price">¥56,000</p>
-                      <p class="campaign-card__after-price">¥46,000</p>
+                    <div class="campaign-card__price-wrapper campaign-card__price-wrapper--side">
+                      <p class="campaign-card__pre-price campaign-card__pre-price--side">¥56,000</p>
+                      <p class="campaign-card__after-price campaign-card__after-price--side">¥46,000</p>
                     </div>
                   </div>
                 </a><a href="#" class="campaign-card">
@@ -289,9 +300,9 @@
                   </div>
                   <div class="campaign-card__contents">
                     <p class="campaign-card__text campaign-card__text--side">全部コミコミ(お一人様)</p>
-                    <div class="campaign-card__price-wrapper">
-                      <p class="campaign-card__pre-price">¥24,000</p>
-                      <p class="campaign-card__after-price">¥18,000</p>
+                    <div class="campaign-card__price-wrapper campaign-card__price-wrapper--side">
+                      <p class="campaign-card__pre-price campaign-card__pre-price--side">¥24,000</p>
+                      <p class="campaign-card__after-price campaign-card__after-price--side">¥18,000</p>
                     </div>
                   </div>
                 </a>
@@ -315,10 +326,8 @@
               </div>
             </section>
           </div>
+        </aside>
       </div>
-    </div>
-    </aside>
-    </div>
     </div>
     <!--contact-->
     <section class="contact contact-wrapper contact-wrapper--layout">

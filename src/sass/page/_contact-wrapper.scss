@@ -10,7 +10,8 @@
   }
 }
 
-.contact-wrapper--info {
+.contact-wrapper--info,
+.contact-wrapper--layout {
   margin: rem(90) auto 0 auto;
 
   @include mq("md") {
@@ -77,6 +78,6 @@
   top: rem(-11);
 
   @include mq("md") {
-    top: rem(-11);
+    top: rem(-40);
   }
 }

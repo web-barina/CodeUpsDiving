@@ -19,6 +19,15 @@
   }
 }
 
+.campaign-card__img--side {
+  position: relative;
+  aspect-ratio: 280/177;
+
+  @include mq("md") {
+    aspect-ratio: 333/216;
+  }
+
+}
 
 .campaign-card__img>img {
   position: absolute;
@@ -48,6 +57,10 @@
 
 .campaign-card__body--side {
   padding-top: rem(12);
+
+  @include mq("md") {
+    padding-top: rem(10);
+  }
 }
 
 .campaign-card__category {
@@ -65,7 +78,7 @@
 }
 
 .campaign-card__title-wrapper {
-  margin: rem(4);
+  margin-top: rem(4);
 }
 
 .campaign-card__title {
@@ -127,6 +140,11 @@
 
 .campaign-card__text--side {
   font-size: rem(14);
+
+  @include mq("md") {
+    font-size: rem(14);
+    margin-top: rem(6);
+  }
 }
 
 //キャンペーン値段
@@ -136,13 +154,20 @@
   justify-content: center;
   align-items: baseline;
   gap: rem(43);
-}
 
-@include mq("md") {
-  .campaign-card__price-wrapper {
+  @include mq("md") {
     margin-top: rem(0);
   }
 }
+
+.campaign-card__price-wrapper--side {
+  gap: rem(17);
+
+  @include mq("md") {
+    padding-bottom: rem(16);
+  }
+}
+
 
 //キャンペーン値段変更前
 .campaign-card__pre-price {
@@ -151,11 +176,15 @@
   font-family: $second-font-family;
   font-weight: $bold;
   text-decoration: line-through rem(3) $red;
+
+  @include mq("md") {
+    font-size: rem(24);
+  }
 }
 
-@include mq("md") {
-  .campaign-card__pre-price {
-    font-size: rem(24);
+.campaign-card__pre-price--side {
+  @include mq("md") {
+    font-size: rem(20);
   }
 }
 
@@ -171,6 +200,11 @@
   }
 }
 
+.campaign-card__after-price--side {
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
 
 @include mq("md") {
   .campaign__detail {

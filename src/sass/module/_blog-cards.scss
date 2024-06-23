@@ -9,15 +9,18 @@
   @include mq("md") {
     grid-template-columns: repeat(3, 1fr);
     margin-top: rem(80);
+    column-gap: rem(40);
+    row-gap: rem(80);
   }
 }
 
 .blog-cards--blog-page {
   margin-top: rem(50);
-  gap: rem(37);
+  gap: rem(39);
 
   @include mq("md") {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: rem(180);
+    margin-top: rem(150);
+    width: 92%;
   }
 }

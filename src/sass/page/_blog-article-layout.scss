@@ -6,5 +6,6 @@
 
     @include mq("md") {
         flex-direction: row;
+        gap: rem(73);
     }
 }

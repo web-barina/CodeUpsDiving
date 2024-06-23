@@ -276,3 +276,12 @@ input[type="checkbox"]:checked:before {
   line-height: 1.44;
 
 }
+
+.contact-form__error {
+  background-color: rgba($color: $red, $alpha: 0.2);
+  border: solid rem(1) $red;
+}
+
+.contact-form__error::placeholder {
+  color: $white;
+}
