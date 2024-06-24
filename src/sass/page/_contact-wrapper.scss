@@ -49,6 +49,14 @@
   }
 }
 
+.contact-wrapper--price {
+  margin: rem(88) auto 0 auto;
+
+  @include mq("md") {
+    margin: rem(140) auto 0 auto;
+  }
+}
+
 .contact-wrapper::after {
   position: absolute;
   content: "";
@@ -70,9 +78,6 @@
   }
 }
 
-.contact-wrapper--price::after {
-  top: 0;
-}
 
 .contact-wrapper--layout::after {
   top: rem(-11);

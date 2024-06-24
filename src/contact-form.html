@@ -42,7 +42,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="no-page__header header">
     <!--SP-hamburger-header-->
     <div class="header__inner">
       <a href="index.html" class="header__logo"><img src="./assets/images/common/logo.png" alt="コードアップスのロゴ" /></a>
@@ -158,6 +158,7 @@
                     <li class="site-map__sub-title"><a href="./price.html#license-price">ライセンス講習</a></li>
                     <li class="site-map__sub-title"><a href="./price.html#trial-price">体験ダイビング</a></li>
                     <li class="site-map__sub-title"><a href="./price.html#fun-price">ファンダイビング</a></li>
+                    <li class="site-map__sub-title"><a href="./price.html#special-price">スペシャルダイビング</a></li>
                   </ul>
                 </div>
               </div>
@@ -168,6 +169,7 @@
                 </li>
                 <li class="site-map__main-title"><a href="./terms-of-service.html">利用規約</a></li>
                 <li class="site-map__main-title"><a href="./contact-form.html">お問い合わせ</a></li>
+                <li class="site-map__main-title"><a href="./site-map.html">サイトマップ</a></li>
               </ul>
             </div>
           </nav>
@@ -186,19 +188,20 @@
         <a href="index.html" class="bread__top">TOP</a>
         <div class="bread__arrow"><img src="./assets/images/common/pager.png" alt="パンくず矢印"></div>
         <div class="bread__detail">お問い合わせ</div>
+        <div class="bread__arrow bread__arrow--error"><img src="./assets/images/common/pager.png" alt="パンくず矢印"></div>
+        <div class="bread__detail bread__arrow--error">お問い合わせエラー</div>
       </div>
     </div>
     <section class="contact-form contact-form-wrapper">
       <div class="contact-form__inner inner">
-        <div class="contact-form__error">
+        <div class="contact-form__error-texts">
           <p class="contact-form__error-text">※必須項目が入力されていません。</p>
           <p class="contact-form__error-text">入力してください。</p>
         </div>
         <form action="confirm.php" method="post" name="form" onsubmit="return validate()" class="contact-form__form">
           <div class="contact-form__item">
             <label class="contact-form__label">お名前<span>必須</span></label>
-            <input type="text" name="name" value="" class="contact-form__text contact-form__error"
-              placeholder="沖縄　太郎" />
+            <input type="text" name="name" value="" class="contact-form__text" placeholder="沖縄　太郎" />
           </div>
           <div class="contact-form__item">
             <label class="contact-form__label">メールアドレス<span>必須</span></label>
@@ -209,22 +212,27 @@
             <input type="text" name="tel" value="" class="contact-form__text" placeholder="000-0000-0000" />
           </div>
           <div class="contact-form__item">
+            <label class="contact-form__label">電話番号<span>必須</span></label>
+            <input type="text" name="tel" value="" class="contact-form__text" placeholder="000-0000-0000" />
+          </div>
+          <div class="contact-form__item">
             <label class="contact-form__label">お問い合わせ項目<span>必須</span></label>
-            <div class="contact-form__checkboxes">
-              <div class="contact-form__checkbox">
-                <input type="checkbox" name="diving" />
-                <label for="" class="">ダイビング講習について</label>
-                </input>
+            <div class="contact-form__radios">
+              <div class="contact-form__radio">
+                <input type="radio" name="diving" id="license-diving" class="contact-form__radio-button" />
+                <label for="license-diving" class="">ダイビング講習について</label>
               </div>
-              <div class="contact-form__checkbox">
-                <input type="checkbox" name="fun-diving" />
-                <label for="" class="">ファンダイビングについて</label>
-                </input>
+              <div class="contact-form__radio">
+                <input type="radio" name="diving" id="fun-diving" class="contact-form__radio-button" />
+                <label for="fun-diving" class="">ファンダイビングについて</label>
               </div>
-              <div class="contact-form__checkbox">
-                <input type="checkbox" name="trial-diving" class="contact-form__checkbox" />
-                <label for="" class="">体験ダイビングについて</label>
-                </input>
+              <div class="contact-form__radio">
+                <input type="radio" name="diving" id="trial-diving" class="contact-form__radio-button" />
+                <label for="trial-diving" class="">体験ダイビングについて</label>
+              </div>
+              <div class="contact-form__radio">
+                <input type="radio" name="diving" id="special-diving" class="contact-form__radio-button" />
+                <label for="special-diving" class="">スペシャルダイビングについて</label>
               </div>
             </div>
           </div>
@@ -242,10 +250,11 @@
             <label class="contact-form__label">お問い合わせ内容<span>必須</span></label>
             <input type="textarea" name="content" rows="5" class="contact-form__textarea"></input>
           </div>
-          <div class="contact-form__doui">
-            <input type="checkbox" id="" name="" checked />
-            <label for="" class="">個人情報の取り扱いについて同意のうえ<wbr />送信します。</label>
+          <div class="contact-form__agreement">
+            <input type="checkbox" name="agreement" id="agreement" class="contact-form__checkbox" />
+            <label for="agreement" class="contact-form__check">個人情報の取り扱いについて同意のうえ<wbr />送信します。</label>
           </div>
+
           <div class="contact-form__btn-wrapper">
             <a href="./contact-form-success.html" class="btn">Send
               <span></span>
@@ -254,115 +263,81 @@
         </form>
       </div>
     </section>
-    <!--contact-->
-    <section class="contact contact-wrapper">
-      <div class="contact__inner inner">
-        <div class="contact__content-inner">
-          <div class="contact__address-wrapper">
-            <div class="contact__info-wrapper">
-              <div class="contact__logo logo"><img src="./assets/images/common/contact-logo.png" alt="コードアップスのロゴ" />
-              </div>
-            </div>
-            <div class="contact__info">
-              <div class="contact__address">
-                <p>沖縄県那覇市1-1</p>
-                <a href="tel:0120-000-0000" class="contact__tel">TEL:0120-000-0000</a>
-                <p>営業時間:8:30-19:00</p>
-                <p>定休日:毎週火曜日</p>
-              </div>
-              <div class="contact__map"><iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6888.6383644040225!2d127.68185319225111!3d26.211610509147523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1713793644657!5m2!1sja!2sjp"
-                  width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-            </div>
+    <!--footer-->
+    <footer class="footer footer-wrapper" id="footer">
+      <div class="footer__js-scroll-top" id="js-scroll-top">
+        <a href="#"><img src="./assets/images/common/scroll-top.png" alt="上へ戻る矢印" /></a>
+      </div>
+      <div class="footer__inner inner">
+        <div class="footer__icons">
+          <div class="footer__logo">
+            <a href="index.html"><img src="./assets/images/common/logo.png" alt="コードアップスのロゴ" /></a>
           </div>
-          <div class="contact__content">
-            <div class="contact__titles">
-              <p class="contact__titles-english">Contact</p>
-              <h2 class="contact__titles-japanese">お問い合わせ</h2>
+          <div class="footer__sns-logos">
+            <div class="footer__sns-logo">
+              <a href="#"><img src="./assets/images/common/FacebookLogo.png" alt="facebook" /></a>
             </div>
-            <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-            <div class="contact__btn-wrapper">
-              <a href="./contact-form.html" class="btn">Contact us
-                <span></span>
-              </a>
+            <div class="footer__sns-logo">
+              <a href="#"><img src="./assets/images/common/Instagram.png" alt="instagram" /></a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <!--footer-->
-  <footer class="footer footer-wrapper" id="footer">
-    <div class="footer__js-scroll-top" id="js-scroll-top">
-      <a href="#"><img src="./assets/images/common/scroll-top.png" alt="上へ戻る矢印" /></a>
-    </div>
-    <div class="footer__inner inner">
-      <div class="footer__icons">
-        <div class="footer__logo">
-          <a href="index.html"><img src="./assets/images/common/logo.png" alt="コードアップスのロゴ" /></a>
+        <div class="footer__site-map-wrapper">
+          <nav class="footer__site-map site-map">
+            <div class="site-map__sp-layout">
+              <div class="site-map__content">
+                <div class="site-map__main-title site-map__main-title--layout"><a href="./campaign.html">キャンペーン</a>
+                </div>
+                <div class="site-map__sub-group">
+                  <ul class="site-map__sub-titles">
+                    <li class="site-map__sub-title"><a href="./campaign.html#license-campaign">ライセンス取得</a></li>
+                    <li class="site-map__sub-title"><a href="./campaign.html#trial-campaign">貸切体験ダイビング</a></li>
+                    <li class="site-map__sub-title"><a href="./campaign.html#fun-campaign">ナイトダイビング</a></li>
+                  </ul>
+                </div>
+                <div class="site-map__main-title"><a href="./about-us.html">私たちについて</a></div>
+              </div>
+              <div class="site-map__main">
+                <div class="site-map__main-title"><a href="./information.html">ダイビング情報</a></div>
+                <div class="site-map__sub-group">
+                  <ul class="site-map__sub-titles">
+                    <li class="site-map__sub-title"><a href="./information.html#license-info">ライセンス講習</a></li>
+                    <li class="site-map__sub-title"><a href="./information.html#trial-info">体験ダイビング</a></li>
+                    <li class="site-map__sub-title"><a href="./information.html#fun-info">ファンダイビング</a></li>
+                  </ul>
+                </div>
+                <div class="site-map__main-title"><a href="./blog.html">ブログ</a></div>
+              </div>
+            </div>
+            <div class="site-map__sp-layout">
+              <div class="site-map__main">
+                <div class="site-map__main-title site-map__main-title--layout"><a href="./voice.html">お客様の声</a></div>
+                <div class="site-map__main-title"><a href="./price.html">料金一覧</a></div>
+                <div class="site-map__sub">
+                  <ul class="site-map__sub-titles">
+                    <li class="site-map__sub-title"><a href="./price.html#license-price">ライセンス講習</a></li>
+                    <li class="site-map__sub-title"><a href="./price.html#trial-price">体験ダイビング</a></li>
+                    <li class="site-map__sub-title"><a href="./price.html#fun-price">ファンダイビング</a></li>
+                    <li class="site-map__sub-title"><a href="./price.html#special-price">スペシャルダイビング</a></li>
+
+                  </ul>
+                </div>
+              </div>
+              <ul class="site-map__main">
+                <li class="site-map__main-title"><a href="./contact-FAQ.html">よくある質問</a></li>
+                <li class="site-map__main-title">
+                  <a href="./privacy.html">プライバシー<wbr />ポリシー</a>
+                </li>
+                <li class="site-map__main-title"><a href="./terms-of-service.html">利用規約</a></li>
+                <li class="site-map__main-title"><a href="./contact-form.html">お問い合わせ</a></li>
+                <li class="site-map__main-title"><a href="./site-map.html">サイトマップ</a></li>
+              </ul>
+            </div>
+          </nav>
         </div>
-        <div class="footer__sns-logos">
-          <div class="footer__sns-logo">
-            <a href="#"><img src="./assets/images/common/FacebookLogo.png" alt="facebook" /></a>
-          </div>
-          <div class="footer__sns-logo">
-            <a href="#"><img src="./assets/images/common/Instagram.png" alt="instagram" /></a>
-          </div>
-        </div>
       </div>
-      <div class="footer__site-map-wrapper">
-        <nav class="footer__site-map site-map">
-          <div class="site-map__sp-layout">
-            <div class="site-map__content">
-              <div class="site-map__main-title site-map__main-title--layout"><a href="./campaign.html">キャンペーン</a></div>
-              <div class="site-map__sub-group">
-                <ul class="site-map__sub-titles">
-                  <li class="site-map__sub-title"><a href="./campaign.html#license-campaign">ライセンス取得</a></li>
-                  <li class="site-map__sub-title"><a href="./campaign.html#trial-campaign">貸切体験ダイビング</a></li>
-                  <li class="site-map__sub-title"><a href="./campaign.html#fun-campaign">ナイトダイビング</a></li>
-                </ul>
-              </div>
-              <div class="site-map__main-title"><a href="./about-us.html">私たちについて</a></div>
-            </div>
-            <div class="site-map__main">
-              <div class="site-map__main-title"><a href="./information.html">ダイビング情報</a></div>
-              <div class="site-map__sub-group">
-                <ul class="site-map__sub-titles">
-                  <li class="site-map__sub-title"><a href="./information.html#license-info">ライセンス講習</a></li>
-                  <li class="site-map__sub-title"><a href="./information.html#trial-info">体験ダイビング</a></li>
-                  <li class="site-map__sub-title"><a href="./information.html#fun-info">ファンダイビング</a></li>
-                </ul>
-              </div>
-              <div class="site-map__main-title"><a href="./blog.html">ブログ</a></div>
-            </div>
-          </div>
-          <div class="site-map__sp-layout">
-            <div class="site-map__main">
-              <div class="site-map__main-title site-map__main-title--layout"><a href="./voice.html">お客様の声</a></div>
-              <div class="site-map__main-title"><a href="./price.html">料金一覧</a></div>
-              <div class="site-map__sub">
-                <ul class="site-map__sub-titles">
-                  <li class="site-map__sub-title"><a href="./price.html#license-price">ライセンス講習</a></li>
-                  <li class="site-map__sub-title"><a href="./price.html#trial-price">体験ダイビング</a></li>
-                  <li class="site-map__sub-title"><a href="./price.html#fun-price">ファンダイビング</a></li>
-                </ul>
-              </div>
-            </div>
-            <ul class="site-map__main">
-              <li class="site-map__main-title"><a href="./contact-FAQ.html">よくある質問</a></li>
-              <li class="site-map__main-title">
-                <a href="./privacy.html">プライバシー<wbr />ポリシー</a>
-              </li>
-              <li class="site-map__main-title"><a href="./terms-of-service.html">利用規約</a></li>
-              <li class="site-map__main-title"><a href="./contact-form.html">お問い合わせ</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <div class="footer__copy">Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</div>
-  </footer>
+      <div class="footer__copy">Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</div>
+    </footer>
 </body>
 
 </html>

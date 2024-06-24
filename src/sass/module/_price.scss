@@ -1,43 +1,14 @@
 @use "global" as *;
 
-.price__menu-wrapper {
-  margin-top: rem(52);
-  position: relative;
-
-  @include mq("md") {
-    margin-top: rem(160);
-  }
-}
-
-.price__menu-wrapper::after {
-  position: absolute;
-  content: "";
-  background-image: url(/assets/images/common/decoration-fish-right.png);
-  top: rem(-25);
-  left: calc(50% - min(45vw, 11rem));
-  max-width: rem(123);
-  width: 100%;
-  height: rem(55);
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include mq("md") {
-    top: rem(-40);
-    left: calc(50% - min(46.4vw, 42rem));
-    max-width: rem(301);
-    height: rem(138);
-  }
-}
-
 .price__menu {
   width: 100%;
-  margin-top: rem(40);
+  margin-top: rem(38);
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @include mq("md") {
-    margin-top: rem(80);
+    margin-top: rem(70);
     flex-direction: row;
   }
 }
@@ -95,30 +66,41 @@
 .price__list {
   display: flex;
   flex-direction: row;
+  border: solid rem(1) $green;
   align-items: center;
 }
 
+.price__list:not(:first-child) {
+  border-top: none;
+}
+
 .price__name {
-  width: 67.7%;
+  width: 69%;
   text-align: center;
-  border: solid rem(1) $green;
-  padding: rem(6) rem(40);
-  word-break: keep-all;
-  overflow-wrap: break-word;
   text-wrap: nowrap;
 
   @include mq("md") {
     padding: rem(18) rem(16);
+    text-align: start;
+    width: 68%;
   }
 }
 
 .price__yen {
-  width: 32.3%;
+  width: 31%;
   text-align: end;
-  border-top: solid rem(1) $green;
-  border-right: solid rem(1) $green;
-  border-bottom: solid rem(1) $green;
+  border-left: solid rem(1) $green;
   padding: rem(18) rem(16);
 
-  @include mq("md") {}
+  @include mq("md") {
+    width: 32%;
+  }
+}
+
+.price-pc-none {
+  display: block;
+
+  @include mq("md") {
+    display: none;
+  }
 }

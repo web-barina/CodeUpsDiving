@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .contact-form-wrapper {
-    margin-top: rem(46);
+    margin-top: rem(15);
     position: relative;
 
     @include mq("md") {
-        margin-top: rem(146);
+        margin-top: rem(96);
     }
 }
 
@@ -14,7 +14,7 @@
     content: "";
     display: block;
     background-image: url(/assets/images/common/decoration-fish-right.svg);
-    top: rem(-20);
+    top: rem(12);
     left: calc(50% - min(45.7vw, 10.8rem));
     max-width: rem(118);
     width: 100%;
@@ -24,7 +24,7 @@
     z-index: -1;
 
     @include mq("md") {
-        top: rem(-67);
+        top: rem(-18);
         left: calc(50% - min(43vw, 38.7rem));
         max-width: rem(301);
         height: rem(138);

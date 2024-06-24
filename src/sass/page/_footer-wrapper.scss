@@ -29,3 +29,11 @@
     margin-top: rem(119);
   }
 }
+
+.footer-wrapper--contact-form {
+  margin-top: rem(144);
+
+  @include mq("md") {
+    margin-top: rem(177);
+  }
+}
