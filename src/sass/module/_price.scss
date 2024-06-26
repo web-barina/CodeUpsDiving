@@ -104,3 +104,11 @@
     display: none;
   }
 }
+
+//ページ内リンク余白調整
+.price__anchor {
+  display: block;
+  position: relative;
+  top: rem(-100);
+  visibility: hidden;
+}

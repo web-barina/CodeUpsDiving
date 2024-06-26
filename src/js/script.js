@@ -1,9 +1,9 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  /*****
-    ハンバーガーメニュー
-    *****/
+  /*********************
+   *ハンバーガーメニュー*
+   *********************/
   $("#js-hamburger").on("click", function () {
     if ($("#js-hamburger").hasClass("js-active")) {
       $(".header__sp-nav").fadeOut();
@@ -12,7 +12,7 @@ jQuery(function ($) {
       $(".header__sp-nav").fadeIn();
       $(this).addClass("js-active");
     }
-  }); //ハンバーガーメニュー閉じタグ
+  });
   //768px以上でドロワーを非表示にする
   $(window).on("resize", function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
@@ -21,9 +21,9 @@ jQuery(function ($) {
     }
   });
 
-  /*****
-    FV-swiper
-    *****/
+  /***********
+   *FV-swiper*
+   ***********/
   var topFVswiper = new Swiper("#js-topFVswiper", {
     effect: "fade",
     speed: 1500,
@@ -55,9 +55,9 @@ jQuery(function ($) {
     },
   });
 
-  /***************
-    カラーボックス
-    **************/
+  /**************
+   *カラーボックス*
+   **************/
   var box = $(".js-color-box"),
     speed = 700;
 
@@ -82,12 +82,11 @@ jQuery(function ($) {
         counter = 1;
       }
     });
-  }); //カラーボックス閉じタグ
+  });
 
-  /*********************
-   スクロールトップ
-   *******************/
-  //スクロールした際の動きを関数でまとめる
+  /*****************
+   *スクロールトップ*
+   *****************/
   function PageTopAnime() {
     var scroll = $(window).scrollTop();
     if (scroll >= 300) {
@@ -103,7 +102,7 @@ jQuery(function ($) {
     var wH = window.innerHeight;
     var footerPos = $("#footer").offset().top;
     if (scroll + wH >= footerPos + 10) {
-      var pos = scroll + wH - footerPos + 15; //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+      var pos = scroll + wH - footerPos + 15; //スクロールの値＋画面の高さからfooterの位置＋15pxを引いた場所を取得し
       $("#js-scroll-top").css("bottom", pos);
     } else {
       //それ以外は
@@ -132,47 +131,23 @@ jQuery(function ($) {
     return false; //リンク自体の無効化
   });
 
-  /* FAQアコーディオン */
+  /******************
+   *FAQアコーディオン*
+   ******************/
   $(function () {
     $(".contact-FAQ__question").on("click", function () {
       $(this).next().slideToggle(300);
-      // タイトルにopenクラスを付け外しして矢印の向きを変更
       $(this).toggleClass("open", 300);
     });
   });
 
-  /*campaignタブメニュー*/
-  $(function () {
-    var $btn = $(".info__info__info__tabs__item [data-filter]"),
-      $list = $(".campaign-card [data-category]");
+  /********************
+   *campaignタブメニュー*
+   *********************/
 
-    $btn.on("click", function (e) {
-      e.preventDefault();
-
-      var $btnTxt = $(this).attr("data-filter");
-
-      if ($btnTxt == "all") {
-        $list
-          .fadeOut()
-          .promise()
-          .done(function () {
-            $list.addClass("animate").fadeIn();
-          });
-      } else {
-        $list
-          .fadeOut()
-          .promise()
-          .done(function () {
-            $list
-              .filter('[data-category = "' + $btnTxt + '"]')
-              .addClass("animate")
-              .fadeIn();
-          });
-      }
-    });
-  });
-
-  /*AboutUs モーダル */
+  /******************
+   *AboutUs モーダル*
+   *****************/
   $(document).ready(
     $(function () {
       $(".gallery__photo-large,.gallery__photo-small").on("click", function () {
@@ -191,7 +166,9 @@ jQuery(function ($) {
     })
   );
 
-  /*infoタブメニュー*/
+  /*****************
+   *infoタブメニュー*
+   *****************/
   $(function () {
     $(".info__tab").on("click", function () {
       $(".info__tab, .info__content").removeClass("js-active");
@@ -203,11 +180,12 @@ jQuery(function ($) {
     });
   });
 
-  /*サイドバーアーカイブ*/
+  /********************
+   *サイドバーアーカイブ*
+   ********************/
   $(function () {
     $(".sidebar__archive-year").on("click", function () {
       $(this).next().slideToggle(300);
-      // タイトルにopenクラスを付け外しして矢印の向きを変更
       $(this).toggleClass("open", 300);
     });
   });
