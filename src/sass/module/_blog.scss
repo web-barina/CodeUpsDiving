@@ -1,6 +1,17 @@
 @use "global" as *;
+
+.blog {
+  width: 100%;
+
+  @include mq("md") {
+    width: 65%;
+  }
+
+}
+
 .blog__pager-wrapper {
   margin-top: rem(40);
+
   @include mq("md") {
     margin-top: rem(80);
   }

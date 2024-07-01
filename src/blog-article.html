@@ -180,35 +180,34 @@
         <h1>Blog</h1>
       </div>
     </section>
-    <div class="bread">
-      <div class="bread__inner inner">
+    <div class="inner">
+      <div class="bread">
         <a href="index.html" class="bread__top">TOP</a>
         <div class="bread__arrow"><img src="./assets/images/common/pager.png" alt="パンくず矢印"></div>
         <div class="bread__detail">ブログ一覧</div>
         <div class="bread__arrow"><img src="./assets/images/common/pager.png" alt="パンくず矢印"></div>
         <div class="bread__detail">ブログ詳細</div>
       </div>
-    </div>
-    <div class="blog-article-layout inner">
-      <div class="blog-article-layout__2column">
-        <article class="blog-article">
+      <div class="blog-layout">
+        <article class="blog-layout__article blog-article">
           <time datetime="2023-11-17" class="blog-article__time">2023.11.17</time>
           <h2 class="blog-article__title">ライセンス取得</h2>
+          <figure class="blog-article__thumbnail"><img src="./assets/images/common/blog1.png" alt="ピンク色の珊瑚の写真" />
+          </figure>
           <div class="blog-article__content">
-            <figure class="blog-article__img"><img src="./assets/images/common/blog1.png" alt="ピンク色の珊瑚の写真" /></figure>
-            <p class="blog-article__text">
+            <p>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
             </p>
-            <figure class="blog-article__img"><img src="./assets/images/common/blog1.png" alt="ピンク色の珊瑚の写真" /></figure>
-            <p class="blog-article__text">
+            <figure><img src="./assets/images/common/blog1.png" alt="ピンク色の珊瑚の写真" /></figure>
+            <p>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
             </p>
-            <ul class="blog-article__lists">
-              <li class="blog-article__list">リスト１</li>
-              <li class="blog-article__list">リスト2</li>
-              <li class="blog-article__list">リスト3</li>
+            <ul>
+              <li>リスト１</li>
+              <li>リスト2</li>
+              <li>リスト3</li>
             </ul>
-            <p class="blog-article__text">
+            <p>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
             </p>
             <div class="blog-article__pager-wrapper">
@@ -229,38 +228,38 @@
             </div>
           </div>
         </article>
-        <aside class="sidebar sidebar-wrapper sidebar-wrapper--blog-article">
+        <aside class="blog-layout__sidebar sidebar sidebar-wrapper">
           <div class="sidebar__inner">
             <section class="sidebar__popular sidebar__popular-wrapper">
-              <h4 class="sidebar__title">人気記事</h4>
+              <h2 class="sidebar__title">人気記事</h2>
               <div class="sidebar__popular-cards">
                 <a href="#" class="sidebar__popular-card">
                   <div class="sidebar__popular-img"><img src="./assets/images/common/blog4.png" alt="" /></div>
                   <div class="sidebar__popular-text">
                     <time class="sidebar__popular-time" datetime="2023-11-17">2023.11.17</time>
-                    <h5 class="sidebar__popular-title">ライセンス取得</h5>
+                    <h3 class="sidebar__popular-title">ライセンス取得</h3>
                   </div>
                 </a><a href="#" class="sidebar__popular-card">
                   <div class="sidebar__popular-img"><img src="./assets/images/common/blog2.png" alt="" /></div>
                   <div class="sidebar__popular-text">
                     <time class="sidebar__popular-time" datetime="2023-11-17">2023.11.17</time>
-                    <h5 class="sidebar__popular-title">ウミガメと泳ぐ</h5>
+                    <h3 class="sidebar__popular-title">ウミガメと泳ぐ</h3>
                   </div>
                 </a><a href="#" class="sidebar__popular-card">
                   <div class="sidebar__popular-img"><img src="./assets/images/common/blog3.png" alt="" /></div>
                   <div class="sidebar__popular-text">
                     <time class="sidebar__popular-time" datetime="2023-11-17">2023.11.17</time>
-                    <h5 class="sidebar__popular-title">カクレクマノミ</h5>
+                    <h3 class="sidebar__popular-title">カクレクマノミ</h3>
                   </div>
                 </a>
               </div>
             </section>
             <section class="sidebar__reviews sidebar__reviews-wrapper">
-              <h4 class="sidebar__title">口コミ</h4>
+              <h2 class="sidebar__title">口コミ</h2>
               <a href="#" class="sidebar__reviews-card">
                 <div class="sidebar__reviews-img"><img src="./assets/images/common/sidebar-voice.png" alt="" /></div>
                 <p class="sidebar__reviews-info">30代(カップル)</p>
-                <h5 class="sidebar__reviews-title">ここにタイトルが入ります。ここにタイトル</h5>
+                <h3 class="sidebar__reviews-title">ここにタイトルが入ります。ここにタイトル</h3>
               </a>
               <div class="sidebar__btn-wrapper">
                 <a href="./voice.html" class="btn">View more
@@ -269,7 +268,7 @@
               </div>
             </section>
             <section class="sidebar__campaign sidebar__campaign-wrapper">
-              <h4 class="sidebar__title">キャンペーン</h4>
+              <h2 class="sidebar__title">キャンペーン</h2>
               <div class="sidebar__campaign-cards">
                 <a href="#" class="campaign__cards-item campaign-card">
                   <figure class="campaign-card__img campaign-card__img--side">
@@ -312,13 +311,13 @@
               </div>
             </section>
             <section class="sidebar__archive sidebar__archive-wrapper">
-              <h4 class="sidebar__title">アーカイブ</h4>
+              <h2 class="sidebar__title">アーカイブ</h2>
               <div class="sidebar__archive-content">
                 <div class="sidebar__archive-year">2023</div>
                 <div class="sidebar__archive-months">
-                  <div class="sidebar__archive-month">3月</div>
-                  <div class="sidebar__archive-month">2月</div>
-                  <div class="sidebar__archive-month">1月</div>
+                  <a href="#" class="sidebar__archive-month">3月</a>
+                  <a href="#" class="sidebar__archive-month">2月</a>
+                  <a href="#" class="sidebar__archive-month">1月</a>
                 </div>
                 <div class="sidebar__archive-year">2022</div>
               </div>
@@ -344,7 +343,7 @@
                 <p>定休日:毎週火曜日</p>
               </div>
               <div class="contact__map"><iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6888.6383644040225!2d127.68185319225111!3d26.211610509147523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1713793644657!5m2!1sja!2sjp"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6888.6383644040225!2d127.68185319225111!3d26.211610509147523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6Kah3biC!5e0!3m2!1sja!2sjp!4v1713793644657!5m2!1sja!2sjp"
                   width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"></iframe></div>
             </div>

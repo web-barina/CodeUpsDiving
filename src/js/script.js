@@ -135,8 +135,9 @@ jQuery(function ($) {
    *FAQアコーディオン*
    ******************/
   $(function () {
-    $(".contact-FAQ__question").on("click", function () {
-      $(this).next().slideToggle(300);
+    $(".faq__question").on("click", function () {
+      var $answer = $(this).next();
+      $answer.slideToggle(300);
       $(this).toggleClass("open", 300);
     });
   });
@@ -150,9 +151,9 @@ jQuery(function ($) {
    *****************/
   $(document).ready(
     $(function () {
-      $(".gallery__photo-large,.gallery__photo-small").on("click", function () {
+      $(".gallery__a,.gallery__b,.gallery__c,.gallery__d,.gallery__e,.gallery__f").on("click", function () {
         var modal_id = $(this).attr("id");
-        $(".modal#cont-" + modal_id).fadeIn(300);
+        $(".modal#cont-" + modal_id).fadeIn(200);
         $(".modal#cont-" + modal_id).addClass("active");
         $("html, body").css("overflow-y", "hidden");
       });
@@ -180,6 +181,31 @@ jQuery(function ($) {
     });
   });
 
+  //ページ内リンクでジャンプした時、該当のタブがクリックされている状態にする
+  document.addEventListener("DOMContentLoaded", function () {
+    function activateTab(tabId) {
+      document.querySelectorAll(".tab").forEach(function (tab) {
+        tab.classList.remove("js-active");
+      });
+      const activeTab = document.getElementById(tabId);
+      if (activeTab) {
+        activeTab.classList.add("js-active");
+      }
+    }
+
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      activateTab(hash + "-tab");
+    }
+
+    // タブクリック時のハッシュ更新
+    document.querySelectorAll(".tab").forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        window.location.hash = this.id.replace("-tab", "");
+      });
+    });
+  });
+
   /********************
    *サイドバーアーカイブ*
    ********************/
@@ -189,4 +215,18 @@ jQuery(function ($) {
       $(this).toggleClass("open", 300);
     });
   });
+  /***********************
+   *ローディング2回目非表示*
+   ***********************/
+  var loadingAnime = $.cookie("accessdate"); //キーが入っていれば年月日を取得
+  var myD = new Date(); //日付データを取得
+  var myYear = String(myD.getFullYear()); //年
+  var myMonth = String(myD.getMonth() + 1); //月
+  var myDate = String(myD.getDate()); //日
+  if (loadingAnime != myYear + myMonth + myDate) {
+    //cookieデータとアクセスした日付を比較↓
+    $(".js-loading").css("display", "block"); //１回目はローディングを表示
+  } else {
+    $(".js-loading").css("display", "none"); //同日2回目のアクセスでローディング画面非表示
+  }
 });

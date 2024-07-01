@@ -29,6 +29,7 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: rem(100);
 }
 
 /* Set core body defaults */
@@ -57,7 +58,7 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 

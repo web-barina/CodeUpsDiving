@@ -18,9 +18,9 @@
   height: rem(38);
   background-color: $white;
   border: solid rem(1) $green;
-  text-align: center;
-  line-height: 1;
-  padding: rem(11) rem(15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pager__number-wrapper {
@@ -35,14 +35,14 @@
 
 .pager__number {
   display: inline-block;
-  width: rem(38);
+  min-width: rem(38);
   height: rem(38);
   background-color: $white;
   color: $green;
   border: solid rem(1) $green;
   text-align: center;
   line-height: 1;
-  padding: rem(11) 0;
+  padding: rem(11) rem(5);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;

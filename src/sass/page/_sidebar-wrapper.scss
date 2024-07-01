@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.sidebar-wrapper {
+    margin-top: rem(80);
+    width: 100%;
+
+    @include mq("md") {
+        margin-top: 0;
+        width: 27.2%;
+    }
+}

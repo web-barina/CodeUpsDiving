@@ -1,11 +1,11 @@
 @use "global" as *;
 
-/*.tab {
+.tab {
     display: inline-block;
     padding: rem(6) 0;
     width: rem(162);
     background: $white;
-    color: $black;
+    color: $green;
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
@@ -20,4 +20,10 @@
 .tab.is-button-active {
     background: $green;
     color: $white;
-}*/
+}
+
+.tab:hover {
+    background-color: $green;
+    color: $white;
+    transition: .3s;
+}

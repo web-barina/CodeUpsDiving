@@ -1,134 +1,20 @@
 @use "global" as *;
 
-.contact-FAQ__inner {
-  width: 100%;
-
-  @include mq("md") {
-    max-width: rem(700);
-  }
-}
-
-.contact-FAQ__wrapper {
+.contact-faq {
   margin-top: rem(50);
-  width: 100%;
-  position: relative;
 
   @include mq("md") {
-    margin: rem(149) auto 0;
+    margin-top: rem(149);
+  }
+}
+
+.contact-faq__inner {
+  max-width: rem(540);
+  width: 100%;
+  margin: 0 auto;
+
+  @include mq("md") {
     max-width: rem(700);
-  }
-}
-
-.contact-FAQ__wrapper::before {
-  position: absolute;
-  content: "";
-  display: block;
-  background-image: url(/assets/images/common/decoration-fish-right.svg);
-  top: rem(-23);
-  left: calc(50% - min(44.5vw, 10.4rem));
-  max-width: rem(109);
-  width: 100%;
-  height: rem(50);
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include mq("md") {
-    top: rem(-70);
-    left: calc(50% - min(43vw, 38.75rem));
-    max-width: rem(301);
-    height: rem(138);
-  }
-}
-
-.contact-FAQ__FAQ {
-  margin-top: rem(38);
-
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}
-
-.contact-FAQ__FAQ:first-child {
-  margin-top: rem(0);
-}
-
-.contact-FAQ__question {
-  background-color: $green;
-  padding: rem(17);
-  position: relative;
-
-  @include mq("md") {
-    padding: rem(26) rem(40);
-  }
-}
-
-.contact-FAQ__question h2 {
-  font-size: rem(16);
-  font-weight: $normal;
-  color: $white;
-
-  @include mq("md") {
-    font-size: rem(20);
-  }
-}
-
-.contact-FAQ__question::before {
-  position: absolute;
-  content: "";
-  display: block;
-  background-color: $white;
-  width: rem(28);
-  height: rem(1);
-  top: 50%;
-  right: rem(17);
-
-  @include mq("md") {
-    width: rem(32);
-    right: rem(40);
-  }
-}
-
-.contact-FAQ__question::after {
-  position: absolute;
-  content: "";
-  display: block;
-  background-color: $white;
-  width: rem(28);
-  height: rem(1);
-  top: 50%;
-  right: rem(17);
-  transform: rotate(-90deg);
-  transition: transform .3s ease-in-out, top .3s ease-in-out;
-
-  @include mq("md") {
-    width: rem(32);
-    right: rem(40);
-  }
-}
-
-.contact-FAQ__question.open::after {
-  transform: rotate(0deg);
-}
-
-
-.contact-FAQ__answer {
-  display: none;
-  padding: rem(22) 0;
-  border: solid rem(1) $green;
-  margin-top: 0;
-
-  @include mq("md") {
-    padding: rem(39) 0;
-    margin-top: rem(14);
-  }
-
-}
-
-.contact-FAQ__answer p {
-  margin: 0 rem(16);
-  line-height: 1.45;
-
-  @include mq("md") {
-    margin: 0 rem(40);
+    width: 100%;
   }
 }

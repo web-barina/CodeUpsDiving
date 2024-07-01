@@ -257,6 +257,6 @@
   @include mq("md") {
     display: block;
     margin-top: rem(16);
-    margin-bottom: rem(40);
+    padding-bottom: rem(40);
   }
 }

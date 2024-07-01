@@ -12,25 +12,3 @@
     column-gap: rem(32);
   }
 }
-
-.tabs label {
-  display: block;
-  padding: rem(6) 0;
-  width: rem(162);
-  font-size: rem(14);
-  background: $white;
-  color: $green;
-  box-sizing: border-box;
-  text-align: center;
-  cursor: pointer;
-  border: solid rem(1) $green;
-}
-
-.tabs input:checked+label {
-  background: $green;
-  color: $white;
-}
-
-.tabs input {
-  display: none;
-}

@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.blog-article-layout__2column {
+.menus {
     display: flex;
     flex-direction: column;
+    gap: rem(40);
 
     @include mq("md") {
-        flex-direction: row;
-        gap: rem(73);
+        gap: rem(74);
     }
 }

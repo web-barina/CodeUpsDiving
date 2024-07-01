@@ -1,7 +1,6 @@
-//jQuery(function ($) {
 "use strict";
 const tl = gsap.timeline();
-
+/*
 tl.fromTo(
   ".js-loading__start",
   {
@@ -9,18 +8,41 @@ tl.fromTo(
   },
   {
     delay: 1,
-    duration: 1.5,
+    duration: 2,
     autoAlpha: 0,
   }
-)
-  .fromTo(
-    ".js-loading__middle",
+);
+.fromTo(
+    ".js-loading__left",
     {
+      y: "100%",
       opacity: 1,
     },
     {
       delay: 1,
-      duration: 1.5,
+      y: "0",
+      ease: "slow(0.7, 0.7, false)",
+    }
+  )
+  .fromTo(
+    ".js-loading__right",
+    {
+      y: "100%",
+      opacity: 1,
+    },
+    {
+      delay: 1,
+      y: "0",
+      ease: "slow(0.7, 0.7, false)",
+    }
+  )
+  .fromTo(
+    ".js-loading__middle",
+    {
+      opacity: 0,
+    },
+    {
+      delay: 0.3,
       autoAlpha: 0,
     }
   )
@@ -34,4 +56,4 @@ tl.fromTo(
       duration: 1,
       autoAlpha: 0,
     }
-  );
+  )*/

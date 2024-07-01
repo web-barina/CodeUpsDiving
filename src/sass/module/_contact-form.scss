@@ -2,20 +2,11 @@
 
 .contact-form__inner {
   width: 100%;
+  margin: 0 auto;
 
   @include mq("md") {
     max-width: rem(700);
     width: 100%;
-  }
-}
-
-.contact-form__form {
-  width: 100%;
-  margin-top: rem(12);
-
-  @include mq("md") {
-    max-width: rem(700);
-    margin: 0 auto;
   }
 }
 
@@ -102,7 +93,7 @@
   }
 }
 
-.contact-form__radios {
+.contact-form__checks {
   margin-top: rem(14);
   display: flex;
   flex-direction: column;
@@ -112,9 +103,9 @@
   }
 }
 
-.contact-form__radio {
+.contact-form__check {
   display: flex;
-  align-items: center;
+  align-items: end;
   margin-top: rem(2);
 }
 
@@ -122,56 +113,6 @@
   cursor: pointer;
 }
 
-.contact-form__radio-button {
-  position: absolute;
-  white-space: nowrap;
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  overflow: hidden;
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-}
-
-.contact-form__radio label {
-  position: relative;
-  cursor: pointer;
-  padding-left: rem(23);
-}
-
-.contact-form__radio label::before,
-.contact-form__radio label::after {
-  content: "";
-  display: block;
-  border-radius: 50%;
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-}
-
-.contact-form__radio label::before {
-  background-color: $white;
-  border: 1px solid $green;
-  border-radius: 50%;
-  width: rem(14);
-  height: rem(14);
-  left: 0;
-}
-
-.contact-form__radio label::after {
-  background-color: $green;
-  border-radius: 50%;
-  opacity: 0;
-  width: rem(9);
-  height: rem(9);
-  left: rem(2.7);
-}
-
-.contact-form__radio-button:checked+label::after {
-  opacity: 1;
-}
 
 .contact-form__contents {
   margin-top: rem(16);
@@ -220,17 +161,14 @@
 
 .contact-form__agreement {
   margin: rem(40) auto 0;
-  max-width: rem(280);
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   font-size: rem(14);
+  justify-content: center;
 
   @include mq("md") {
     margin-top: rem(80);
-    max-width: none;
-    text-align: center;
     gap: rem(15);
   }
 }
@@ -238,13 +176,16 @@
 .contact-form__agreement label {
   word-break: keep-all;
   overflow-wrap: break-word;
-  text-wrap: nowrap;
+  max-width: rem(252);
+
+  @include mq("md") {
+    max-width: none;
+  }
 }
 
 input[type=checkbox] {
-  width: rem(32);
+  width: rem(22);
   height: rem(22);
-  margin-top: rem(-15);
   display: inline-block;
   border: solid rem(1) $green;
   cursor: pointer;
@@ -252,7 +193,6 @@ input[type=checkbox] {
 
   @include mq("md") {
     width: rem(22);
-    margin-top: rem(-2);
     margin-left: rem(-2);
   }
 }

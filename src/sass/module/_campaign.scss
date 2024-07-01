@@ -2,20 +2,14 @@
 
 .campaign__inner {
   max-width: rem(311);
-
-  @include mq("md") {}
-}
-
-.campaign__tabs-wrapper {
-  margin-top: rem(51);
-  position: relative;
+  margin: 0 auto;
 
   @include mq("md") {
-    margin-top: rem(150);
+    max-width: none;
   }
 }
 
-.campaign__tabs-wrapper::before {
+.campaign__tabs::before {
   position: absolute;
   content: "";
   display: block;
@@ -38,6 +32,7 @@
 }
 
 .campaign__tabs {
+  position: relative;
   flex-wrap: wrap;
 }
 

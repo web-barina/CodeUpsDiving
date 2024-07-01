@@ -15,12 +15,11 @@
 }
 
 .blog-cards--blog-page {
-  margin-top: rem(50);
   gap: rem(39);
+  margin-top: 0;
 
   @include mq("md") {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: rem(150);
-    width: 92%;
+    margin-top: 0;
   }
 }

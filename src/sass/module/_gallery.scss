@@ -1,46 +1,35 @@
 @use "global" as *;
 
-.gallery__photo-wrapper {
+.gallery__container-wrapper {
     margin-top: rem(40);
-    display: flex;
-    flex-direction: column;
-    gap: rem(8);
 
     @include mq("md") {
         margin-top: rem(80);
     }
 }
 
-
-.gallery__photo {
-    display: flex;
-    flex-direction: column;
-    gap: rem(8);
-    align-items: center;
-
-    @include mq("md") {
-        flex-direction: row;
-        align-items: initial;
-    }
-}
-
-.gallery__photo-large {
-    aspect-ratio: 345/523;
+.gallery__container {
+    display: grid;
+    grid-auto-flow: dense;
+    gap: rem(8) rem(8);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     position: relative;
-    max-width: rem(345);
-    width: 100%;
-    max-height: rem(746);
-    top: 0;
-    left: 0;
 
     @include mq("md") {
-        aspect-ratio: 746/492;
-        max-width: rem(492);
-        cursor: pointer;
+        grid-template-columns: repeat(22, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
 }
 
-.gallery__photo-large>img {
+.gallery__a {
+    cursor: pointer;
+    grid-column: span 10;
+    grid-row: span 2;
+    position: relative;
+}
+
+.gallery__a>img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -50,35 +39,77 @@
     object-fit: cover;
 }
 
-.gallery__photo-smalls {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: rem(8);
-    align-items: center;
-
-    @include mq("md") {
-        width: 54%;
-        cursor: pointer;
-    }
-}
-
-.gallery__photo-small {
+.gallery__b {
+    cursor: pointer;
+    grid-area: gallery__b;
     position: relative;
-    aspect-ratio: 345/219;
-    max-width: rem(345);
-    width: 100%;
-    height: auto;
-    top: 0;
-    right: 0;
-
-    @include mq("md") {
-        aspect-ratio: 580/369;
-        max-width: rem(580);
-    }
 }
 
-.gallery__photo-small>img {
+.gallery__b>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.gallery__c {
+    cursor: pointer;
+    grid-area: gallery__c;
+    position: relative;
+}
+
+.gallery__c>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.gallery__d {
+    cursor: pointer;
+    grid-area: gallery__d;
+    position: relative;
+}
+
+.gallery__d>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.gallery__e {
+    cursor: pointer;
+    grid-area: gallery__e;
+    position: relative;
+}
+
+.gallery__e>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.gallery__f {
+    cursor: pointer;
+    grid-area: gallery__f;
+    position: relative;
+}
+
+.gallery__f>img {
     position: absolute;
     width: 100%;
     height: 100%;
