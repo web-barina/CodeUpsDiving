@@ -12,6 +12,7 @@
   display: flex;
   gap: rem(20);
   justify-content: space-between;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .info__tab {
@@ -30,6 +31,10 @@
   gap: rem(8);
   word-break: keep-all;
   overflow-wrap: break-word;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   @include mq("md") {
     padding: rem(26) 0;
@@ -51,6 +56,11 @@
     height: rem(64);
     width: rem(64);
   }
+}
+
+.info__tab:hover {
+  background-color: #A0C7CA;
+  transition: fill 0.3s;
 }
 
 .info__tab--license::before {

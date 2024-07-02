@@ -10,106 +10,45 @@
 
 .gallery__container {
     display: grid;
-    grid-auto-flow: dense;
-    gap: rem(8) rem(8);
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    position: relative;
+    grid-auto-rows: 1fr;
+    gap: rem(8);
 
     @include mq("md") {
-        grid-template-columns: repeat(22, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(9, 1fr);
+        grid-auto-flow: dense;
     }
 }
 
-.gallery__a {
-    cursor: pointer;
-    grid-column: span 10;
+.gallery__photo:nth-child(6n),
+.gallery__photo:nth-child(6n + 1) {
     grid-row: span 2;
     position: relative;
+    aspect-ratio: 345/446;
+
+    @include mq(md) {
+        grid-row: span 4;
+        grid-column: span 4;
+        aspect-ratio: 492/746;
+    }
 }
 
-.gallery__a>img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
 
-.gallery__b {
-    cursor: pointer;
-    grid-area: gallery__b;
+.gallery__photo:nth-child(6n + 2),
+.gallery__photo:nth-child(6n + 3),
+.gallery__photo:nth-child(6n + 4),
+.gallery__photo:nth-child(6n + 5) {
     position: relative;
+    grid-row: span 1;
+    aspect-ratio: 345/219;
+
+    @include mq(md) {
+        aspect-ratio: 580/347;
+        grid-row: span 2;
+        grid-column: span 5;
+    }
 }
 
-.gallery__b>img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
-.gallery__c {
-    cursor: pointer;
-    grid-area: gallery__c;
-    position: relative;
-}
-
-.gallery__c>img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
-.gallery__d {
-    cursor: pointer;
-    grid-area: gallery__d;
-    position: relative;
-}
-
-.gallery__d>img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
-.gallery__e {
-    cursor: pointer;
-    grid-area: gallery__e;
-    position: relative;
-}
-
-.gallery__e>img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
-.gallery__f {
-    cursor: pointer;
-    grid-area: gallery__f;
-    position: relative;
-}
-
-.gallery__f>img {
+.gallery__photo>img {
     position: absolute;
     width: 100%;
     height: 100%;

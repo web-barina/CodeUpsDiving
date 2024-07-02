@@ -48,6 +48,8 @@
 .menu__lists {
     width: 100%;
     align-items: center;
+    border: 1px solid $green;
+    border-collapse: collapse;
 
     @include mq("md") {
         width: 71.5%;
@@ -58,7 +60,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: solid rem(1) $green;
+    border: 1px solid $green;
+    border-collapse: collapse;
     min-height: rem(60);
 }
 
@@ -69,11 +72,12 @@
 .menu__name {
     width: 69%;
     text-align: center;
-    border-right: solid rem(1) $green;
+    border: 1px solid $green;
+    border-collapse: collapse;
+    padding: rem(18) rem(16);
 
 
     @include mq("md") {
-        padding: rem(0) rem(16);
         text-align: start;
         width: 68%;
     }
@@ -82,8 +86,9 @@
 .menu__yen {
     width: 31%;
     text-align: end;
-    padding: rem(0) rem(16);
-    border-left: solid rem(1) $green;
+    padding: rem(18) rem(16);
+    border: 1px solid $green;
+    border-collapse: collapse;
 
     @include mq("md") {
         width: 32%;

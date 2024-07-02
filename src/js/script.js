@@ -145,13 +145,57 @@ jQuery(function ($) {
   /********************
    *campaignタブメニュー*
    *********************/
+  document.addEventListener("DOMContentLoaded", function () {
+    // ページロード時にURLのハッシュを確認
+    activateTabFromHash();
+
+    // すべてのリンクにクリックイベントを追加
+    document.querySelectorAll(".site-map__sub-titles a").forEach((link) => {
+      link.addEventListener("click", function (event) {
+        // 他のタブの active クラスを削除
+        document.querySelectorAll(".info__tab").forEach((tab) => {
+          tab.classList.remove("js-active");
+        });
+
+        // クリックされたリンクのハッシュを取得
+        const hash = this.hash;
+
+        // 対応するタブに active クラスを追加
+        if (hash) {
+          const tab = document.querySelector(hash);
+          if (tab) {
+            tab.classList.add("js-active");
+          }
+        }
+      });
+    });
+
+    // ハッシュが変更されたときにタブをアクティブにする
+    window.addEventListener("hashchange", activateTabFromHash);
+
+    function activateTabFromHash() {
+      const hash = window.location.hash;
+      if (hash) {
+        // 他のタブの active クラスを削除
+        document.querySelectorAll(".info__tab").forEach((tab) => {
+          tab.classList.remove("js-active");
+        });
+
+        // 対応するタブに active クラスを追加
+        const tab = document.querySelector(hash);
+        if (tab) {
+          tab.classList.add("js-active");
+        }
+      }
+    }
+  });
 
   /******************
    *AboutUs モーダル*
    *****************/
   $(document).ready(
     $(function () {
-      $(".gallery__a,.gallery__b,.gallery__c,.gallery__d,.gallery__e,.gallery__f").on("click", function () {
+      $(".gallery__photo").on("click", function () {
         var modal_id = $(this).attr("id");
         $(".modal#cont-" + modal_id).fadeIn(200);
         $(".modal#cont-" + modal_id).addClass("active");
@@ -170,40 +214,57 @@ jQuery(function ($) {
   /*****************
    *infoタブメニュー*
    *****************/
-  $(function () {
-    $(".info__tab").on("click", function () {
-      $(".info__tab, .info__content").removeClass("js-active");
 
-      $(this).addClass("js-active");
+  $(document).ready(function () {
+    var tabButton = $(".info__tab"),
+      tabContent = $(".info__content");
 
-      var index = $(".info__tab").index(this);
-      $(".info__content").eq(index).addClass("js-active");
-    });
-  });
-
-  //ページ内リンクでジャンプした時、該当のタブがクリックされている状態にする
-  document.addEventListener("DOMContentLoaded", function () {
     function activateTab(tabId) {
-      document.querySelectorAll(".tab").forEach(function (tab) {
-        tab.classList.remove("js-active");
+      tabButton.removeClass("js-active");
+      tabContent.removeClass("js-active");
+
+      // タブボタンとタブコンテンツを一致させる
+      tabButton.each(function (index) {
+        if ($(this).attr("id") === tabId) {
+          $(this).addClass("js-active");
+          tabContent.eq(index).addClass("js-active");
+        }
       });
-      const activeTab = document.getElementById(tabId);
-      if (activeTab) {
-        activeTab.classList.add("js-active");
-      }
     }
 
-    const hash = window.location.hash.substring(1);
+    // ページ読み込み時にURLのハッシュを確認してタブを表示
+    var hash = window.location.hash;
     if (hash) {
-      activateTab(hash + "-tab");
+      var tabId = hash.substring(1); // '#'を取り除く
+      activateTab(tabId);
     }
 
-    // タブクリック時のハッシュ更新
-    document.querySelectorAll(".tab").forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        window.location.hash = this.id.replace("-tab", "");
-      });
+    var newUrl = $(".site-map__sub-title a").on("click", function () {
+      var targetHash = $(this).attr("href").split("#")[1];
+      activateTab(targetHash);
     });
+    console.log(newUrl);
+
+    // タブクリック時の処理
+    tabButton.on("click", function () {
+      var tabId = $(this).attr("id");
+      activateTab(tabId);
+
+      // URLにハッシュを追加（ページ遷移なし）
+      var newUrl = window.location.pathname + window.location.search + "#" + tabId;
+      history.pushState(null, "", newUrl);
+    });
+
+    // サイトマップのリンククリック時の処理
+    $(".site-map__sub-title a").on("click", function () {
+      var targetHash = $(this).attr("href").split("#")[1];
+      activateTab(targetHash);
+    });
+
+    // 初回ロード時のデフォルトタブ
+    if (!hash) {
+      activateTab("license-info"); // デフォルトタブ
+    }
   });
 
   /********************
@@ -215,6 +276,16 @@ jQuery(function ($) {
       $(this).toggleClass("open", 300);
     });
   });
+  /********************
+   *料金ページ内リンク*
+   ********************/
+  $('.site-map__sub-title a[href*="#"]').click(function () {
+    var elmHash = $(this).attr("href");
+    var pos = $(elmHash).offset().top - 80; //数字は上部余白
+    $("body,html").animate({ scrollTop: pos }, 500); //数字はスピード
+    return false;
+  });
+
   /***********************
    *ローディング2回目非表示*
    ***********************/

@@ -3,9 +3,6 @@
 .bread {
   font-size: rem(14);
   margin-top: rem(8);
-  display: flex;
-  flex-direction: row;
-  gap: rem(8);
 }
 
 .bread__arrow {
@@ -16,4 +13,10 @@
 
 .bread__arrow--error {
   display: none;
+}
+
+.bread__inner {
+  display: flex;
+  flex-direction: row;
+  gap: rem(8);
 }
