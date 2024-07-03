@@ -8,7 +8,7 @@
   justify-content: center;
 
   @include mq("md") {
-    justify-content: start;
     column-gap: rem(32);
+    justify-content: flex-start;
   }
 }
