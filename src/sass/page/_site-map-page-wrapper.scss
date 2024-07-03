@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.site-map-wrapper {
+.site-map-page-wrapper {
   position: relative;
   margin-top: rem(50);
 
@@ -9,7 +9,7 @@
   }
 }
 
-.site-map-wrapper::before {
+.site-map-page-wrapper::before {
   position: absolute;
   content: "";
   display: block;
@@ -21,6 +21,7 @@
   height: rem(55);
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: -1;
 
   @include mq("md") {
     display: none;

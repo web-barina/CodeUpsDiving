@@ -19,7 +19,7 @@
   }
 }
 
-.site-map--lower {
+.site-map--page {
   width: 100%;
   column-gap: rem(28);
 
@@ -29,18 +29,22 @@
 }
 
 //SPのときに2つに分かれるようにするため
-@include mq("md") {
-  .site-map__sp-layout {
-    row-gap: 2.5rem;
-    display: flex;
+
+.site-map__sp-layout {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+
+  @include mq("md") {
+    flex-direction: row;
+    row-gap: rem(0);
     column-gap: rem(120);
   }
 }
 
-@include mq("md") {
-  .site-map__sp-layout--lower {
-    row-gap: 2.5rem;
-    display: flex;
+
+.site-map__sp-layout--page {
+  @include mq("md") {
     column-gap: rem(144);
   }
 }
@@ -56,16 +60,12 @@
   list-style: none;
 }
 
-.site-map__main-title--black {
-  background: url(/assets/images/common/site-map__list-icon--black.png) no-repeat 0 0;
+.site-map__main-title:first-child {
+  margin-top: rem(0);
 }
 
-.site-map__main-title--layout {
-  margin-top: rem(0);
-
-  @include mq("md") {
-    margin-top: rem(41);
-  }
+.site-map__main-title--black {
+  background: url(/assets/images/common/site-map__list-icon--black.png) no-repeat 0 0;
 }
 
 //リストマークつかないところ

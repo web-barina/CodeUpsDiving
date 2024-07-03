@@ -1,14 +1,5 @@
 @use "global" as *;
 
-.campaign__inner {
-  max-width: rem(311);
-  margin: 0 auto;
-
-  @include mq("md") {
-    max-width: none;
-  }
-}
-
 .campaign__tabs::before {
   position: absolute;
   content: "";
@@ -48,6 +39,15 @@
     column-gap: rem(40);
     row-gap: rem(80);
     margin-top: rem(40);
+  }
+}
+
+.campaign__cards-inner {
+  max-width: rem(311);
+  margin: 0 auto;
+
+  @include mq("md") {
+    max-width: none;
   }
 }
 

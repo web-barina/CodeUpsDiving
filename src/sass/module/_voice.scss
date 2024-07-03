@@ -4,11 +4,19 @@
   margin-top: rem(38);
 }
 
+.voice__cards-inner {
+  max-width: rem(540);
+  margin: 0 auto;
+
+  @include mq("md") {
+    max-width: none;
+  }
+}
+
 .voice__pager-wrapper {
   margin-top: rem(84);
 
   @include mq("md") {
-
     margin-top: rem(73);
   }
 }

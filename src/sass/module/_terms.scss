@@ -1,8 +1,11 @@
 @use "global" as *;
 
-.terms__inner {
-  max-width: rem(852);
-  margin: 0 auto;
+.terms__inner.inner {
+  max-width: rem(540);
+
+  @include mq("md") {
+    max-width: rem(852);
+  }
 }
 
 .terms__title-wrapper {

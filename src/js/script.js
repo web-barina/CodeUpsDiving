@@ -4,21 +4,32 @@ jQuery(function ($) {
   /*********************
    *ハンバーガーメニュー*
    *********************/
-  $("#js-hamburger").on("click", function () {
-    if ($("#js-hamburger").hasClass("js-active")) {
+
+  $(document).ready(function () {
+    // ハンバーガーメニューのクリックイベント
+    $("#js-hamburger").on("click", function () {
+      if ($(this).hasClass("js-active")) {
+        $(".header__sp-nav").fadeOut();
+        $(this).removeClass("js-active");
+      } else {
+        $(".header__sp-nav").fadeIn();
+        $(this).addClass("js-active");
+      }
+    });
+
+    // ウィンドウリサイズ時のイベント
+    $(window).on("resize", function () {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        $("#js-hamburger").removeClass("js-active");
+        $(".header__sp-nav").fadeOut();
+      }
+    });
+
+    // ハンバーガーメニュー内のリンククリック時のイベント
+    $(".header__sp-nav a").on("click", function () {
       $(".header__sp-nav").fadeOut();
-      $(this).removeClass("js-active");
-    } else {
-      $(".header__sp-nav").fadeIn();
-      $(this).addClass("js-active");
-    }
-  });
-  //768px以上でドロワーを非表示にする
-  $(window).on("resize", function () {
-    if (window.matchMedia("(min-width: 768px)").matches) {
       $("#js-hamburger").removeClass("js-active");
-      $(".header__sp-nav").fadeOut();
-    }
+    });
   });
 
   /***********
@@ -195,7 +206,7 @@ jQuery(function ($) {
    *****************/
   $(document).ready(
     $(function () {
-      $(".gallery__photo").on("click", function () {
+      $(".photo").on("click", function () {
         var modal_id = $(this).attr("id");
         $(".modal#cont-" + modal_id).fadeIn(200);
         $(".modal#cont-" + modal_id).addClass("active");
@@ -239,7 +250,7 @@ jQuery(function ($) {
       activateTab(tabId);
     }
 
-    var newUrl = $(".site-map__sub-title a").on("click", function () {
+    var newUrl = $(".site-map__sub-titles a").on("click", function () {
       var targetHash = $(this).attr("href").split("#")[1];
       activateTab(targetHash);
     });
@@ -256,7 +267,7 @@ jQuery(function ($) {
     });
 
     // サイトマップのリンククリック時の処理
-    $(".site-map__sub-title a").on("click", function () {
+    $(".site-map__sub-titles a").on("click", function () {
       var targetHash = $(this).attr("href").split("#")[1];
       activateTab(targetHash);
     });
@@ -275,15 +286,6 @@ jQuery(function ($) {
       $(this).next().slideToggle(300);
       $(this).toggleClass("open", 300);
     });
-  });
-  /********************
-   *料金ページ内リンク*
-   ********************/
-  $('.site-map__sub-title a[href*="#"]').click(function () {
-    var elmHash = $(this).attr("href");
-    var pos = $(elmHash).offset().top - 80; //数字は上部余白
-    $("body,html").animate({ scrollTop: pos }, 500); //数字はスピード
-    return false;
   });
 
   /***********************
