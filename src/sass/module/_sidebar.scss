@@ -1,12 +1,11 @@
 @use "global" as *;
 
-.sidebar__inner {
-  padding: 0 rem(24);
-
-  @include mq("md") {
-    padding: 0 0 0 rem(14);
-  }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: rem(80);
 }
+
 
 .sidebar__title {
   position: relative;
@@ -14,6 +13,7 @@
   padding: rem(13) 0 rem(13) rem(75);
   line-height: 1;
   font-size: rem(24);
+  font-weight: normal;
 }
 
 .sidebar__title::before {
@@ -37,58 +37,6 @@
   gap: rem(23);
 }
 
-.sidebar__popular-card {
-  display: flex;
-  gap: rem(16);
-  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
-  background-color: $white;
-  opacity: 1;
-  padding: rem(16);
-}
-
-.sidebar__popular-img {
-  width: 49%;
-  aspect-ratio: 121/90;
-  position: relative;
-}
-
-.sidebar__popular-img>img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-.sidebar__popular-text {
-  width: 51%;
-}
-
-.sidebar__popular-time {
-  display: block;
-  font-size: rem(12);
-  font-family: $title-font-family;
-}
-
-.sidebar__popular-title {
-  margin-top: rem(4);
-  font-size: rem(16);
-}
-
-.sidebar__reviews-wrapper {
-  margin-top: rem(79);
-
-  @include mq("md") {
-    margin-top: rem(85);
-  }
-}
-
-.sidebar__reviews-wrapper--blog {
-  margin-top: rem(86);
-}
-
 .sidebar__reviews-card {
   margin-top: rem(22);
   display: block;
@@ -97,14 +45,6 @@
 .sidebar__reviews-info {
   margin-top: rem(14);
   font-size: rem(12);
-
-  @include mq("md") {
-    margin-top: rem(18);
-  }
-}
-
-.sidebar__reviews-info--blog {
-  margin-top: rem(22);
 
   @include mq("md") {
     margin-top: rem(18);
@@ -140,14 +80,6 @@
   }
 }
 
-.sidebar__campaign-wrapper {
-  margin-top: rem(84);
-}
-
-.sidebar__campaign-wrapper--blog {
-  margin-top: rem(82);
-}
-
 .sidebar__campaign-cards {
   margin-top: rem(23);
   display: flex;
@@ -156,22 +88,6 @@
 
   @include mq("md") {
     gap: rem(47);
-  }
-}
-
-.sidebar__campaign-cards--blog {
-  gap: rem(53);
-}
-
-.sidebar__archive-wrapper {
-  margin-top: rem(84);
-}
-
-.sidebar__archive-wrapper--blog {
-  margin-top: rem(92);
-
-  @include mq("md") {
-    margin-top: rem(85);
   }
 }
 
@@ -184,7 +100,7 @@
 
 .sidebar__archive-months {
   display: none;
-  padding-left: rem(25);
+  padding-left: rem(28);
 }
 
 .sidebar__archive-month {

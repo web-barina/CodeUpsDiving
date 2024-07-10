@@ -18,12 +18,12 @@
   }
 }
 
-.privacy__title-wrapper {
+.privacy__title {
   position: relative;
 
 }
 
-.privacy__title-wrapper::before {
+.privacy__title::before {
   position: absolute;
   content: "";
   display: block;
@@ -45,7 +45,7 @@
   }
 }
 
-.privacy__title {
+.privacy__title h2 {
   font-size: rem(24);
 
   @include mq("md") {
@@ -54,21 +54,21 @@
 
 }
 
-.privacy__lists {
+.privacy__text ol {
   list-style: decimal;
   margin-top: rem(0);
 }
 
-.privacy__lists--top {
+.privacy__text ol:first-child {
   list-style: decimal;
   margin-top: rem(31);
 }
 
-.privacy__list {
+.privacy__text li {
   margin-left: rem(24);
 }
 
-.privacy__text-wrapper {
+.privacy__text {
   margin-top: rem(37);
   line-height: 2;
 
@@ -77,10 +77,10 @@
   }
 }
 
-.privacy__text {
+.privacy__text p {
   margin-top: rem(32);
 }
 
-.privacy__text:first-child {
+.privacy__text p:first-child {
   margin-top: 0;
 }

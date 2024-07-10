@@ -11,6 +11,7 @@
     cursor: pointer;
     border: solid rem(1) $green;
     opacity: 1;
+    transition: .3s;
 
     @include mq("md") {
         padding: rem(6) 0;
@@ -25,5 +26,4 @@
 .tab:hover {
     background-color: $green;
     color: $white;
-    transition: .3s;
 }

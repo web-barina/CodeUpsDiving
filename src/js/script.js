@@ -153,54 +153,6 @@ jQuery(function ($) {
     });
   });
 
-  /********************
-   *campaignタブメニュー*
-   *********************/
-  document.addEventListener("DOMContentLoaded", function () {
-    // ページロード時にURLのハッシュを確認
-    activateTabFromHash();
-
-    // すべてのリンクにクリックイベントを追加
-    document.querySelectorAll(".site-map__sub-titles a").forEach((link) => {
-      link.addEventListener("click", function (event) {
-        // 他のタブの active クラスを削除
-        document.querySelectorAll(".info__tab").forEach((tab) => {
-          tab.classList.remove("js-active");
-        });
-
-        // クリックされたリンクのハッシュを取得
-        const hash = this.hash;
-
-        // 対応するタブに active クラスを追加
-        if (hash) {
-          const tab = document.querySelector(hash);
-          if (tab) {
-            tab.classList.add("js-active");
-          }
-        }
-      });
-    });
-
-    // ハッシュが変更されたときにタブをアクティブにする
-    window.addEventListener("hashchange", activateTabFromHash);
-
-    function activateTabFromHash() {
-      const hash = window.location.hash;
-      if (hash) {
-        // 他のタブの active クラスを削除
-        document.querySelectorAll(".info__tab").forEach((tab) => {
-          tab.classList.remove("js-active");
-        });
-
-        // 対応するタブに active クラスを追加
-        const tab = document.querySelector(hash);
-        if (tab) {
-          tab.classList.add("js-active");
-        }
-      }
-    }
-  });
-
   /******************
    *AboutUs モーダル*
    *****************/

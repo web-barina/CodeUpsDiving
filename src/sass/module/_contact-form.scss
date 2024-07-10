@@ -86,7 +86,7 @@
   width: 100%;
   border: solid rem(1) $green;
   height: rem(200);
-  padding-left: rem(8);
+  padding: rem(8);
 
   @include mq("md") {
     margin-top: 0;
@@ -152,11 +152,11 @@
 
 .contact-form__select {
   font-size: rem(12);
-  padding: rem(10) 0 rem(10) rem(16);
+  padding: rem(10) rem(32) rem(10) rem(16);
   width: 100%;
 
   @include mq("md") {
-    padding: rem(5) 0 rem(5) rem(16);
+    padding: rem(5) rem(32) rem(5) rem(16);
   }
 }
 
@@ -184,7 +184,40 @@
   }
 }
 
-input[type=checkbox] {
+.contact-form__check input[type=checkbox] {
+  width: rem(14);
+  height: rem(14);
+  display: inline-block;
+  border: solid rem(1) $green;
+  cursor: pointer;
+  position: relative;
+
+  @include mq("md") {
+    margin-left: rem(-2);
+  }
+}
+
+.contact-form__check input[type="checkbox"]:before {
+  opacity: 0;
+}
+
+.contact-form__check input[type="checkbox"]:checked:before {
+  opacity: 1;
+  position: absolute;
+  content: '';
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: rem(9);
+  width: rem(13);
+  top: rem(2);
+  left: rem(0);
+  background-image: url(/assets/images/common/contact-form-check.png);
+}
+
+//同意のチェックボックス
+.contact-form__agreement input[type=checkbox] {
   width: rem(22);
   height: rem(22);
   display: inline-block;
@@ -193,16 +226,15 @@ input[type=checkbox] {
   position: relative;
 
   @include mq("md") {
-    width: rem(22);
     margin-left: rem(-2);
   }
 }
 
-input[type="checkbox"]:before {
+.contact-form__agreement input[type="checkbox"]:before {
   opacity: 0;
 }
 
-input[type="checkbox"]:checked:before {
+.contact-form__agreement input[type="checkbox"]:checked:before {
   opacity: 1;
   position: absolute;
   content: '';
@@ -210,12 +242,13 @@ input[type="checkbox"]:checked:before {
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-  height: rem(8);
-  width: rem(14);
-  top: rem(6);
+  height: rem(11);
+  width: rem(16);
+  top: rem(4);
   left: rem(3);
   background-image: url(/assets/images/common/contact-form-check.png);
 }
+
 
 .contact-form__btn-wrapper {
   margin-top: rem(24);

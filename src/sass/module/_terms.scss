@@ -8,7 +8,8 @@
   }
 }
 
-.terms__title-wrapper {
+.terms__title {
+  position: relative;
   margin-top: rem(50);
 
   @include mq("md") {
@@ -16,8 +17,7 @@
   }
 }
 
-.terms__title {
-  position: relative;
+.terms__title h2 {
   font-size: rem(24);
 
   @include mq("md") {
@@ -37,6 +37,7 @@
   height: rem(55);
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: -1;
 
   @include mq("md") {
     top: rem(-69);
@@ -46,20 +47,20 @@
   }
 }
 
-.terms__text-wrapper {
+.terms__text {
   margin-top: rem(40);
   line-height: 2;
 }
 
-.terms__lists {
+.terms__text p:last-child {
+  margin-top: rem(32);
+}
+
+.terms__text ol {
   list-style: decimal;
   margin-top: rem(32);
 }
 
-.terms__list {
+.terms__text li {
   margin-left: rem(23);
-}
-
-.terms__text--last {
-  margin-top: rem(32);
 }

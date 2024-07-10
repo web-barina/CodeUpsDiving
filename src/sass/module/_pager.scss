@@ -21,6 +21,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .pager__number-wrapper {
@@ -66,7 +70,6 @@
 .pager__number:hover {
   background-color: $green;
   color: $white;
-  transition: fill 0.3s;
 }
 
 .pager__path {
@@ -78,10 +81,6 @@
 .pager__after:hover {
   background-color: $green;
   color: $white;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .pager__before:hover .pager__path,
