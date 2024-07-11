@@ -30,47 +30,6 @@
   left: rem(16);
 }
 
-.sidebar__popular-cards {
-  margin-top: rem(24);
-  display: flex;
-  flex-direction: column;
-  gap: rem(23);
-}
-
-.sidebar__reviews-card {
-  margin-top: rem(22);
-  display: block;
-}
-
-.sidebar__reviews-info {
-  margin-top: rem(14);
-  font-size: rem(12);
-
-  @include mq("md") {
-    margin-top: rem(18);
-  }
-}
-
-.sidebar__reviews-title {
-  margin-top: rem(8);
-  font-size: rem(24);
-}
-
-.sidebar__reviews-img {
-  position: relative;
-  aspect-ratio: 294/218;
-}
-
-.sidebar__reviews-img>img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
 .sidebar__btn-wrapper {
   margin-top: rem(43);
   text-align: center;
@@ -80,78 +39,9 @@
   }
 }
 
-.sidebar__campaign-cards {
-  margin-top: rem(23);
-  display: flex;
-  flex-direction: column;
-  gap: rem(43);
-
-  @include mq("md") {
-    gap: rem(47);
-  }
-}
-
 .sidebar__archive-content {
   margin-top: rem(23);
   color: $green;
   font-size: rem(24);
   padding-left: rem(32);
-}
-
-.sidebar__archive-months {
-  display: none;
-  padding-left: rem(28);
-}
-
-.sidebar__archive-month {
-  display: block;
-  width: fit-content;
-  position: relative;
-  margin-top: rem(3);
-}
-
-.sidebar__archive-month::before {
-  background: $green;
-  content: '';
-  width: 100%;
-  height: rem(2);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  transform-origin: right top;
-  transform: scale(0, 1);
-  transition: transform .3s;
-}
-
-.sidebar__archive-month:hover::before {
-  transform-origin: left top;
-  transform: scale(1, 1);
-}
-
-//アーカイブ三角
-.sidebar__archive-year,
-.sidebar__archive-month {
-  position: relative;
-  margin-top: rem(3);
-}
-
-.sidebar__archive-year::after,
-.sidebar__archive-month::after {
-  position: absolute;
-  content: "";
-  display: block;
-  background-image: url(/assets/images/common/sidebar-archive-arrow.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  transition: transform .3s ease-in-out, top .3s ease-in-out;
-  width: rem(24);
-  height: rem(24);
-  top: rem(8);
-  left: rem(-30);
-}
-
-.sidebar__archive-year.open::after {
-  transform: rotate(90deg);
 }

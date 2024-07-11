@@ -12,6 +12,7 @@
     border: solid rem(1) $green;
     opacity: 1;
     transition: .3s;
+    cursor: pointer;
 
     @include mq("md") {
         padding: rem(6) 0;

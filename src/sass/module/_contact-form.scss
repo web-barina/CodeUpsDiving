@@ -67,7 +67,7 @@
   width: 100%;
   border: solid rem(1) $green;
   height: rem(40);
-  padding-left: rem(16);
+  padding: 0 rem(16);
   background-color: $white;
   opacity: 1;
 
@@ -106,7 +106,7 @@
 
 .contact-form__check {
   display: flex;
-  align-items: end;
+  align-items: center;
   margin-top: rem(2);
 }
 
@@ -245,7 +245,7 @@
   height: rem(11);
   width: rem(16);
   top: rem(4);
-  left: rem(3);
+  left: rem(2);
   background-image: url(/assets/images/common/contact-form-check.png);
 }
 
