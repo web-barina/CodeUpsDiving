@@ -2,8 +2,8 @@
 
 .tab {
     display: inline-block;
-    padding: rem(6) 0;
-    width: rem(162);
+    padding: rem(6);
+    min-width: rem(162);
     background: $white;
     color: $green;
     box-sizing: border-box;
@@ -13,10 +13,6 @@
     opacity: 1;
     transition: .3s;
     cursor: pointer;
-
-    @include mq("md") {
-        padding: rem(6) 0;
-    }
 }
 
 .tab.js-active {

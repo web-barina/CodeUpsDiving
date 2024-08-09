@@ -42,13 +42,25 @@
                                 <h3 class="voice-card__title"><?php the_field("customer_title"); ?></h3>
                             </div>
                         </div>
-                        <figure class="voice-card__img js-color-box"><img src="<?php the_field("customer_img"); ?>"
-                                alt="<?php the_field("customer_title"); ?>" /></figure>
+                        <figure class="voice-card__img js-color-box">
+                            <?php 
+                                $customer_img = get_field("customer_img");
+                                if ($customer_img) : 
+                            ?>
+                            <img src="<?php echo esc_url($customer_img); ?>"
+                                alt="<?php the_field("customer_title"); ?>" />
+                            <?php else : ?>
+                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/no-image.png"
+                                alt="no-image" />
+                            <?php endif; ?>
+                        </figure>
                     </div>
                     <p class="voice-card__text"><?php the_field("customer_comment"); ?></p>
                 </li>
                 <?php endwhile; ?>
             </ul>
+            <?php else : ?>
+            <p class="voice-card__no-message">ただいま準備中です。もう少しお待ちください。</p>
             <?php endif; ?>
             <div class="voice__pager-wrapper">
                 <div class="voice__pager pager">

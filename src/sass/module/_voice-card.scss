@@ -12,6 +12,7 @@
 
   @include mq("md") {
     padding: rem(24);
+    min-height: rem(369);
   }
 }
 
@@ -119,5 +120,14 @@
 
   @include mq("md") {
     padding: rem(4) rem(14);
+  }
+}
+
+.voice-card__no-message {
+  margin-top: rem(50);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(100);
   }
 }

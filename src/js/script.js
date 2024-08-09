@@ -142,6 +142,39 @@ jQuery(function ($) {
     return false; //リンク自体の無効化
   });
 
+  /******************************************
+   *キャンペーン、他のリンクから遷移した時の動き*
+   ******************************************/
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // 現在のURLを取得
+    var urlParams = new URLSearchParams(window.location.search);
+    var category = urlParams.get("category");
+    // すべてのタブ要素を取得
+    var tabs = document.querySelectorAll(".tabs__item");
+    // すべてのタブからアクティブクラスを削除
+    tabs.forEach(function (tab) {
+      tab.classList.remove("js-active");
+    });
+    // 該当するタブにアクティブクラスを追加
+    if (category) {
+      var activeTab = document.querySelector('.tabs__item[href*="category=' + category + '"]');
+      // 選択したタブ要素をコンソールに表示して確認
+      console.log("Active Tab:", activeTab);
+      if (activeTab) {
+        activeTab.classList.add("js-active");
+      }
+    } else {
+      // 'ALL' タブをデフォルトでアクティブにする
+      var allTab = document.querySelector('.tabs__item[href*="category=all"]');
+      // 'ALL' タブ要素をコンソールに表示して確認
+      console.log("All Tab:", allTab);
+      if (allTab) {
+        allTab.classList.add("js-active");
+      }
+    }
+  });
+
   /******************
    *FAQアコーディオン*
    ******************/
@@ -150,6 +183,12 @@ jQuery(function ($) {
       var $answer = $(this).next();
       $answer.slideToggle(300);
       $(this).toggleClass("open", 300);
+    });
+
+    // 初期状態で開いた状態にする
+    $(".faq__answer").each(function () {
+      $(this).show();
+      $(this).prev().addClass("open");
     });
   });
 
@@ -243,15 +282,23 @@ jQuery(function ($) {
   /***********************
    *ローディング2回目非表示*
    ***********************/
-  var loadingAnime = $.cookie("accessdate"); //キーが入っていれば年月日を取得
-  var myD = new Date(); //日付データを取得
-  var myYear = String(myD.getFullYear()); //年
-  var myMonth = String(myD.getMonth() + 1); //月
-  var myDate = String(myD.getDate()); //日
-  if (loadingAnime != myYear + myMonth + myDate) {
-    //cookieデータとアクセスした日付を比較↓
-    $(".js-loading").css("display", "block"); //１回目はローディングを表示
-  } else {
-    $(".js-loading").css("display", "none"); //同日2回目のアクセスでローディング画面非表示
-  }
+  $(document).ready(function () {
+    // Cookieの値を取得
+    var loadingAnime = $.cookie("accessdate"); //キーが入っていれば年月日を取得
+    var myD = new Date(); //日付データを取得
+    var myYear = String(myD.getFullYear()); //年
+    var myMonth = ("0" + (myD.getMonth() + 1)).slice(-2); //月（2桁に補完）
+    var myDate = ("0" + myD.getDate()).slice(-2); //日（2桁に補完）
+    var today = myYear + myMonth + myDate; // yyyyMMdd形式の日付
+
+    // Cookieデータとアクセスした日付を比較
+    if (loadingAnime !== today) {
+      $(".js-loading").css("display", "block");
+
+      // Cookieに今日の日付をセットし、1日の有効期限を設定
+      $.cookie("accessdate", today, { expires: 1, path: "/" });
+    } else {
+      $(".js-loading").css("display", "none");
+    }
+  });
 });

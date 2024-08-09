@@ -34,6 +34,8 @@
                         </li>
                         <?php endwhile; ?>
                     </ul>
+                    <?php else : ?>
+                    <p class="blog-card__no-message">ただいま準備中です。少々お待ちください。</p>
                     <?php endif; ?>
                     <div class="blog-card__pager-wrapper">
                         <div class="blog-card__pager pager">

@@ -40,3 +40,11 @@
     margin-top: rem(4);
     font-size: rem(16);
 }
+
+.popular-card__no-message {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(48);
+    }
+}

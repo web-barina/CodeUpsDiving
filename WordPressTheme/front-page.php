@@ -65,8 +65,12 @@
                     ?>
                     <li class="topCampaign__card campaign-card swiper-slide">
                         <figure class="campaign-card__img">
-                            <img src="<?php the_field('campaign_img'); ?>"
-                                alt="<?php the_field('campaign_title'); ?>" />
+                            <?php if (get_field("campaign_img")) : ?>
+                            <img src="<?php the_field("campaign_img"); ?>" alt="<?php the_field("campaign_title"); ?>">
+                            <?php else : ?>
+                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/no-image.png"
+                                alt="no-image" />
+                            <?php endif; ?>
                         </figure>
                         <div class="campaign-card__body">
                             <div class="campaign-card__category">
@@ -91,17 +95,18 @@
                                 <?php the_field('campaign_text'); ?></p>
                             <div class="campaign-card__price-wrapper">
                                 <p class="campaign-card__pre-price">
-                                    <?php the_field('campaign_pre-price'); ?></p>
+                                    &yen;<?php the_field('campaign_pre-price'); ?></p>
                                 <p class="campaign-card__after-price">
-                                    <?php the_field('campaign_after-price'); ?></p>
+                                    &yen;<?php the_field('campaign_after-price'); ?></p>
                             </div>
                         </div>
                     </li>
-                    <?php endwhile;
-                        wp_reset_postdata(); // サブループ終了後、メインクエリにリセットする
-                        endif;
-                    ?>
+                    <?php endwhile;?>
                 </ul>
+                <?php else : ?>
+                <p class="campaign-card__no-message">ただいま準備中です。もう少しお待ちください。</p>
+                <?php wp_reset_postdata();?>
+                <?php endif;?>
             </div>
             <div class="topCampaign__btn-wrapper">
                 <a href="<?php echo esc_url(home_url("campaign")); ?>" class="btn">View more
@@ -209,6 +214,8 @@
                 </li>
                 <?php endwhile; ?>
             </ul>
+            <?php else : ?>
+            <p class="blog-card__no-message">ただいま準備中です。少々お待ちください。</p>
             <?php wp_reset_postdata(); ?>
             <?php endif; ?>
         </div>
@@ -258,8 +265,17 @@
                                 <h3 class="voice-card__title"><?php the_field("customer_title"); ?></h3>
                             </div>
                         </div>
-                        <figure class="voice-card__img js-color-box"><img src="<?php the_field("customer_img"); ?>"
+                        <figure class="voice-card__img js-color-box">
+                            <?php 
+                                $customer_img = get_field("customer_img");
+                                if ($customer_img) : 
+                            ?>
+                            <img src="<?php echo esc_url($customer_img); ?>"
                                 alt="<?php the_field("customer_title"); ?>" />
+                            <?php else : ?>
+                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/no-image.png"
+                                alt="no-image" />
+                            <?php endif; ?>
                         </figure>
                     </div>
                     <p class="voice-card__text">
@@ -271,6 +287,8 @@
                 </li>
                 <?php endwhile; ?>
             </ul>
+            <?php else : ?>
+            <p class="voice-card__no-message">ただいま準備中です。少々お待ちください。</p>
             <?php wp_reset_postdata(); ?>
             <?php endif; ?>
             <div class="top-voice__btn-wrapper">
@@ -294,87 +312,99 @@
                     <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/price-sp.png" alt="ウミガメ" />
                 </picture>
                 <div class="top-price__contents">
+                    <?php 
+                        // データが有効かどうかを確認する関数
+                        function has_valid_price($prices, $menu_key, $yen_key) {
+                            if (!empty($prices)) {
+                                foreach ($prices as $price) {
+                                    if (!empty($price[$menu_key]) || !empty($price[$yen_key])) {
+                                        return true;
+                                    }
+                                }
+                            }
+                            return false;
+                        }
+
+                        // ライセンス講習
+                        $page_id = 17;
+                        $license_prices = SCF::get('license_price', $page_id);
+                    ?>
+                    <?php if (has_valid_price($license_prices, 'license_menu', 'license_yen')) : ?>
                     <dl class="top-price__content">
                         <dt class="top-price__title">ライセンス講習</dt>
-                        <?php 
-                            $page_id = 17; 
-                            // SCFで指定したフィールドグループ名とページIDからデータを取得
-                            $group_set = SCF::get('license_price', $page_id); 
-                            if ($group_set) : 
-                                foreach ($group_set as $field) : 
-                                    $license_menu = isset($field['license_menu']) ? esc_html($field['license_menu']) : ''; 
-                                    $license_yen = isset($field['license_yen']) ? esc_html($field['license_yen']) : ''; 
-                            ?>
+                        <?php foreach ($license_prices as $field) : ?>
+                        <?php
+                            $license_menu = isset($field['license_menu']) ? esc_html($field['license_menu']) : ''; 
+                            $license_yen = isset($field['license_yen']) ? esc_html($field['license_yen']) : ''; 
+                        ?>
                         <dd class="top-price__menu">
                             <div class="top-price__name"><?php echo $license_menu; ?></div>
                             <div class="top-price__yen"><?php echo $license_yen; ?></div>
                         </dd>
-                        <?php 
-                                endforeach; 
-                            endif; 
-                        ?>
+                        <?php endforeach; ?>
                     </dl>
+                    <?php endif; ?>
+
+                    <?php 
+                        // 体験ダイビング
+                        $trial_prices = SCF::get('trial_price', $page_id);
+                    ?>
+                    <?php if (has_valid_price($trial_prices, 'trial_menu', 'trial_yen')) : ?>
                     <dl class="top-price__content">
                         <dt class="top-price__title">体験ダイビング</dt>
-                        <?php 
-                            $page_id = 17; 
-                            // SCFで指定したフィールドグループ名とページIDからデータを取得
-                            $group_set = SCF::get('trial_price', $page_id); 
-                            if ($group_set) : 
-                                foreach ($group_set as $field) : 
-                                    $trial_menu = isset($field['trial_menu']) ? esc_html($field['trial_menu']) : ''; 
-                                    $trial_yen = isset($field['trial_yen']) ? esc_html($field['trial_yen']) : ''; 
-                            ?>
+                        <?php foreach ($trial_prices as $field) : ?>
+                        <?php
+                            $trial_menu = isset($field['trial_menu']) ? esc_html($field['trial_menu']) : ''; 
+                            $trial_yen = isset($field['trial_yen']) ? esc_html($field['trial_yen']) : ''; 
+                        ?>
                         <dd class="top-price__menu">
                             <div class="top-price__name"><?php echo $trial_menu; ?></div>
                             <div class="top-price__yen"><?php echo $trial_yen; ?></div>
                         </dd>
-                        <?php 
-                                endforeach; 
-                            endif; 
-                        ?>
+                        <?php endforeach; ?>
                     </dl>
+                    <?php endif; ?>
+
+                    <?php 
+                        // ファンダイビング
+                        $fun_prices = SCF::get('fun_price', $page_id);
+                    ?>
+                    <?php if (has_valid_price($fun_prices, 'fun_menu', 'fun_yen')) : ?>
                     <dl class="top-price__content">
                         <dt class="top-price__title">ファンダイビング</dt>
-                        <?php 
-                            $page_id = 17; 
-                            // SCFで指定したフィールドグループ名とページIDからデータを取得
-                            $group_set = SCF::get('fun_price', $page_id); 
-                            if ($group_set) :
-                                foreach ($group_set as $field) : 
-                                    $fun_menu = isset($field['fun_menu']) ? esc_html($field['fun_menu']) : ''; 
-                                    $fun_yen = isset($field['fun_yen']) ? esc_html($field['fun_yen']) : ''; 
-                            ?>
+                        <?php foreach ($fun_prices as $field) : ?>
+                        <?php
+                            $fun_menu = isset($field['fun_menu']) ? esc_html($field['fun_menu']) : ''; 
+                            $fun_yen = isset($field['fun_yen']) ? esc_html($field['fun_yen']) : ''; 
+                        ?>
                         <dd class="top-price__menu">
                             <div class="top-price__name"><?php echo $fun_menu; ?></div>
                             <div class="top-price__yen"><?php echo $fun_yen; ?></div>
                         </dd>
-                        <?php 
-                                endforeach; 
-                            endif; 
-                        ?>
+                        <?php endforeach; ?>
                     </dl>
+                    <?php endif; ?>
+
+                    <?php 
+                        // スペシャルダイビング
+                        $special_prices = SCF::get('special_price', $page_id);
+                    ?>
+                    <?php if (has_valid_price($special_prices, 'special_menu', 'special_yen')) : ?>
                     <dl class="top-price__content">
                         <dt class="top-price__title">スペシャルダイビング</dt>
-                        <?php 
-                            $page_id = 17; 
-                            // SCFで指定したフィールドグループ名とページIDからデータを取得
-                            $group_set = SCF::get('special_price', $page_id); 
-
-                            if ($group_set) : 
-                                foreach ($group_set as $field) : 
-                                    $special_menu = isset($field['special_menu']) ? esc_html($field['special_menu']) : ''; 
-                                    $special_yen = isset($field['special_yen']) ? esc_html($field['special_yen']) : ''; 
-                            ?>
+                        <?php foreach ($special_prices as $field) : ?>
+                        <?php
+                            $special_menu = isset($field['special_menu']) ? esc_html($field['special_menu']) : ''; 
+                            $special_yen = isset($field['special_yen']) ? esc_html($field['special_yen']) : ''; 
+                        ?>
                         <dd class="top-price__menu">
                             <div class="top-price__name"><?php echo $special_menu; ?></div>
                             <div class="top-price__yen"><?php echo $special_yen; ?></div>
                         </dd>
-                        <?php 
-                                endforeach; 
-                            endif; 
-                        ?>
+                        <?php endforeach; ?>
                     </dl>
+                    <?php endif; ?>
+
                 </div>
             </div>
         </div>

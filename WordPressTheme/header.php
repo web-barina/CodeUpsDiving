@@ -23,7 +23,7 @@
         echo 'class="' . esc_attr(implode(' ', $classes)) . '"';
         body_class($classes);
     ?>>
-    <!--loading-->
+    <!--loading
     <?php
         if (is_front_page()) :
             ?>
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-    <?php endif;?>
+    <?php endif;?>-->
     <!--header-->
     <header class="header">
         <!--SP-hamburger-header-->
@@ -131,6 +131,7 @@
             <div class="header__site-map-wrapper">
                 <div class="header__site-map-inner">
                     <nav class="header__site-map site-map">
+
                         <div class="site-map__sp-layout">
                             <div class="site-map__content">
                                 <div class="site-map__main-title site-map__main-title--layout">
@@ -138,14 +139,14 @@
                                 </div>
                                 <ul class="site-map__sub-titles">
                                     <?php
-                                        $terms = get_terms(array(
-                                            'taxonomy' => 'campaign_category',
-                                            'hide_empty' => false,
-                                        ));
-                                        foreach ($terms as $term) :
-                                            $term_slug = $term->slug;
-                                            $term_name = $term->name;
-                                    ?>
+                                $terms = get_terms(array(
+                                    'taxonomy' => 'campaign_category',
+                                    'hide_empty' => false,
+                                ));
+                                foreach ($terms as $term) :
+                                    $term_slug = $term->slug;
+                                    $term_name = $term->name;
+                            ?>
                                     <li class="site-map__sub-title">
                                         <a href="<?php echo get_term_link($term); ?>">
                                             <?php echo esc_html($term_name); ?>
@@ -192,20 +193,58 @@
                                 </div>
                                 <div class="site-map__sub">
                                     <ul class="site-map__sub-titles">
+                                        <?php 
+                                            // データが有効かどうかを確認する関数
+                                            function has_valid_price_header($prices, $menu_key, $yen_key) {
+                                                if (!empty($prices)) {
+                                                    foreach ($prices as $price) {
+                                                        if (!empty($price[$menu_key]) || !empty($price[$yen_key])) {
+                                                            return true;
+                                                        }
+                                                    }
+                                                }
+                                                return false;
+                                            }
+
+                                            // ライセンス講習
+                                            $page_id_header = 17;
+                                            $license_prices_header = SCF::get('license_price', $page_id_header);
+                                        ?>
+                                        <?php if (has_valid_price_header($license_prices_header, 'license_menu', 'license_yen')) : ?>
                                         <li class="site-map__sub-title">
                                             <a
                                                 href="<?php echo esc_url(home_url('price#license-price')); ?>">ライセンス講習</a>
                                         </li>
+                                        <?php endif; ?>
+                                        <?php 
+                                            // 体験ダイビング
+                                            $trial_prices_header = SCF::get('trial_price', $page_id_header);
+                                        ?>
+                                        <?php if (has_valid_price_header($trial_prices_header, 'trial_menu', 'trial_yen')) : ?>
                                         <li class="site-map__sub-title">
                                             <a href="<?php echo esc_url(home_url('price#trial-price')); ?>">体験ダイビング</a>
                                         </li>
+                                        <?php endif; ?>
+                                        <?php 
+                                            // ファンダイビング
+                                            $fun_prices_header = SCF::get('fun_price', $page_id_header);
+                                        ?>
+                                        <?php if (has_valid_price_header($fun_prices_header, 'fun_menu', 'fun_yen')) : ?>
                                         <li class="site-map__sub-title">
                                             <a href="<?php echo esc_url(home_url('price#fun-price')); ?>">ファンダイビング</a>
                                         </li>
+                                        <?php endif; ?>
+                                        <?php 
+                                            // スペシャルダイビング
+                                            $special_prices_header = SCF::get('special_price', $page_id_header);
+                                        ?>
+                                        <?php if (has_valid_price_header($special_prices_header, 'special_menu', 'special_yen')) : ?>
                                         <li class="site-map__sub-title">
                                             <a
                                                 href="<?php echo esc_url(home_url('price#special-price')); ?>">スペシャル<wbr />ダイビング</a>
                                         </li>
+                                        <?php endif; ?>
+
                                     </ul>
                                 </div>
                             </div>
@@ -305,12 +344,13 @@
     <?php endif; ?>
     <main>
         <!-- パンくず -->
+        <?php if (!is_front_page()) : ?>
         <div class="bread">
             <div class="bread__inner inner">
                 <?php if (function_exists('bcn_display')): 
-                // 404ページの場合のクラスを設定
-                $breadcrumb_class = is_404() ? 'no-page__bread' : ''; 
-            ?>
+                    // 404ページの場合のクラスを設定
+                    $breadcrumb_class = is_404() ? 'no-page__bread' : ''; 
+                ?>
                 <div id="<?php echo is_404() ? 'no-page__bread' : 'breadcrumb'; ?>" vocab="http://schema.org/"
                     typeof="BreadcrumbList">
                     <?php bcn_display(); ?>
@@ -318,4 +358,5 @@
                 <?php endif; ?>
             </div>
         </div>
+        <?php endif; ?>
     </main>

@@ -3,12 +3,12 @@
 
 .faq__question {
     background-color: $green;
-    padding: rem(17);
+    padding: rem(17) rem(50) rem(17) rem(17);
     position: relative;
     cursor: pointer;
 
     @include mq("md") {
-        padding: rem(26) rem(40);
+        padding: rem(26) rem(80) rem(26) rem(40);
     }
 }
 
@@ -80,5 +80,14 @@
 
     @include mq("md") {
         margin: 0 rem(40);
+    }
+}
+
+.faq__no-content {
+    margin-top: rem(50);
+    text-align: center;
+
+    @include mq("md") {
+        margin-top: 0;
     }
 }

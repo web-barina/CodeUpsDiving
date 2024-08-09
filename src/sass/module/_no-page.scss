@@ -9,7 +9,7 @@
 .no-page::after {
   position: absolute;
   content: "";
-  background-image: url(/assets/images/common/404img.png);
+  background-image: url(../images/common/404img.png);
   top: rem(-9);
   left: calc(50% - min(46vw, 11rem));
   max-width: rem(345);
@@ -50,12 +50,11 @@
   }
 }
 
-.no-page__bread {
-  margin-top: rem(87);
+#no-page__bread {
+  margin-top: rem(88);
+  display: flex;
+  gap: rem(8);
 
-  @include mq("md") {
-    margin-top: rem(98);
-  }
 }
 
 .no-page__texts {

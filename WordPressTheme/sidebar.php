@@ -30,7 +30,10 @@
                             <h3 class="popular-card__title"><?php the_title(); ?></h3>
                         </div>
                     </div>
-                </a><?php endwhile; ?>
+                </a>
+                <?php endwhile; ?>
+                <?php else : ?>
+                <p class="popular-card__no-message">ただいま準備中です。<br>少々お待ちください。</p>
                 <?php
                     endif;
                     wp_reset_postdata();
@@ -50,7 +53,15 @@
                 ?>
                 <div class="sidebar__review-card review">
                     <div class="review__img">
-                        <img src="<?php the_field("customer_img"); ?>" alt="<?php the_field("customer_title"); ?>" />
+                        <?php 
+                                $customer_img = get_field("customer_img");
+                                if ($customer_img) : 
+                            ?>
+                        <img src="<?php echo esc_url($customer_img); ?>" alt="<?php the_field("customer_title"); ?>" />
+                        <?php else : ?>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/no-image.png"
+                            alt="no-image" />
+                        <?php endif; ?>
                     </div>
                     <p class="review__info"><?php the_field("customer_info"); ?></p>
                     <h3 class="review__title"><?php the_field("customer_title"); ?></h3>
@@ -82,9 +93,13 @@
                         while ($latest_campaigns->have_posts()) : $latest_campaigns->the_post();
                     ?>
                     <li class="campaign-cards__item campaign-card">
-                        <figure class="campaign-card__img campaign-card__img--side">
-                            <img src="<?php the_field('campaign_img'); ?>"
-                                alt="<?php the_field('campaign_title'); ?>" />
+                        <figure class="campaign-card__img">
+                            <?php if (get_field("campaign_img")) : ?>
+                            <img src="<?php the_field("campaign_img"); ?>" alt="<?php the_field("campaign_title"); ?>">
+                            <?php else : ?>
+                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/no-image.png"
+                                alt="no-image" />
+                            <?php endif; ?>
                         </figure>
                         <div class="campaign-card__body campaign-card__body--side">
                             <div class="campaign-card__title-wrapper">
@@ -103,11 +118,12 @@
                             </div>
                         </div>
                     </li>
-                    <?php endwhile;
-                        wp_reset_postdata(); // サブループ終了後、メインクエリにリセットする
-                        endif;
-                    ?>
+                    <?php endwhile;?>
                 </ul>
+                <?php else : ?>
+                <p class="campaign-card__no-message">ただいま準備中です。もう少しお待ちください。</p>
+                <?php wp_reset_postdata();?>
+                <?php endif;?>
                 <div class="sidebar__btn-wrapper">
                     <a href="<?php echo get_post_type_archive_link('campaign'); ?>" class="btn">View more
                         <span></span>

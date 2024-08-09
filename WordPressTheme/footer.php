@@ -1,4 +1,5 @@
 <?php if (!is_404() && !is_page_template('page-contact.php') && !is_page('contact/thanks')) : ?>
+
 <!--contact-->
 <section class="contact contact-wrapper contact-wrapper--layout">
     <div class="contact__inner inner">
@@ -124,19 +125,57 @@
                         </div>
                         <div class="site-map__sub">
                             <ul class="site-map__sub-titles">
+                                <?php 
+                                    // データが有効かどうかを確認する関数
+                                    function has_valid_price_footer($prices, $menu_key, $yen_key) {
+                                        if (!empty($prices)) {
+                                            foreach ($prices as $price) {
+                                                if (!empty($price[$menu_key]) || !empty($price[$yen_key])) {
+                                                    return true;
+                                                }
+                                            }
+                                        }
+                                        return false;
+                                    }
+
+                                    // ライセンス講習
+                                    $page_id_footer = 17;
+                                    $license_prices_footer = SCF::get('license_price', $page_id_footer);
+                                ?>
+                                <?php if (has_valid_price_footer($license_prices_footer, 'license_menu', 'license_yen')) : ?>
                                 <li class="site-map__sub-title">
                                     <a href="<?php echo esc_url(home_url('price#license-price')); ?>">ライセンス講習</a>
                                 </li>
+                                <?php endif; ?>
+                                <?php 
+                                    // 体験ダイビング
+                                    $trial_prices_footer = SCF::get('trial_price', $page_id_footer);
+                                ?>
+                                <?php if (has_valid_price_footer($trial_prices_footer, 'trial_menu', 'trial_yen')) : ?>
                                 <li class="site-map__sub-title">
                                     <a href="<?php echo esc_url(home_url('price#trial-price')); ?>">体験ダイビング</a>
                                 </li>
+                                <?php endif; ?>
+                                <?php 
+                                    // ファンダイビング
+                                    $fun_prices_footer = SCF::get('fun_price', $page_id_footer);
+                                ?>
+                                <?php if (has_valid_price_footer($fun_prices_footer, 'fun_menu', 'fun_yen')) : ?>
                                 <li class="site-map__sub-title">
                                     <a href="<?php echo esc_url(home_url('price#fun-price')); ?>">ファンダイビング</a>
                                 </li>
+                                <?php endif; ?>
+                                <?php 
+                                    // スペシャルダイビング
+                                    $special_prices_footer = SCF::get('special_price', $page_id_footer);
+                                ?>
+                                <?php if (has_valid_price_footer($special_prices_footer, 'special_menu', 'special_yen')) : ?>
                                 <li class="site-map__sub-title">
                                     <a
                                         href="<?php echo esc_url(home_url('price#special-price')); ?>">スペシャル<wbr />ダイビング</a>
                                 </li>
+                                <?php endif; ?>
+
                             </ul>
                         </div>
                     </div>

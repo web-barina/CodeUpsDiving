@@ -72,3 +72,14 @@
 .blog-card__pager-wrapper {
   margin-top: rem(80);
 }
+
+.blog-card__no-message {
+  margin-top: rem(50);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(100);
+    background-color: $white;
+    padding: rem(16);
+  }
+}

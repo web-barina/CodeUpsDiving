@@ -42,13 +42,17 @@
     justify-content: center;
 }
 
+
 .modal__content {
-    background: transparent;
-    max-width: rem(920);
+    aspect-ratio: 580/369;
+    max-width: rem(350);
     width: 100%;
-    height: auto;
     position: relative;
-    aspect-ratio: 920/588;
+
+    @include mq("md") {
+        max-width: rem(800);
+        width: 100%;
+    }
 }
 
 .modal__content--large {
@@ -69,4 +73,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+}
+
+/* モーダルの隠しスタイル */
+.modal[style*="display: none;"] {
+    display: none;
+}
+
+/* モーダルがアクティブなときのスタイル */
+.modal.active {
+    display: flex;
 }

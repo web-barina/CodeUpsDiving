@@ -5,10 +5,13 @@
         <div class="contact-faq__wrapper faq-wrapper">
             <?php
                 $faqs = SCF::get('faq'); 
+                $has_content = false; // コンテンツがあるかどうかのフラグを初期化
                 if (!empty($faqs)) :
                     foreach ($faqs as $faq) :
                         $question = $faq['faq_question'];
                         $answer = $faq['faq_answer'];
+                        if (!empty($question) && !empty($answer)) :
+                            $has_content = true; // コンテンツがある場合にフラグを設定
             ?>
             <div class="faq-wrapper__item faq">
                 <div class="faq__question">
@@ -19,9 +22,15 @@
                 </div>
             </div>
             <?php
-                endforeach;
+                        endif;
+                    endforeach;
                 endif;
+
+                // コンテンツがない場合のメッセージ表示
+                if (!$has_content) :
             ?>
+            <p class="faq__no-content">ただいま準備中です。少々お待ちください。</p>
+            <?php endif; ?>
         </div>
     </div>
 </section>

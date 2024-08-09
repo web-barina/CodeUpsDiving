@@ -63,30 +63,30 @@
 }
 
 .info__tab--license::before {
-  background-image: url(/assets/images/common/info-lisence-icon.png);
+  background-image: url(../images/common/info-lisence-icon.png);
   left: rem(30);
 }
 
 .info__tab--fun::before {
-  background-image: url(/assets/images/common/info-fun-icon.png);
+  background-image: url(../images/common/info-fun-icon.png);
   left: rem(17);
 }
 
 .info__tab--trial::before {
-  background-image: url(/assets/images/common/info-trial-icon.png);
+  background-image: url(../images/common/info-trial-icon.png);
   left: rem(30);
 }
 
 .info__tab--license.js-active::before {
-  background-image: url(/assets/images/common/info-lisence-icon--white.png);
+  background-image: url(../images/common/info-lisence-icon--white.png);
 }
 
 .info__tab--fun.js-active::before {
-  background-image: url(/assets/images/common/info-fun-icon--white.png);
+  background-image: url(../images/common/info-fun-icon--white.png);
 }
 
 .info__tab--trial.js-active::before {
-  background-image: url(/assets/images/common/info-trial-icon--white.png);
+  background-image: url(../images/common/info-trial-icon--white.png);
 }
 
 .info__tab.js-active {
